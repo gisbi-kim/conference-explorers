@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conference Explorers</title>
+<style>
+:root {
+  --bg: #f5f5f7;
+  --panel: #ffffff;
+  --text: #1d1d1f;
+  --muted: #6e6e73;
+  --line: #d2d2d7;
+  --soft-line: #e5e5ea;
+  --accent: #0066cc;
+  --accent-soft: #eef6ff;
+  --green: #1f7a4d;
+  --orange: #a85500;
+  --purple: #6d45c7;
+  --pink: #b4235a;
+  --shadow: 0 1px 3px rgba(0,0,0,.06), 0 8px 26px rgba(0,0,0,.05);
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Pretendard, "Noto Sans KR", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font); font-size: 15px; line-height: 1.5; }
+a { color: inherit; text-decoration: none; }
+.topbar { position: sticky; top: 0; z-index: 10; background: rgba(245,245,247,.86); backdrop-filter: blur(18px); border-bottom: 1px solid var(--soft-line); }
+.topbar .inner { max-width: 1180px; margin: 0 auto; padding: 13px 22px; display: flex; align-items: center; gap: 12px; }
+.brand { font-weight: 700; letter-spacing: 0; }
+.topbar .meta { color: var(--muted); font-size: 13px; }
+.topbar .right { margin-left: auto; display: flex; gap: 8px; }
+.pill { border: 1px solid var(--soft-line); background: #fff; color: var(--muted); border-radius: 999px; padding: 4px 10px; font-size: 12px; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 42px 22px 64px; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 28px; align-items: end; margin-bottom: 28px; }
+h1 { margin: 0 0 12px; font-size: 48px; line-height: 1.02; letter-spacing: 0; }
+.lede { margin: 0; max-width: 760px; font-size: 18px; color: #424245; }
+.summary { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.stat { background: var(--panel); border: 1px solid var(--soft-line); border-radius: 8px; padding: 14px; box-shadow: var(--shadow); }
+.stat .n { font-size: 27px; line-height: 1.1; font-weight: 750; }
+.stat .l { margin-top: 4px; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.card { background: var(--panel); border: 1px solid var(--soft-line); border-radius: 8px; padding: 18px; box-shadow: var(--shadow); display: flex; flex-direction: column; min-height: 240px; }
+.card:hover { border-color: #b8d7ff; }
+.card-head { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.mark { width: 42px; height: 42px; border-radius: 8px; display: grid; place-items: center; color: #fff; font-weight: 800; font-size: 14px; flex: 0 0 auto; }
+.mark.icra { background: var(--green); }
+.mark.cvpr { background: var(--accent); }
+.mark.icros { background: var(--orange); }
+.mark.iclr { background: var(--purple); }
+.title { font-size: 22px; line-height: 1.18; font-weight: 760; }
+.subtitle { color: var(--muted); font-size: 13px; margin-top: 3px; }
+.desc { color: #424245; margin: 2px 0 16px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+.tag { border: 1px solid var(--soft-line); background: #fafafa; border-radius: 999px; color: #424245; padding: 4px 9px; font-size: 12px; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--line); border-radius: 7px; padding: 8px 11px; font-weight: 600; font-size: 13px; background: #fff; color: var(--text); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn:hover { border-color: var(--accent); color: var(--accent); }
+.btn.primary:hover { color: #fff; background: #0058b0; }
+.note { margin-top: 22px; color: var(--muted); font-size: 13px; }
+@media (max-width: 900px) {
+  .hero, .grid { grid-template-columns: 1fr; }
+  h1 { font-size: 38px; }
+}
+@media (max-width: 560px) {
+  .wrap, .topbar .inner { padding-left: 14px; padding-right: 14px; }
+  .summary { grid-template-columns: 1fr; }
+  .topbar .right { display: none; }
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="inner">
+    <div class="brand">Conference Explorers</div>
+    <div class="meta">ICRA / CVPR / ICROS / ICLR 2026</div>
+    <div class="right">
+      <a class="pill" href="https://github.com/gisbi-kim/conference-explorers">GitHub</a>
+      <a class="pill" href="https://gisbi-kim.github.io/conference-explorers/">Pages</a>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <h1>Conference paper explorers in one place.</h1>
+      <p class="lede">A compact launchpad for the 2026 paper explorer sites: robotics, computer vision, Korean robotics, and machine learning venues.</p>
+    </div>
+    <div class="summary">
+      <div class="stat"><div class="n">4</div><div class="l">Explorer Sites</div></div>
+      <div class="stat"><div class="n">2026</div><div class="l">Conference Year</div></div>
+      <div class="stat"><div class="n">Static</div><div class="l">GitHub Pages</div></div>
+      <div class="stat"><div class="n">Open</div><div class="l">Public Repos</div></div>
+    </div>
+  </section>
+
+  <section class="grid" aria-label="Conference explorer links">
+    <article class="card">
+      <div class="card-head">
+        <div class="mark icra">ICRA</div>
+        <div>
+          <div class="title">ICRA 2026 Paper Explorer</div>
+          <div class="subtitle">Robotics conference paper explorer</div>
+        </div>
+      </div>
+      <p class="desc">Self-contained explorer for ICRA 2026 papers with country, affiliation, keyword, abstract, and paper-level filters.</p>
+      <div class="tags">
+        <span class="tag">Robotics</span><span class="tag">Affiliations</span><span class="tag">Keywords</span><span class="tag">Static HTML</span>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="https://gisbi-kim.github.io/icra2026-explorer/">Open Explorer</a>
+        <a class="btn" href="https://github.com/gisbi-kim/icra2026-explorer">Repository</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <div class="mark cvpr">CVPR</div>
+        <div>
+          <div class="title">CVPR 2026 Paper Explorer</div>
+          <div class="subtitle">Computer vision paper explorer</div>
+        </div>
+      </div>
+      <p class="desc">Public CVPR 2026 explorer for browsing accepted paper metadata and trends from a computer vision perspective.</p>
+      <div class="tags">
+        <span class="tag">Computer Vision</span><span class="tag">Papers</span><span class="tag">Trends</span><span class="tag">Explorer</span>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="https://gisbi-kim.github.io/cvpr2026-explorer/">Open Explorer</a>
+        <a class="btn" href="https://github.com/gisbi-kim/cvpr2026-explorer">Repository</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <div class="mark icros">ICROS</div>
+        <div>
+          <div class="title">ICROS 2026 Explorer</div>
+          <div class="subtitle">Institution and author analytics dashboard</div>
+        </div>
+      </div>
+      <p class="desc">ICROS 2026 participation dashboard, now renamed from <code>icros2026-eda</code> to <code>icros2026-explorer</code>.</p>
+      <div class="tags">
+        <span class="tag">Korea Robotics</span><span class="tag">Institutions</span><span class="tag">Authors</span><span class="tag">Dashboard</span>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="https://gisbi-kim.github.io/icros2026-explorer/">Open Explorer</a>
+        <a class="btn" href="https://github.com/gisbi-kim/icros2026-explorer">Repository</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <div class="mark iclr">ICLR</div>
+        <div>
+          <div class="title">ICLR 2026 Paper Explorer</div>
+          <div class="subtitle">Machine learning paper explorer</div>
+        </div>
+      </div>
+      <p class="desc">Accepted ICLR 2026 papers with OpenReview links, countries, institutions, keywords, author filters, and resource links.</p>
+      <div class="tags">
+        <span class="tag">Machine Learning</span><span class="tag">OpenReview</span><span class="tag">Authors</span><span class="tag">Resources</span>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="https://gisbi-kim.github.io/iclr2026-explorer/">Open Explorer</a>
+        <a class="btn" href="https://github.com/gisbi-kim/iclr2026-explorer">Repository</a>
+      </div>
+    </article>
+  </section>
+  <p class="note">This index is intentionally lightweight: each explorer remains an independently hosted static site in its own repository.</p>
+</main>
+</body>
+</html>
