@@ -22,3 +22,8 @@ This repository collects links to the public 2026 conference explorer sites.
 | ICML 2026 | https://gisbi-kim.github.io/icml2026-explorer/ | https://github.com/gisbi-kim/icml2026-explorer |
 
 The site is a static `index.html` hosted with GitHub Pages.
+
+## CoRL 2026 analysis
+
+- [Spatial Intelligence for Embodied Navigation](https://gisbi-kim.github.io/conference-explorers/corl2026-analysis/spatial_intelligence_for_embodied_navigation_analysis.html)
+- [Memory for Robot Foundation Models](https://gisbi-kim.github.io/conference-explorers/corl2026-analysis/memory_for_robot_foundation_models_analysis.html)
