@@ -11,7 +11,7 @@ This repository collects links to the public 2026 conference explorer sites.
 | Conference | Explorer | Repository |
 |---|---|---|
 | ECCV 2026 | https://gisbi-kim.github.io/eccv2026-explorer/ | https://github.com/gisbi-kim/eccv2026-explorer |
-| IROS 2026 | https://gisbi-kim.github.io/iros2026-explorer/ | https://github.com/gisbi-kim/iros2026-explorer |
+| IROS 2026 | https://gisbi-kim.github.io/iros2026-explorer/ (Analysis: https://gisbi-kim.github.io/iros2026-explorer/output/iros2026_vlm_vla_landscape_review.html) | https://github.com/gisbi-kim/iros2026-explorer |
 | ICRA 2026 | https://gisbi-kim.github.io/icra2026-explorer/ | https://github.com/gisbi-kim/icra2026-explorer |
 | RSS 2026 | https://gisbi-kim.github.io/rss2026_explorer/ | https://github.com/gisbi-kim/rss2026_explorer |
 | IFAC 2026 | https://gisbi-kim.github.io/ifac2026-explorer/ | https://github.com/gisbi-kim/ifac2026-explorer |
