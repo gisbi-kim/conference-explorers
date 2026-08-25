@@ -25,5 +25,6 @@ The site is a static `index.html` hosted with GitHub Pages.
 
 ## CoRL 2026 analysis
 
+- [Agentic Robotics](https://gisbi-kim.github.io/conference-explorers/corl2026-analysis/agentic_robotics_analysis.html)
 - [Spatial Intelligence for Embodied Navigation](https://gisbi-kim.github.io/conference-explorers/corl2026-analysis/spatial_intelligence_for_embodied_navigation_analysis.html)
 - [Memory for Robot Foundation Models](https://gisbi-kim.github.io/conference-explorers/corl2026-analysis/memory_for_robot_foundation_models_analysis.html)

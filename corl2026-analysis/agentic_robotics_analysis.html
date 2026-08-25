@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agentic Robotics: 문제, 기회, 그리고 Why Now</title>
+  <style>
+    :root { color-scheme: light; }
+    html { background: #f4f6f8; color: #18212b; }
+    body { max-width: 940px; margin: 40px auto; padding: 52px 58px 72px; background: #fff; color: #18212b; box-shadow: 0 16px 48px rgba(15, 23, 42, .08); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", Arial, sans-serif; font-size: 17px; line-height: 1.8; }
+    main { max-width: 820px; margin: 0 auto; }
+    h1 { margin: 0 0 1.15em; padding-bottom: .7em; border-bottom: 2px solid #183b63; color: #102a43; font-size: clamp(2rem, 5vw, 2.7rem); line-height: 1.22; letter-spacing: -.035em; }
+    h2 { margin: 3em 0 1em; padding-top: 1.25em; border-top: 1px solid #cfd8e3; color: #163a5f; font-size: 1.68em; line-height: 1.35; letter-spacing: -.02em; }
+    h3 { margin: 2.15em 0 .7em; color: #1d4f7a; font-size: 1.25em; line-height: 1.4; }
+    p { margin: .95em 0; } ul, ol { margin: 1em 0; padding-left: 1.55em; } li { margin: .3em 0; } strong { color: #102a43; }
+    blockquote { margin: 1.5em 0; padding: 1em 1.25em; border-left: 4px solid #2d6a9f; background: #f3f7fb; color: #243b53; } blockquote p { margin: 0; }
+    table { width: 100%; margin: 1.5em 0; border-collapse: collapse; overflow: hidden; border: 1px solid #cbd5e1; border-radius: 8px; font-size: .93em; }
+    th, td { padding: .7em .82em; border: 1px solid #d8e0e8; text-align: left; vertical-align: top; } th { background: #edf3f8; color: #183b63; font-weight: 750; } tr:nth-child(even) td { background: #fafcfe; }
+    @media (max-width: 720px) { body { margin: 0; padding: 36px 20px 52px; box-shadow: none; } h1 { font-size: 2rem; } h2 { margin-top: 2.5em; } table { display: block; overflow-x: auto; white-space: normal; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Agentic Robotics: 문제, 기회, 그리고 Why Now</h1>
+<p>이 워크숍의 핵심 주장은 다음과 같다.</p>
+<blockquote>
+<p><strong>로봇의 능력을 하나의 policy 안에 모두 압축하는 대신, 추론·계획·도구 호출·skill 실행·결과 검증·실패 복구를 inference time에 조직하는 상위 agent가 필요할 수 있다.</strong></p>
+</blockquote>
+<p>LLM agent는 디지털 환경에서 이미 다음과 같은 loop로 작동한다.</p>
+<ol>
+<li>목표를 해석한다.</li>
+<li>복잡한 목표를 sub-task로 나눈다.</li>
+<li>코드나 계획을 생성한다.</li>
+<li>필요한 tool을 호출한다.</li>
+<li>실행 결과를 관찰한다.</li>
+<li>실패 원인을 추론한다.</li>
+<li>계획을 수정하고 다시 시도한다.</li>
+</ol>
+<p>이 워크숍은 이 패러다임을 실제 로봇으로 가져왔을 때 무엇이 달라지는지를 묻는다.</p>
+<p>핵심은 로봇에게 LLM을 붙이는 것이 아니다.</p>
+<blockquote>
+<p><strong>고수준 reasoning과 저수준 policy를 어떻게 연결하고, 실행 결과를 검증하며, 실패했을 때 안전하게 복구할 것인가</strong>가 agentic robotics의 본질이다.</p>
+</blockquote>
+<h2 id="section">1. 기존 로봇 시스템과 무엇이 다른가</h2>
+<p>전통적인 로봇 시스템도 perception, planning, control module로 구성되어 있었다. 따라서 “여러 모듈을 연결한다”는 것 자체는 새로운 개념이 아니다.</p>
+<p>Agentic robotics의 차이는 시스템 구성이 inference time에 더 동적으로 이루어진다는 데 있다.</p>
+<table>
+<thead>
+<tr>
+<th>기존 pipeline</th>
+<th>Agentic robotics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>개발자가 미리 정한 실행 순서</td>
+<td>agent가 상황에 따라 실행 순서를 결정</td>
+</tr>
+<tr>
+<td>고정된 state machine</td>
+<td>task별로 계획과 sub-goal을 동적 생성</td>
+</tr>
+<tr>
+<td>미리 정의된 recovery rule</td>
+<td>실패 원인을 해석하고 새로운 recovery를 구성</td>
+</tr>
+<tr>
+<td>제한된 skill 호출</td>
+<td>tool·policy·code·memory를 조합</td>
+</tr>
+<tr>
+<td>task별 별도 시스템</td>
+<td>동일한 agent가 새로운 task structure에 대응</td>
+</tr>
+<tr>
+<td>설계 시점의 computation</td>
+<td>실행 중 reasoning과 verification 수행</td>
+</tr>
+</tbody>
+</table>
+<p>예를 들어 “테이블 위를 정리하라”는 명령을 받았다고 하자.</p>
+<p>일반적인 end-to-end VLA는 observation과 instruction에서 action을 직접 출력한다. 반면 agentic robot은 다음과 같이 행동할 수 있다.</p>
+<ol>
+<li>테이블 위 물체를 파악한다.</li>
+<li>정리 기준이 불분명하면 사용자에게 질문한다.</li>
+<li>물체별 목적지를 결정한다.</li>
+<li>grasp skill과 navigation skill을 선택한다.</li>
+<li>grasp 성공 여부를 검증한다.</li>
+<li>실패하면 원인을 분류한다.</li>
+<li>viewpoint, grasp pose 또는 skill을 바꿔 다시 시도한다.</li>
+<li>완료된 sub-task를 memory에 기록한다.</li>
+<li>남은 물체에 대해 계획을 갱신한다.</li>
+</ol>
+<p>즉 하나의 policy가 모든 것을 암묵적으로 수행하는 대신, 여러 능력을 실행 중에 구성하고 감시한다.</p>
+<h2 id="agent">2. 디지털 agent를 그대로 로봇에 적용할 수 없는 이유</h2>
+<p>소프트웨어 agent는 잘못된 tool을 호출해도 다시 실행하거나 파일을 복원할 수 있다. 로봇의 행동에는 동일한 가정이 성립하지 않는다.</p>
+<h3 id="section-1">행동이 물리적이고 되돌리기 어렵다</h3>
+<p>로봇이 컵을 떨어뜨리거나 물체를 잘못 밀면 world state 자체가 바뀐다. 어떤 실패는 reset할 수 없고, 물체나 로봇을 손상시킬 수도 있다.</p>
+<p>따라서 로봇에서는 “실패한 다음 다시 시도한다”보다 다음이 먼저 필요하다.</p>
+<ul>
+<li>실행 전 위험 예측</li>
+<li>실행 가능성 검증</li>
+<li>진행 중 이상 감지</li>
+<li>위험한 행동의 조기 중단</li>
+<li>변경된 world state의 재인식</li>
+<li>복구 가능성과 비용의 판단</li>
+</ul>
+<h3 id="action-space">Action space가 연속적이다</h3>
+<p>소프트웨어 agent는 비교적 명확한 API를 호출한다. 반면 로봇은 pose, velocity, force, trajectory처럼 연속적인 action을 생성해야 한다.</p>
+<p>“컵을 집어라”는 고수준 명령과 실제 torque command 사이에는 매우 큰 abstraction gap이 존재한다. 이 간극을 어떤 policy, controller, skill library가 담당할지가 핵심 문제다.</p>
+<h3 id="noisy">관측이 불완전하고 noisy하다</h3>
+<p>tool call은 대개 명시적인 성공·실패 값을 반환한다. 실제 로봇에서는 grasp가 성공한 것처럼 보이지만 물체가 조금씩 미끄러질 수 있다.</p>
+<p>따라서 agent는 sensor observation으로부터 다음을 추론해야 한다.</p>
+<ul>
+<li>행동이 실제로 완료되었는가</li>
+<li>부분적으로 성공했는가</li>
+<li>world state가 예상대로 변했는가</li>
+<li>실패 원인이 perception, reasoning, policy, control 중 어디에 있는가</li>
+</ul>
+<h3 id="section-2">실시간 제약이 있다</h3>
+<p>LLM이 수십 초 동안 생각하는 동안 로봇과 주변 환경은 계속 변할 수 있다. 모든 control cycle에 foundation model reasoning을 사용할 수도 없다.</p>
+<p>따라서 빠른 reactive control과 느린 deliberative reasoning을 분리하고, 언제 느린 reasoning을 호출할지를 결정해야 한다.</p>
+<h2 id="agentpolicy-seam">3. 가장 근본적인 문제: Agent–policy seam</h2>
+<p>이 워크숍에서 가장 중요한 질문이다.</p>
+<blockquote>
+<p><strong>어디까지 agent가 결정하고, 어디부터 policy에 맡길 것인가?</strong></p>
+</blockquote>
+<p>가능한 architecture는 다음과 같다.</p>
+<h3 id="monolithic-vla">극단 1: Monolithic VLA</h3>
+<p>하나의 모델이 image, language, robot state를 받아 직접 action을 출력한다.</p>
+<p>장점은 다음과 같다.</p>
+<ul>
+<li>interface가 단순하다.</li>
+<li>end-to-end optimization이 가능하다.</li>
+<li>module 사이의 정보 손실이 적다.</li>
+<li>반응 속도를 높일 수 있다.</li>
+</ul>
+<p>약점은 다음과 같다.</p>
+<ul>
+<li>실패 원인을 분리하기 어렵다.</li>
+<li>새로운 task composition이 어렵다.</li>
+<li>중간 상태를 검증하거나 수정하기 어렵다.</li>
+<li>장기 planning과 recovery가 모델 내부에 묻힌다.</li>
+<li>새로운 embodiment나 skill 추가가 어렵다.</li>
+</ul>
+<h3 id="factored-agent">극단 2: 완전히 factored agent</h3>
+<p>상위 agent가 perception tool, map, planner, skill, controller를 명시적으로 호출한다.</p>
+<p>장점은 다음과 같다.</p>
+<ul>
+<li>각 단계의 검증과 교체가 가능하다.</li>
+<li>새로운 skill을 추가하기 쉽다.</li>
+<li>실패 위치를 진단하기 쉽다.</li>
+<li>zero-shot task composition에 유리하다.</li>
+<li>안전 constraint를 명시적으로 적용할 수 있다.</li>
+</ul>
+<p>약점은 다음과 같다.</p>
+<ul>
+<li>module interface에서 정보가 손실될 수 있다.</li>
+<li>자연어 또는 symbolic abstraction이 실제 control에 충분하지 않을 수 있다.</li>
+<li>agent의 잘못된 decomposition이 오류를 유발한다.</li>
+<li>전체 system latency와 complexity가 증가한다.</li>
+<li>module별 오차가 누적된다.</li>
+</ul>
+<p>따라서 실제 연구 질문은 monolithic 대 modular 중 하나를 선택하는 것이 아니다.</p>
+<blockquote>
+<p><strong>어떤 시간 척도와 abstraction level에서 시스템을 분리해야 하는가?</strong></p>
+</blockquote>
+<p>예를 들면 다음과 같은 계층이 가능하다.</p>
+<table>
+<thead>
+<tr>
+<th>계층</th>
+<th>역할</th>
+<th>주된 주기</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agent</td>
+<td>목표 해석, task decomposition, recovery 전략</td>
+<td>수초~수분</td>
+</tr>
+<tr>
+<td>Planner</td>
+<td>sub-goal, 경로, constraint 생성</td>
+<td>수백 ms~수초</td>
+</tr>
+<tr>
+<td>Skill policy</td>
+<td>grasp, place, open, navigate</td>
+<td>수십~수백 ms</td>
+</tr>
+<tr>
+<td>Controller</td>
+<td>trajectory tracking, force control</td>
+<td>1~10 ms</td>
+</tr>
+<tr>
+<td>Safety monitor</td>
+<td>충돌·불안정·위험 감시</td>
+<td>지속적 고주기</td>
+</tr>
+</tbody>
+</table>
+<p>이 경계가 앞으로도 유지될 durable architecture인지, VLA scaling이 대부분을 흡수하면서 임시 scaffold로 끝날지가 워크숍의 중요한 논쟁점이다.</p>
+<h2 id="open-problem">4. 여섯 가지 open problem의 의미</h2>
+<h3 id="agentpolicy-seam-1">① Agent–policy seam</h3>
+<p>reasoning layer와 motor layer 사이의 경계를 찾는 문제다.</p>
+<p>상위 agent는 “컵을 집어라”라고만 지시해야 하는가, 아니면 grasp 후보와 접근 방향까지 지정해야 하는가? Policy는 완성된 skill이어야 하는가, parameterized primitive여야 하는가?</p>
+<p>좋은 interface는 다음을 전달해야 한다.</p>
+<ul>
+<li>목표와 성공 조건</li>
+<li>relevant object와 spatial constraint</li>
+<li>허용되는 위험 수준</li>
+<li>execution budget</li>
+<li>policy confidence</li>
+<li>예상 결과</li>
+<li>실행 후 관측된 결과</li>
+<li>실패 유형과 recovery 가능성</li>
+</ul>
+<p>단순히 language command를 내려보내고 success/failure만 돌려받는 interface로는 충분하지 않을 가능성이 크다.</p>
+<h3 id="real-world-self-improvement">② Real-world self-improvement</h3>
+<p>agent가 현실에서 데이터를 수집하고, 실패를 분석하고, policy를 개선하며, 개선된 policy를 다시 검증하는 자동화된 loop를 만들자는 문제다.</p>
+<p>이상적인 과정은 다음과 같다.</p>
+<ol>
+<li>agent가 현재 성능의 약점을 찾는다.</li>
+<li>정보가 많이 필요한 task를 선택한다.</li>
+<li>안전한 범위에서 rollout을 수행한다.</li>
+<li>성공·실패와 원인을 기록한다.</li>
+<li>학습 데이터를 자동 생성한다.</li>
+<li>policy를 fine-tuning하거나 RL로 개선한다.</li>
+<li>hold-out task에서 성능을 검증한다.</li>
+<li>실제 시스템에 배포하거나 rollback한다.</li>
+</ol>
+<p>하지만 현실에서는 self-improvement가 곧 self-corruption이 될 위험도 있다.</p>
+<ul>
+<li>잘못된 reward를 최적화할 수 있다.</li>
+<li>실패 데이터를 잘못 해석할 수 있다.</li>
+<li>쉬운 task만 선택하는 방향으로 gaming할 수 있다.</li>
+<li>새 능력을 학습하면서 기존 능력을 잊을 수 있다.</li>
+<li>불안정한 policy가 실제 장비에 배포될 수 있다.</li>
+<li>분포가 편향된 self-generated data가 누적될 수 있다.</li>
+</ul>
+<p>따라서 핵심은 자동 학습 자체가 아니라 <strong>자동 실험 설계, 안전한 데이터 수집, 독립적 검증, rollback까지 포함한 closed loop</strong>다.</p>
+<h3 id="abstraction-aware-guiding">③ Abstraction-aware guiding</h3>
+<p>피드백은 오류가 발생한 abstraction level에 전달해야 한다는 주장이다.</p>
+<p>예를 들어 로봇이 잘못된 서랍을 열었다면 원인은 여러 가지일 수 있다.</p>
+<ul>
+<li>“왼쪽 서랍”이라는 언어 지시를 잘못 해석했다.</li>
+<li>object grounding이 틀렸다.</li>
+<li>spatial relation을 잘못 계산했다.</li>
+<li>올바른 서랍을 선택했지만 grasp pose가 틀렸다.</li>
+<li>handle을 잡았지만 force control에 실패했다.</li>
+</ul>
+<p>각 오류에는 서로 다른 supervision이 필요하다.</p>
+<table>
+<thead>
+<tr>
+<th>오류</th>
+<th>적절한 피드백</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Task logic 오류</td>
+<td>language correction</td>
+</tr>
+<tr>
+<td>Object grounding 오류</td>
+<td>perceptual annotation</td>
+</tr>
+<tr>
+<td>Spatial planning 오류</td>
+<td>waypoint·sub-goal correction</td>
+</tr>
+<tr>
+<td>Skill 선택 오류</td>
+<td>skill-level feedback</td>
+</tr>
+<tr>
+<td>Motion 오류</td>
+<td>trajectory demonstration</td>
+</tr>
+<tr>
+<td>Contact/control 오류</td>
+<td>kinesthetic·force feedback</td>
+</tr>
+</tbody>
+</table>
+<p>모든 피드백을 monolithic model의 동일한 loss로 넣으면 무엇을 수정해야 하는지가 흐려질 수 있다. 따라서 오류를 진단하고 피드백을 가장 일반화가 잘되는 수준으로 routing하는 것이 기회다.</p>
+<h3 id="simulation-as-the-data-multiplier">④ Simulation as the data multiplier</h3>
+<p>simulation은 실제 로봇보다 다음 장점이 있다.</p>
+<ul>
+<li>대규모 병렬 실행</li>
+<li>빠른 reset</li>
+<li>정확한 state 관측</li>
+<li>자동 reward 계산</li>
+<li>위험한 실패 허용</li>
+<li>환경과 task의 체계적 변형</li>
+<li>counterfactual test 수행</li>
+</ul>
+<p>Agentic system은 simulation 안에서 단순히 policy rollout만 하는 것이 아니라 다음을 자동화할 수 있다.</p>
+<ul>
+<li>새로운 task 생성</li>
+<li>어려운 failure case 탐색</li>
+<li>environment curriculum 구성</li>
+<li>reward와 verifier 생성</li>
+<li>여러 planning strategy 비교</li>
+<li>실패 원인 분류</li>
+<li>synthetic demonstration 생성</li>
+<li>새로운 skill 후보 발견</li>
+</ul>
+<p>즉 simulation을 policy training engine뿐 아니라 <strong>자동화된 robot research environment</strong>로 사용하는 방향이다.</p>
+<p>그러나 simulator exploit, sim-to-real gap, 잘못된 reward verifier 등의 문제가 있으므로 simulation에서 성능이 증가했다는 것만으로 실제 self-improvement를 주장해서는 안 된다.</p>
+<h3 id="zero-shot-composition">⑤ Zero-shot composition</h3>
+<p>Foundation model이 가진 큰 장점은 이미 배운 요소를 새로운 방식으로 조합하는 능력이다.</p>
+<p>로봇이 다음 skill을 개별적으로 알고 있다고 하자.</p>
+<ul>
+<li>navigate</li>
+<li>find</li>
+<li>open</li>
+<li>grasp</li>
+<li>place</li>
+<li>verify</li>
+</ul>
+<p>Agent layer는 새로운 task가 주어졌을 때 이들을 즉석에서 조합할 수 있다.</p>
+<blockquote>
+<p>“주방으로 가서 서랍 안의 수건을 찾아 싱크대 옆에 놓아라.”</p>
+</blockquote>
+<p>이 task 전체에 대한 training trajectory가 없어도 기존 skill을 조합해 실행할 수 있다는 것이 agentic approach의 약속이다.</p>
+<p>하지만 실제 문제는 skill 이름을 나열하는 것이 아니라 다음을 보장하는 것이다.</p>
+<ul>
+<li>각 skill의 precondition이 만족되는가</li>
+<li>이전 skill의 결과가 다음 skill의 입력 조건을 만족하는가</li>
+<li>skill 사이에서 world state가 정확히 전달되는가</li>
+<li>실행 중 실패하면 어느 단계로 돌아가야 하는가</li>
+<li>서로 다른 policy의 action convention이 호환되는가</li>
+</ul>
+<p>즉 zero-shot composition의 병목은 언어적 task decomposition보다 <strong>physical interface compatibility와 state transition verification</strong>에 있을 수 있다.</p>
+<h3 id="agentic-system">⑥ Agentic system의 평가</h3>
+<p>이 분야에서 가장 어려운 문제 중 하나다.</p>
+<p>Agent는 task를 다시 시도하고, 질문하고, 도구를 바꾸고, 경로를 수정할 수 있다. 따라서 기존의 한 번 실행한 Success Rate만으로는 평가하기 어렵다.</p>
+<p>최소한 다음을 함께 측정해야 한다.</p>
+<table>
+<thead>
+<tr>
+<th>평가 항목</th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Final task success</td>
+<td>결국 목표를 달성했는가</td>
+</tr>
+<tr>
+<td>First-attempt success</td>
+<td>최초 계획과 실행이 정확했는가</td>
+</tr>
+<tr>
+<td>Recovery success</td>
+<td>실패 후 실제로 복구했는가</td>
+</tr>
+<tr>
+<td>Recovery efficiency</td>
+<td>복구에 얼마나 많은 시간과 행동이 들었는가</td>
+</tr>
+<tr>
+<td>Intervention count</td>
+<td>인간 도움이 몇 번 필요했는가</td>
+</tr>
+<tr>
+<td>Irreversible failure rate</td>
+<td>복구 불가능한 상태를 만들었는가</td>
+</tr>
+<tr>
+<td>Safety violations</td>
+<td>충돌·낙하·과도한 힘 등이 있었는가</td>
+</tr>
+<tr>
+<td>Reasoning latency</td>
+<td>추론 때문에 작업이 얼마나 지연되었는가</td>
+</tr>
+<tr>
+<td>Tool/skill calls</td>
+<td>불필요한 호출을 남발하지 않았는가</td>
+</tr>
+<tr>
+<td>Generalization</td>
+<td>새로운 task composition에서도 작동하는가</td>
+</tr>
+<tr>
+<td>Calibration</td>
+<td>실패 가능성을 정확히 인식하는가</td>
+</tr>
+</tbody>
+</table>
+<p>특히 recovery를 평가할 때 단순히 무한 재시도를 허용하면 benchmark gaming이 발생한다. 따라서 시간, action, energy, intervention, risk budget을 명시해야 한다.</p>
+<blockquote>
+<p><strong>성공했는가뿐 아니라, 얼마만큼의 비용과 위험을 사용해 성공했는가를 측정해야 한다.</strong></p>
+</blockquote>
+<h2 id="section-3">5. 무엇이 가장 큰 연구 기회인가</h2>
+<h3 id="robot-skill-interface">① Robot skill을 위한 표준 interface</h3>
+<p>Agent가 여러 policy와 tool을 조합하려면 skill interface가 필요하다.</p>
+<p>좋은 robot skill은 단순한 함수 이름보다 풍부한 contract를 가져야 한다.</p>
+<ul>
+<li>precondition</li>
+<li>input schema</li>
+<li>controllable parameter</li>
+<li>expected effect</li>
+<li>termination condition</li>
+<li>failure mode</li>
+<li>uncertainty</li>
+<li>recovery option</li>
+<li>embodiment compatibility</li>
+<li>safety constraint</li>
+</ul>
+<p>예를 들어 <code>grasp(object)</code>보다 다음과 같은 skill description이 agentic composition에 더 유용하다.</p>
+<ul>
+<li>어떤 물체와 gripper에 적용 가능한가</li>
+<li>어느 정도의 pose uncertainty를 견디는가</li>
+<li>성공 여부를 어떻게 검증하는가</li>
+<li>실패 시 재시도할 수 있는가</li>
+<li>실패가 world state를 어떻게 바꾸는가</li>
+</ul>
+<p>Agentic robotics의 기반 기술은 거대한 reasoning model뿐 아니라 <strong>machine-readable robot skill contract</strong>일 가능성이 크다.</p>
+<h3 id="verifier-execution-monitor">② Verifier와 execution monitor</h3>
+<p>Agent가 계획을 세우는 것보다 그 계획과 실행 결과가 맞는지 확인하는 것이 더 중요할 수 있다.</p>
+<p>필요한 verifier는 여러 수준에 존재한다.</p>
+<ul>
+<li>task plan verifier</li>
+<li>geometric feasibility checker</li>
+<li>collision and safety checker</li>
+<li>skill precondition verifier</li>
+<li>trajectory monitor</li>
+<li>grasp success detector</li>
+<li>world-state change detector</li>
+<li>task completion verifier</li>
+</ul>
+<p>LLM이나 VLM 하나가 plan을 만들고 같은 모델이 스스로 정답이라고 판단하게 하면 오류가 공유될 수 있다. 따라서 독립적인 sensor, geometry, constraint, reward model을 결합하는 연구가 중요하다.</p>
+<h3 id="fastslow-reasoning-architecture">③ Fast–slow reasoning architecture</h3>
+<p>모든 상황에 긴 reasoning을 사용하면 느리고 비싸다. 반대로 항상 reactive policy만 사용하면 복잡한 실패에 대응하지 못한다.</p>
+<p>따라서 다음과 같은 구조가 유망하다.</p>
+<ul>
+<li>정상 상황에서는 fast policy로 실행한다.</li>
+<li>uncertainty나 anomaly가 증가하면 slow reasoning을 호출한다.</li>
+<li>sub-goal 전환점에서만 계획을 검토한다.</li>
+<li>irreversible action 전에 강한 verification을 수행한다.</li>
+<li>실패가 감지되면 recovery mode로 전환한다.</li>
+<li>안전에 민감한 control은 agent reasoning과 독립적으로 유지한다.</li>
+</ul>
+<p>핵심 질문은 reasoning 능력 자체보다 <strong>언제, 얼마나, 어느 수준에서 reasoning budget을 사용할 것인가</strong>다.</p>
+<h3 id="failure-attribution-recovery-policy">④ Failure attribution과 recovery policy</h3>
+<p>실패 복구를 위해서는 먼저 실패가 어디에서 발생했는지 알아야 한다.</p>
+<p>가능한 실패 원인은 다음과 같다.</p>
+<ul>
+<li>perception failure</li>
+<li>grounding failure</li>
+<li>planning failure</li>
+<li>skill-selection failure</li>
+<li>policy failure</li>
+<li>control failure</li>
+<li>hardware failure</li>
+<li>environment change</li>
+<li>instruction ambiguity</li>
+</ul>
+<p>실패 원인을 구별하지 못하면 같은 action을 반복하거나 관련 없는 plan 전체를 다시 생성하게 된다.</p>
+<p>따라서 중요한 방향은 다음과 같다.</p>
+<blockquote>
+<p><strong>Failure detection → attribution → localized correction → verified re-execution</strong></p>
+</blockquote>
+<p>이는 단순 retry와 genuine recovery를 구별하는 핵심 구조다.</p>
+<h3 id="agentic-system-provenance-logging">⑤ Agentic system을 위한 provenance와 logging</h3>
+<p>장기 agent는 어떤 관측을 근거로 어떤 결정을 내렸고, 어떤 tool과 policy를 호출했는지를 기록해야 한다.</p>
+<p>이는 다음에 필요하다.</p>
+<ul>
+<li>실패 원인 분석</li>
+<li>안전 감사</li>
+<li>학습 데이터 생성</li>
+<li>잘못된 memory 수정</li>
+<li>human feedback routing</li>
+<li>policy update의 책임 추적</li>
+<li>benchmark 재현성</li>
+</ul>
+<p>따라서 agent trajectory는 단순 action log가 아니라 reasoning, observation, tool call, policy version, outcome을 연결한 structured trace가 되어야 한다.</p>
+<h2 id="section-4">6. 왜 지금 필요한가</h2>
+<h3 id="software-agent">Software agent가 먼저 가능성을 보여줬기 때문이다</h3>
+<p>LLM agent는 코드 작성, 검색, tool use, planning, debugging에서 여러 단계를 수행하고 결과에 따라 계획을 수정하는 패턴을 보여줬다.</p>
+<p>이제 로봇 분야에서는 자연스럽게 다음 질문이 등장한다.</p>
+<blockquote>
+<p>디지털 작업에서 작동한 agent loop가 physical task에서도 작동할 수 있는가?</p>
+</blockquote>
+<p>다만 물리 세계에서는 action cost와 risk가 훨씬 크므로 새로운 연구 분야가 필요하다.</p>
+<h3 id="vla-robot-foundation-policy-skill-substrate">VLA와 robot foundation policy가 skill substrate를 제공하기 때문이다</h3>
+<p>과거에는 상위 planner가 명령을 내려도 이를 수행할 범용 저수준 policy가 부족했다. 이제 VLA와 generalist policy가 여러 manipulation skill과 language-conditioned behavior를 제공하기 시작했다.</p>
+<p>따라서 agent가 조합하고 호출할 수 있는 motor substrate가 형성되고 있다.</p>
+<p>Agentic robotics는 foundation policy의 경쟁자가 아니라, foundation policy를 실제 long-horizon task에 조직하는 상위 runtime으로 볼 수 있다.</p>
+<h3 id="inference-time-capability">모델의 inference-time capability가 커졌기 때문이다</h3>
+<p>모델은 이제 inference 중에 다음을 수행할 수 있다.</p>
+<ul>
+<li>task decomposition</li>
+<li>code generation</li>
+<li>visual reasoning</li>
+<li>tool selection</li>
+<li>memory retrieval</li>
+<li>plan revision</li>
+<li>error explanation</li>
+</ul>
+<p>즉 모든 능력을 training parameter 안에 미리 넣는 방식 외에, 실행 시 계산을 사용해 새로운 task를 푸는 경로가 열렸다.</p>
+<h3 id="execution-reliability">로봇의 다음 병목이 execution reliability이기 때문이다</h3>
+<p>짧은 demonstration에서는 인상적인 성공 사례를 만들 수 있다. 그러나 장기 작업에서는 작은 오류가 누적된다.</p>
+<p>skill 하나의 성공률이 95%라도 20개의 skill을 모두 성공해야 하는 작업의 단순 성공 확률은 다음과 같다.</p>
+<p>[
+0.95^{20} \approx 0.36
+]</p>
+<p>따라서 long-horizon robotics에서는 개별 policy의 성능을 조금 높이는 것만으로 부족하다. 실행을 검증하고, 실패를 발견하며, 국소적으로 복구하는 시스템이 필요하다.</p>
+<p>Agentic robotics는 바로 이 시스템 수준의 reliability를 다루려는 흐름이다.</p>
+<h2 id="section-5">7. 이 워크숍의 숨은 핵심 논쟁</h2>
+<p>표면적인 질문은 “로봇에 agent를 어떻게 적용할 것인가?”지만, 실제 핵심 논쟁은 다음과 같다.</p>
+<blockquote>
+<p><strong>Agentic architecture는 로봇의 영구적인 구조인가, 아니면 아직 충분히 강하지 않은 monolithic VLA를 보완하는 임시 scaffold인가?</strong></p>
+</blockquote>
+<p>두 가지 미래가 가능하다.</p>
+<h3 id="a-scaling-agent-layer">미래 A: Scaling이 agent layer를 흡수한다</h3>
+<p>더 큰 VLA가 planning, composition, recovery까지 내부적으로 학습한다. 외부 agent와 명시적인 skill interface의 필요성이 줄어든다.</p>
+<h3 id="b-factoring">미래 B: 물리 세계는 구조적 factoring을 계속 요구한다</h3>
+<p>안전, 실시간성, 검증 가능성, 다양한 control rate 때문에 고수준 reasoning과 저수준 control의 분리는 유지된다. Foundation model이 강해져도 verifier, controller, safety monitor, skill interface는 독립적으로 남는다.</p>
+<p>현실적으로는 두 극단의 중간 형태가 유력하다.</p>
+<ul>
+<li>학습된 모델이 각 계층에서 더 많은 역할을 맡는다.</li>
+<li>그러나 서로 다른 시간 척도와 안전 요구 때문에 계층 자체는 유지된다.</li>
+<li>module의 경계가 hand-coded API에서 learned interface로 변한다.</li>
+<li>monolithic core 위에 external memory, verifier, safety layer가 결합될 수 있다.</li>
+</ul>
+<h2 id="section-6">8. 앞의 세 워크숍과의 관계</h2>
+<p>네 가지 주제는 서로 경쟁하는 것이 아니라 하나의 persistent autonomous robot을 구성하는 서로 다른 층이다.</p>
+<table>
+<thead>
+<tr>
+<th>주제</th>
+<th>핵심 질문</th>
+<th>시스템 역할</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spatial intelligence</td>
+<td>세계를 어떤 공간 구조로 표현하고 추론하는가</td>
+<td>구조화된 world state</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>무엇을 저장하고 언제 다시 사용하는가</td>
+<td>시간에 걸친 상태와 경험</td>
+</tr>
+<tr>
+<td>Adaptation</td>
+<td>경험으로 모델을 어떻게 개선하는가</td>
+<td>능력의 지속적 변화</td>
+</tr>
+<tr>
+<td>Agentic robotics</td>
+<td>이 능력들을 실행 중 어떻게 조직하고 검증하는가</td>
+<td>runtime orchestration</td>
+</tr>
+</tbody>
+</table>
+<p>이를 하나의 과정으로 연결하면 다음과 같다.</p>
+<ol>
+<li><strong>Spatial intelligence</strong>가 현재 환경과 task를 구조화한다.</li>
+<li><strong>Memory</strong>가 과거 경험, 실패, world state를 제공한다.</li>
+<li><strong>Agent</strong>가 목표를 분해하고 적절한 policy와 tool을 선택한다.</li>
+<li><strong>Policy와 controller</strong>가 물리적 행동을 실행한다.</li>
+<li><strong>Verifier</strong>가 예상 결과와 실제 결과를 비교한다.</li>
+<li>실패하면 <strong>agent</strong>가 원인을 추론하고 복구한다.</li>
+<li>반복된 경험은 <strong>adaptation</strong>을 통해 policy와 representation을 개선한다.</li>
+</ol>
+<p>가장 강한 통합 연구 질문은 다음과 같다.</p>
+<blockquote>
+<p><strong>로봇이 불완전한 관측 아래에서 세계를 구조화하고, 과거 경험을 활용해 계획하며, 여러 skill을 안전하게 조합하고, 실행 실패를 스스로 진단·복구하며, 그 경험으로 지속적으로 개선되게 하려면 어떤 architecture가 필요한가?</strong></p>
+</blockquote>
+<h2 id="section-7">9. 이 워크숍의 형식 자체가 의미하는 것</h2>
+<p>이 워크숍이 일반적인 발표 중심이 아니라 live demo 중심이라는 점도 주제와 잘 맞는다.</p>
+<p>Agentic robotics는 정제된 성공 영상만으로 평가하기 어렵다. 실제 가치는 예상하지 못한 task와 실패에서 드러난다.</p>
+<p>청중이 직접 다음을 시험하면 시스템의 실체가 빠르게 드러난다.</p>
+<ul>
+<li>instruction을 조금 바꾼다.</li>
+<li>예상하지 못한 물체를 추가한다.</li>
+<li>중간에 물체 위치를 바꾼다.</li>
+<li>일부러 ambiguous instruction을 준다.</li>
+<li>skill 실행을 방해한다.</li>
+<li>실패 후 같은 행동을 반복하는지 관찰한다.</li>
+<li>스스로 질문하거나 계획을 수정하는지 확인한다.</li>
+</ul>
+<p>따라서 live demo는 단순한 흥행 요소가 아니라 <strong>agentic behavior를 평가하기 위한 diagnostic stress test</strong>라는 의미가 있다.</p>
+<p>다만 공정한 비교를 위해서는 task difficulty, intervention, time budget, robot familiarity, API access를 표준화해야 한다. 그렇지 않으면 시스템 성능보다 demo engineering의 완성도를 비교하게 될 수 있다.</p>
+<h2 id="section-8">한 줄 평</h2>
+<p>이 워크숍은 “LLM으로 로봇에게 계획을 쓰게 하자”는 이야기가 아니다.</p>
+<blockquote>
+<p><strong>Foundation policy 위에 planning, tool use, memory, verification, failure attribution, recovery를 결합하여, 새로운 장기 과제를 실행 중에 구성하고 끝까지 완수하는 robot runtime을 만들자는 연구 의제다.</strong></p>
+</blockquote>
+<p>그리고 가장 중요한 승부처는 agent가 얼마나 그럴듯하게 reasoning text를 생성하는지가 아니라 다음 세 가지에 있다.</p>
+<ol>
+<li><strong>reasoning과 motor control 사이의 interface를 어떻게 설계하는가</strong></li>
+<li><strong>실패를 정확히 발견하고 원인을 특정해 국소적으로 복구할 수 있는가</strong></li>
+<li><strong>시간·위험·재시도 비용을 포함한 정직한 benchmark에서 실제 이득을 보이는가</strong></li>
+</ol>
+<p>결국 agentic robotics의 진짜 기준은 “생각하는 것처럼 보이는 로봇”이 아니라 <strong>예상 밖의 상황에서도 스스로 상태를 확인하고, 잘못을 수정하며, 안전하게 일을 끝내는 로봇</strong>이다.</p>
+  </main>
+</body>
+</html>
+
