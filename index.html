@@ -58,6 +58,7 @@ h1 { margin: 0 0 12px; font-size: 48px; line-height: 1.02; letter-spacing: 0; }
 .mark.icml { background: #0f766e; }
 .mark.rss { background: var(--pink); }
 .mark.ifac { background: #287f68; }
+.mark.corl { background: #5b3c88; }
 .title { font-size: 22px; line-height: 1.18; font-weight: 760; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
 .tag { border: 1px solid var(--soft-line); background: #fafafa; border-radius: 999px; color: #424245; padding: 4px 9px; font-size: 12px; }
@@ -87,7 +88,7 @@ h1 { margin: 0 0 12px; font-size: 48px; line-height: 1.02; letter-spacing: 0; }
 <header class="topbar">
   <div class="inner">
     <div class="brand">Conference Explorers</div>
-    <div class="meta">ICRA / IROS / RSS / CVPR / ECCV / ICROS / ICLR / ICML / IFAC 2026</div>
+    <div class="meta">ICRA / IROS / CoRL / RSS / CVPR / ECCV / ICROS / ICLR / ICML / IFAC 2026</div>
     <div class="right">
       <a class="pill" href="https://github.com/gisbi-kim/conference-explorers">GitHub</a>
       <a class="pill" href="https://gisbi-kim.github.io/conference-explorers/">Pages</a>
@@ -98,10 +99,10 @@ h1 { margin: 0 0 12px; font-size: 48px; line-height: 1.02; letter-spacing: 0; }
   <section class="hero">
     <div>
       <h1>Conference paper explorers in one place.</h1>
-      <p class="lede">A compact launchpad for the 2026 paper explorer sites: robotics, computer vision, Korean robotics, control systems, and machine learning venues.</p>
+      <p class="lede">A compact launchpad for the 2026 paper explorer sites: robotics, robot learning, computer vision, Korean robotics, control systems, and machine learning venues.</p>
     </div>
     <div class="summary">
-      <div class="stat"><div class="n">9</div><div class="l">Explorer Sites</div></div>
+      <div class="stat"><div class="n">10</div><div class="l">Conference Entries</div></div>
       <div class="stat"><div class="n">2026</div><div class="l">Conference Year</div></div>
       <div class="stat"><div class="n">Static</div><div class="l">GitHub Pages</div></div>
       <div class="stat"><div class="n">Open</div><div class="l">Public Repos</div></div>
@@ -117,6 +118,24 @@ h1 { margin: 0 0 12px; font-size: 48px; line-height: 1.02; letter-spacing: 0; }
   </div>
 
   <section class="grid" aria-label="Conference explorer links">
+    <article class="card" data-title="CoRL 2026 Paper Explorer" data-date="2026-11-09">
+      <div class="card-head">
+        <div class="mark corl">CoRL</div>
+        <div>
+          <div class="title">CoRL 2026 Paper Explorer</div>
+        </div>
+      </div>
+      <div class="card-side">
+        <div class="when">November 9–12, 2026</div>
+        <div class="tags">
+        <span class="tag">Robot Learning</span><span class="tag">Austin, Texas</span><span class="tag">Explorer Coming Soon</span>
+      </div>
+        <div class="actions">
+        <a class="btn" href="https://2026.corl.org/">Conference Website</a>
+        </div>
+      </div>
+    </article>
+
     <article class="card" data-title="ECCV 2026 Paper Explorer" data-date="2026-09-08">
       <div class="card-head">
         <div class="mark eccv">ECCV</div>
@@ -290,7 +309,7 @@ h1 { margin: 0 0 12px; font-size: 48px; line-height: 1.02; letter-spacing: 0; }
       </div>
     </article>
   </section>
-  <p class="note">This index is intentionally lightweight: each explorer remains an independently hosted static site in its own repository.</p>
+  <p class="note">This index is intentionally lightweight: published explorers remain independently hosted static sites in their own repositories; upcoming venues are listed here as they are prepared.</p>
 </main>
 <script>
 const sortButtons = [...document.querySelectorAll('.sort-btn')];
