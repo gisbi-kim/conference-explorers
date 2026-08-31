@@ -62,6 +62,11 @@ h1 { margin: 0 0 12px; font-size: 48px; line-height: 1.02; letter-spacing: 0; }
 .mark.ifac { background: #287f68; }
 .mark.corl { background: #5b3c88; }
 .title { font-size: 22px; line-height: 1.18; font-weight: 760; }
+.acceptance { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+.acceptance-stat { border-left: 2px solid var(--soft-line); padding-left: 8px; color: var(--muted); font-size: 12px; line-height: 1.25; }
+.acceptance-stat strong { display: block; color: var(--text); font-size: 15px; font-weight: 760; }
+.acceptance-stat.rate { border-left-color: var(--accent); }
+.acceptance-note { width: 100%; color: var(--muted); font-size: 11px; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
 .tag { border: 1px solid var(--soft-line); background: #fafafa; border-radius: 999px; color: #424245; padding: 4px 9px; font-size: 12px; }
 .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; justify-content: flex-end; }
@@ -166,12 +171,18 @@ h1 { margin: 0 0 12px; font-size: 48px; line-height: 1.02; letter-spacing: 0; }
         <div class="mark iros">IROS</div>
         <div>
           <div class="title">IROS 2026 Paper Explorer</div>
+          <div class="acceptance" aria-label="IROS 2026 official acceptance statistics">
+            <div class="acceptance-stat"><strong>4,348</strong>Submissions</div>
+            <div class="acceptance-stat"><strong>1,585</strong>Accepted</div>
+            <div class="acceptance-stat rate"><strong>36%</strong>Acceptance rate</div>
+            <div class="acceptance-note">Official contributed paper submissions</div>
+          </div>
         </div>
       </div>
       <div class="card-side">
         <div class="when">September 27–October 1, 2026</div>
         <div class="tags">
-        <span class="tag">Robotics</span><span class="tag">1,933 Papers</span><span class="tag">Affiliations</span><span class="tag">Keywords</span>
+        <span class="tag">Robotics</span><span class="tag">Affiliations</span><span class="tag">Keywords</span>
       </div>
         <div class="actions">
         <a class="btn primary" href="https://gisbi-kim.github.io/iros2026-explorer/">Open Explorer</a>
@@ -205,6 +216,12 @@ h1 { margin: 0 0 12px; font-size: 48px; line-height: 1.02; letter-spacing: 0; }
         <div class="mark icra">ICRA</div>
         <div>
           <div class="title">ICRA 2026 Paper Explorer</div>
+          <div class="acceptance" aria-label="ICRA 2026 official acceptance statistics">
+            <div class="acceptance-stat"><strong>4,947</strong>Submissions</div>
+            <div class="acceptance-stat"><strong>1,882</strong>Accepted</div>
+            <div class="acceptance-stat rate"><strong>38.04%</strong>Acceptance rate</div>
+            <div class="acceptance-note">Official contributed paper submissions</div>
+          </div>
         </div>
       </div>
       <div class="card-side">

@@ -21,6 +21,15 @@ This repository collects links to the public 2026 conference explorer sites.
 | ICLR 2026 | https://gisbi-kim.github.io/iclr2026-explorer/ | https://github.com/gisbi-kim/iclr2026-explorer |
 | ICML 2026 | https://gisbi-kim.github.io/icml2026-explorer/ | https://github.com/gisbi-kim/icml2026-explorer |
 
+## Official 2026 acceptance statistics
+
+These figures cover contributed paper submissions, as reported in the official conference emails.
+
+| Conference | Submissions | Accepted | Acceptance rate |
+| --- | ---: | ---: | ---: |
+| ICRA 2026 | 4,947 | 1,882 | 38.04% |
+| IROS 2026 | 4,348 | 1,585 | 36% |
+
 The site is a static `index.html` hosted with GitHub Pages.
 
 ## CoRL 2026 analysis
