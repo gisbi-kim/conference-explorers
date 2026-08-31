@@ -29,6 +29,11 @@ These figures cover contributed paper submissions, as reported in the official c
 | --- | ---: | ---: | ---: |
 | ICRA 2026 | 4,947 | 1,882 | 38.04% |
 | IROS 2026 | 4,348 | 1,585 | 36% |
+| ICLR 2026 | 19,525 | 5,355 | 27.4% |
+| ICML 2026 | 24,661 | 6,552 | 26.6% |
+| CVPR 2026 | 16,092 | 4,089 | 25.4% |
+
+ECCV 2026 and RSS 2026 publish accepted-paper lists (2,865 and 210 papers respectively), but no official submission totals or acceptance rates were found.
 
 The site is a static `index.html` hosted with GitHub Pages.
 
