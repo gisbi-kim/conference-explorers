@@ -56,5 +56,3 @@ async function init(){
  renderSchedule();render();
 }
 init().catch(error=>{$('results').innerHTML=`<div class="empty">${esc(error.message)} <a href="source/programme.pdf">Open the programme PDF</a>.</div>`;$('result-count').textContent='Unable to load programme';console.error(error);});
-
-
