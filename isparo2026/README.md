@@ -48,3 +48,5 @@ Saved presentation IDs stay in browser local storage. Search queries are encoded
 Initial snapshot: supplied October 2026 preliminary programme. Added to the existing hub as a self-contained subdirectory; existing conference destinations are preserved.
 
 Visual refresh: orbital/planetary hero, dark navy and pale cyan palette, redesigned programme cards and filters. The illustration is decorative, not scientific imagery. All 224 matching rows remain visible without pagination.
+
+Light mode is the default, with a header toggle for the existing dark space theme. The explicit choice is stored locally and applied before first paint; it does not follow the system theme.
