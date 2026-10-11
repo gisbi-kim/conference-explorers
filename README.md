@@ -10,6 +10,7 @@ This repository collects links to the public 2026 conference explorer sites.
 
 | Conference | Explorer | Repository |
 |---|---|---|
+| iSpaRo / i-SAIRAS 2026 | [Programme Explorer](isparo2026/) | Included in this repository |
 | ECCV 2026 | https://gisbi-kim.github.io/eccv2026-explorer/ | https://github.com/gisbi-kim/eccv2026-explorer |
 | CoRL 2026 | Explorer coming soon; analysis: https://gisbi-kim.github.io/conference-explorers/corl2026-analysis/ (official site: https://2026.corl.org/) | Reserved |
 | IROS 2026 | https://gisbi-kim.github.io/iros2026-explorer/ (Analysis: https://gisbi-kim.github.io/iros2026-explorer/output/analysis/) | https://github.com/gisbi-kim/iros2026-explorer |
@@ -37,6 +38,10 @@ These figures cover contributed paper submissions, as reported in the official c
 ECCV 2026 and RSS 2026 publish accepted-paper lists (2,865 and 210 papers respectively), but no official submission totals or acceptance rates were found.
 
 The site is a static `index.html` hosted with GitHub Pages.
+
+## iSpaRo / i-SAIRAS 2026 programme
+
+The [joint programme explorer](isparo2026/) indexes 224 preliminary technical presentations (98 iSpaRo, 126 i-SAIRAS), 38 sessions and 6 workshops. It includes source-page links, search and filters, title-derived themes, exact-label speaker institution counts, CSV export and device-local favourites. See its [maintenance and validation guide](isparo2026/README.md) for provenance, reproducible parsing and known timetable discrepancies. These counts are programme entries, not acceptance statistics or full author counts.
 
 ## CoRL 2026 analysis
 
