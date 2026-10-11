@@ -7,7 +7,7 @@ Static, buildless explorer for the joint preliminary programme in Cologne, 3–5
 - 224 technical presentation rows: 98 iSpaRo and 126 i-SAIRAS.
 - 38 technical sessions, 6 workshops with source abstracts, 4 keynotes, 2 panels, opening programme, social events and the 6 November lab tour.
 - Search with AND/OR, symposium/day/room/session/institution/theme filters, all matching presentations on one page, CSV export, shareable filter URLs and device-local saved presentations.
-- Responsive layout, keyboard controls and links to the exact source PDF pages.
+- Space-themed dark interface with an original procedural lunar SVG, orbital illustration, horizontal navigation, responsive cards, keyboard controls and links to the exact source PDF pages.
 
 The user-supplied `i-SAIRAS_iSpaRo_2026_Preliminary_Programme_2026-10-08.pdf` is retained unchanged at `source/programme.pdf`. Its cover and printed date are 7 October 2026. `data.json` includes the SHA-256 checksum and PDF page numbers (not internal technical-programme page labels).
 
@@ -46,3 +46,5 @@ Saved presentation IDs stay in browser local storage. Search queries are encoded
 ## Version
 
 Initial snapshot: supplied October 2026 preliminary programme. Added to the existing hub as a self-contained subdirectory; existing conference destinations are preserved.
+
+Visual refresh: orbital/planetary hero, dark navy and pale cyan palette, redesigned programme cards and filters. The illustration is decorative, not scientific imagery. All 224 matching rows remain visible without pagination.
