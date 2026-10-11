@@ -54,3 +54,9 @@ Light mode is the default, with a header toggle for the existing dark space them
 The technical-session schedule supports All / i-SAIRAS / iSpaRo within each day. Buttons show daily counts; session cards show counts for the selected symposium and open the matching presentation subset. Changing days preserves the symposium selection.
 
 Readability refresh: larger presentation titles, body copy, metadata and controls; stronger secondary-text contrast in both themes; responsive spacing for mobile.
+
+## Korean research perspective
+
+The header links to `trends/`, a Korean magazine contribution on verifiable autonomy across perception, learning, contact physics, multi-robot operations and validation. It uses the supplied preliminary programme and seven cited primary sources. It distinguishes programme topics from demonstrated results and author interpretation; no year-over-year growth or conference attendance is claimed.
+
+`trends/index.html`, `trends/article.css` and `trends/article.js` are self-contained static assets. The page supports the shared light/dark preference and browser printing to A4 (five body pages plus one references page, at 100% scale without browser headers/footers). Source citations use physical PDF page numbers. The references include reproducible session-group counts and direct primary-source links. Update the prose and citations manually if the source programme changes.
