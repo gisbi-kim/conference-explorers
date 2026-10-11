@@ -50,3 +50,5 @@ Initial snapshot: supplied October 2026 preliminary programme. Added to the exis
 Visual refresh: orbital/planetary hero, dark navy and pale cyan palette, redesigned programme cards and filters. The illustration is decorative, not scientific imagery. All 224 matching rows remain visible without pagination.
 
 Light mode is the default, with a header toggle for the existing dark space theme. The explicit choice is stored locally and applied before first paint; it does not follow the system theme.
+
+The technical-session schedule supports All / i-SAIRAS / iSpaRo within each day. Buttons show daily counts; session cards show counts for the selected symposium and open the matching presentation subset. Changing days preserves the symposium selection.
