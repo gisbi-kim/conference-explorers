@@ -1,0 +1,25 @@
+{
+  "years": [
+    {
+      "year": 2024,
+      "papers": 264,
+      "basis": "PMLR main-conference proceedings entries",
+      "source": "https://proceedings.mlr.press/v270/"
+    },
+    {
+      "year": 2025,
+      "papers": 263,
+      "basis": "PMLR main-conference proceedings entries",
+      "source": "https://proceedings.mlr.press/v305/"
+    },
+    {
+      "year": 2026,
+      "papers": 687,
+      "basis": "Unique papers in official programme as of 2026-10-15",
+      "source": "https://www.corl.org/program"
+    }
+  ],
+  "growth_2025_to_2026_percent": 161.2,
+  "growth_2024_to_2026_percent": 160.2,
+  "note": "Published proceedings compared with current programme; not initial acceptance-decision counts. Workshops excluded."
+}
