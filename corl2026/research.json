@@ -1,0 +1,503 @@
+{
+  "snapshot_date": "2026-10-15",
+  "program_source": "https://www.corl.org/program",
+  "headline": "범용 정책의 확장과 실제 물리 실행의 신뢰성이 함께 중심에 놓인 CoRL 2026",
+  "methodology": [
+    "687편 공식 제목 전수의 재현 가능한 키워드 탐색과 공식 세션 주제를 비교했다. 각 키워드는 중복 집계되며 범주별 전체 연구 편수를 뜻하지 않는다.",
+    "Oral 21편과 Spotlight 72편은 별도 집단이며, 687편 전체 안에 포함된다. Poster only는 594편이다. 모든 논문에는 포스터 세션도 있다.",
+    "공식 세션 주제는 Oral·Spotlight에만 제공된다. Poster only에 공식 주제를 추정 부여하지 않는다.",
+    "초록 확보는 전체 511/687, Oral 17/21, Spotlight 58/72, Poster only 436/594이다. 초록 기반 질적 해석은 공개 자료가 있는 논문에 한정한다.",
+    "제목 키워드가 없는 연구도 관련 방법을 사용할 수 있다. 예를 들어 Oral O1의 RoboTTT, π0.7, Being-H0.5는 제목에 VLA가 없어 VLA 제목 건수에 반영되지 않는다.",
+    "Oral은 세션당 3편으로 구성돼 표본이 작고 프로그램 편성의 영향을 받는다. 선택 비율을 연구 우수성·수상 가능성·인과관계로 해석하지 않는다.",
+    "2025년 등 과거 연도와 같은 방법으로 비교하지 않았으므로 증가·급증·전환의 연도별 추세를 주장하지 않는다. 성능 결과는 각 논문의 보고이며 독립 재현은 수행하지 않았다."
+  ],
+  "group_sizes": {
+    "All": 687,
+    "Oral": 21,
+    "Spotlight": 72,
+    "Poster only": 594
+  },
+  "abstract_coverage": {
+    "All": 511,
+    "Oral": 17,
+    "Spotlight": 58,
+    "Poster only": 436
+  },
+  "official_sessions": [
+    {
+      "session_id": "sess-s1",
+      "label": "Spotlight S1 Generalist policies, memory and transfer",
+      "kind": "Spotlight",
+      "topic": "Generalist policies, memory and transfer",
+      "day": "Monday",
+      "date": "2026-11-09",
+      "time": "9:00–9:30 AM",
+      "venue": "Hilton Austin",
+      "metadata": "Mon 11/9, 9:00–9:30 AM · Hilton Austin · 9 papers",
+      "count": 9
+    },
+    {
+      "session_id": "sess-o1",
+      "label": "Oral O1 Generalist policies and context scaling",
+      "kind": "Oral",
+      "topic": "Generalist policies and context scaling",
+      "day": "Monday",
+      "date": "2026-11-09",
+      "time": "10:30–11:00 AM",
+      "venue": "Hilton Austin",
+      "metadata": "Mon 11/9, 10:30–11:00 AM · Hilton Austin · 3 papers",
+      "count": 3
+    },
+    {
+      "session_id": "sess-o2",
+      "label": "Oral O2 World models and temporal representations",
+      "kind": "Oral",
+      "topic": "World models and temporal representations",
+      "day": "Monday",
+      "date": "2026-11-09",
+      "time": "11:00–11:30 AM",
+      "venue": "Hilton Austin",
+      "metadata": "Mon 11/9, 11:00–11:30 AM · Hilton Austin · 3 papers",
+      "count": 3
+    },
+    {
+      "session_id": "sess-o3",
+      "label": "Oral O3 Data, simulation and evaluation",
+      "kind": "Oral",
+      "topic": "Data, simulation and evaluation",
+      "day": "Monday",
+      "date": "2026-11-09",
+      "time": "11:30 AM–12:00 PM",
+      "venue": "Hilton Austin",
+      "metadata": "Mon 11/9, 11:30 AM–12:00 PM · Hilton Austin · 3 papers",
+      "count": 3
+    },
+    {
+      "session_id": "sess-s2",
+      "label": "Spotlight S2 Efficient execution, world models and learning",
+      "kind": "Spotlight",
+      "topic": "Efficient execution, world models and learning",
+      "day": "Monday",
+      "date": "2026-11-09",
+      "time": "2:30–3:00 PM",
+      "venue": "Hilton Austin",
+      "metadata": "Mon 11/9, 2:30–3:00 PM · Hilton Austin · 9 papers",
+      "count": 9
+    },
+    {
+      "session_id": "sess-s3",
+      "label": "Spotlight S3 Human learning, dexterity and cooperation",
+      "kind": "Spotlight",
+      "topic": "Human learning, dexterity and cooperation",
+      "day": "Tuesday",
+      "date": "2026-11-10",
+      "time": "8:30–9:00 AM",
+      "venue": "Hilton Austin",
+      "metadata": "Tue 11/10, 8:30–9:00 AM · Hilton Austin · 9 papers",
+      "count": 9
+    },
+    {
+      "session_id": "sess-o4",
+      "label": "Oral O4 Reinforcement learning and motion reasoning",
+      "kind": "Oral",
+      "topic": "Reinforcement learning and motion reasoning",
+      "day": "Tuesday",
+      "date": "2026-11-10",
+      "time": "9:00–9:30 AM",
+      "venue": "Hilton Austin",
+      "metadata": "Tue 11/10, 9:00–9:30 AM · Hilton Austin · 3 papers",
+      "count": 3
+    },
+    {
+      "session_id": "sess-o5",
+      "label": "Oral O5 Dexterous learning, grasping and assembly",
+      "kind": "Oral",
+      "topic": "Dexterous learning, grasping and assembly",
+      "day": "Tuesday",
+      "date": "2026-11-10",
+      "time": "10:30–11:00 AM",
+      "venue": "Hilton Austin",
+      "metadata": "Tue 11/10, 10:30–11:00 AM · Hilton Austin · 3 papers",
+      "count": 3
+    },
+    {
+      "session_id": "sess-o6",
+      "label": "Oral O6 Force, tactile control and manipulation planning",
+      "kind": "Oral",
+      "topic": "Force, tactile control and manipulation planning",
+      "day": "Tuesday",
+      "date": "2026-11-10",
+      "time": "11:00–11:30 AM",
+      "venue": "Hilton Austin",
+      "metadata": "Tue 11/10, 11:00–11:30 AM · Hilton Austin · 3 papers",
+      "count": 3
+    },
+    {
+      "session_id": "sess-o7",
+      "label": "Oral O7 Humanoid data, control and skills",
+      "kind": "Oral",
+      "topic": "Humanoid data, control and skills",
+      "day": "Tuesday",
+      "date": "2026-11-10",
+      "time": "11:30 AM–12:00 PM",
+      "venue": "Hilton Austin",
+      "metadata": "Tue 11/10, 11:30 AM–12:00 PM · Hilton Austin · 3 papers",
+      "count": 3
+    },
+    {
+      "session_id": "sess-s4",
+      "label": "Spotlight S4 Touch, force and contact-rich manipulation",
+      "kind": "Spotlight",
+      "topic": "Touch, force and contact-rich manipulation",
+      "day": "Tuesday",
+      "date": "2026-11-10",
+      "time": "2:00–2:30 PM",
+      "venue": "Hilton Austin",
+      "metadata": "Tue 11/10, 2:00–2:30 PM · Hilton Austin · 9 papers",
+      "count": 9
+    },
+    {
+      "session_id": "sess-s5",
+      "label": "Spotlight S5 Deformable manipulation, geometry and morphology",
+      "kind": "Spotlight",
+      "topic": "Deformable manipulation, geometry and morphology",
+      "day": "Tuesday",
+      "date": "2026-11-10",
+      "time": "2:30–3:00 PM",
+      "venue": "Hilton Austin",
+      "metadata": "Tue 11/10, 2:30–3:00 PM · Hilton Austin · 9 papers",
+      "count": 9
+    },
+    {
+      "session_id": "sess-s6",
+      "label": "Spotlight S6 Optimization, agentic planning and evaluation",
+      "kind": "Spotlight",
+      "topic": "Optimization, agentic planning and evaluation",
+      "day": "Wednesday",
+      "date": "2026-11-11",
+      "time": "8:30–9:00 AM",
+      "venue": "Hilton Austin",
+      "metadata": "Wed 11/11, 8:30–9:00 AM · Hilton Austin · 9 papers",
+      "count": 9
+    },
+    {
+      "session_id": "sess-s7",
+      "label": "Spotlight S7 Humanoid locomotion and whole-body control",
+      "kind": "Spotlight",
+      "topic": "Humanoid locomotion and whole-body control",
+      "day": "Wednesday",
+      "date": "2026-11-11",
+      "time": "9:00–9:30 AM",
+      "venue": "Hilton Austin",
+      "metadata": "Wed 11/11, 9:00–9:30 AM · Hilton Austin · 9 papers",
+      "count": 9
+    },
+    {
+      "session_id": "sess-s8",
+      "label": "Spotlight S8 Perception, navigation and autonomous systems",
+      "kind": "Spotlight",
+      "topic": "Perception, navigation and autonomous systems",
+      "day": "Wednesday",
+      "date": "2026-11-11",
+      "time": "9:30–10:00 AM",
+      "venue": "Hilton Austin",
+      "metadata": "Wed 11/11, 9:30–10:00 AM · Hilton Austin · 9 papers",
+      "count": 9
+    }
+  ],
+  "insights": [
+    {
+      "title": "범용 정책의 다음 축은 기억·맥락·몸체 간 전이",
+      "summary": "전체 제목에는 VLA가 넓게 분포하지만 Oral O1은 범용 정책을 맥락 길이, 조종 가능성, 몸체 간 일반화로 구체화한다. Spotlight S1은 이를 메모리 설계, 표현 보존, 언어 지시 실패 진단, 배포 시 조향으로 세분화한다.",
+      "official_sessions": [
+        "Oral O1",
+        "Spotlight S1"
+      ],
+      "interpretation": "모델 크기나 단발 행동 예측 외에 장기 상태와 조건을 유지하는 능력이 중요한 연구 축이라는 해석이다.",
+      "examples": [
+        {
+          "id": "NHE9q2cz1n",
+          "title": "RoboTTT: Context Scaling for Robot Policies",
+          "type": "Oral",
+          "session": "Oral O1",
+          "openreview": "https://openreview.net/forum?id=NHE9q2cz1n",
+          "source": "https://arxiv.org/abs/2607.15275",
+          "why": "RoboTTT는 fast weights에 과거 맥락을 압축해 8K timesteps 맥락을 다룬다."
+        },
+        {
+          "id": "5TiiTY1fK3",
+          "title": "MEM: Multi-Scale Embodied Memory for Vision Language Action Models",
+          "type": "Spotlight",
+          "session": "Spotlight S1",
+          "openreview": "https://openreview.net/forum?id=5TiiTY1fK3",
+          "source": "https://arxiv.org/abs/2603.03596",
+          "why": "MEM은 짧은 영상 메모리와 긴 텍스트 메모리를 결합한다."
+        },
+        {
+          "id": "5XKFwWrW0v",
+          "title": "π0.7: a Steerable Generalist Robotic Foundation Model with Emergent Capabilities",
+          "type": "Oral",
+          "session": "Oral O1",
+          "openreview": "https://openreview.net/forum?id=5XKFwWrW0v",
+          "source": "https://arxiv.org/abs/2604.15483",
+          "why": "π0.7은 다양한 맥락 조건으로 정책을 조종하는 접근을 제시한다."
+        }
+      ]
+    },
+    {
+      "title": "World model이 행동·시간 표현·제어와 결합",
+      "summary": "Oral O2 전체가 world models와 temporal representations다. World Action Models는 미래 영상과 행동을 공동 모델링하며, 다른 Oral 논문들은 동적 환경의 표현 격차와 메모리 결합을 다룬다. Spotlight S2는 물리별 모델 구성과 보안 취약점까지 범위를 확장한다.",
+      "official_sessions": [
+        "Oral O2",
+        "Spotlight S2"
+      ],
+      "examples": [
+        {
+          "id": "Bshs9HDDiu",
+          "title": "World Action Models are Zero-shot Policies",
+          "type": "Oral",
+          "session": "Oral O2",
+          "openreview": "https://openreview.net/forum?id=Bshs9HDDiu",
+          "source": "https://arxiv.org/abs/2602.15922",
+          "why": "DreamZero는 미래 상태와 행동의 공동 모델링을 통한 새로운 동작·환경 일반화를 연구한다."
+        },
+        {
+          "id": "6T2ebANGy5",
+          "title": "Targeting World Models to Compromise Robot Learning Pipelines",
+          "type": "Spotlight",
+          "session": "Spotlight S2",
+          "openreview": "https://openreview.net/forum?id=6T2ebANGy5",
+          "source": "https://arxiv.org/abs/2606.09499",
+          "why": "World model을 통과할 때 활성화되는 오염 경로를 연구해 데이터 공급망의 취약점을 제기한다."
+        }
+      ]
+    },
+    {
+      "title": "데이터 양과 함께 데이터 출처·다양성·평가 타당성이 주요 의제",
+      "summary": "Oral O3는 시뮬레이션 규모, 데이터 다양성 측정, 벤치마크 자체의 타당성을 나란히 배치한다. EgoScale과 GRAIL은 사람 영상과 합성 데이터를 서로 다른 신체로 전달하는 사례다. Spotlight의 ATOM-Bench는 원자 기술과 조합 능력을 분리해 평가한다.",
+      "official_sessions": [
+        "Oral O3",
+        "Oral O5",
+        "Oral O7",
+        "Spotlight S3",
+        "Spotlight S6"
+      ],
+      "examples": [
+        {
+          "id": "RdvH11pAfJ",
+          "title": "What Are We Actually Benchmarking in Robot Manipulation?",
+          "type": "Oral",
+          "session": "Oral O3",
+          "openreview": "https://openreview.net/forum?id=RdvH11pAfJ",
+          "source": "https://arxiv.org/abs/2606.04233",
+          "why": "다섯 조작 벤치마크를 shortcut·통계 유의성·과적합·데이터 출처 의존성으로 진단한다."
+        },
+        {
+          "id": "WF4X17Al2r",
+          "title": "EgoScale: Scaling Dexterous Manipulation with Diverse Egocentric Human Data",
+          "type": "Oral",
+          "session": "Oral O5",
+          "openreview": "https://openreview.net/forum?id=WF4X17Al2r",
+          "source": "https://arxiv.org/abs/2602.16710",
+          "why": "대규모 1인칭 사람 데이터의 사전학습과 사람–로봇 정렬 단계를 연구한다."
+        },
+        {
+          "id": "DpOVq6nE2d",
+          "title": "ATOM-Bench: A Real-World Benchmark for Atomic Skills and Compositional Generalization in Manipulation Policies",
+          "type": "Spotlight",
+          "session": "Spotlight S6",
+          "openreview": "https://openreview.net/forum?id=DpOVq6nE2d",
+          "source": "https://arxiv.org/abs/2606.16826",
+          "why": "ATOM-Bench는 원자 기술 실패와 조합 재사용 실패를 구분한다."
+        },
+        {
+          "id": "TscNG5Wcwn",
+          "title": "Diversity You Can Actually Measure: A Fast, Model-Free Diversity Metric for Robotics Datasets",
+          "type": "Oral",
+          "session": "Oral O3",
+          "openreview": "https://openreview.net/forum?id=TscNG5Wcwn",
+          "source": "https://arxiv.org/abs/2603.11634",
+          "why": "정책을 학습하지 않고 궤적 다양성을 정량화하고 시연 부분집합을 선정한다."
+        }
+      ]
+    },
+    {
+      "title": "접촉·촉각·힘은 범용 정책을 실제 정밀 작업에 연결하는 축",
+      "summary": "Oral O5와 O6, Spotlight S3와 S4에 dexterity·force·touch·contact가 명시된다. 접촉 피드백을 넣는 것뿐 아니라 어떤 시간에 어떤 경로로 주입할지, 힘 센서 없이 접촉을 어떻게 추정할지, 접촉 실패를 어떻게 나눠 진단할지가 등장한다.",
+      "official_sessions": [
+        "Oral O5",
+        "Oral O6",
+        "Spotlight S3",
+        "Spotlight S4"
+      ],
+      "examples": [
+        {
+          "id": "03zMMFkTXk",
+          "title": "Learning External Force Sensing for Commodity Robot Arms Improves Policy Learning",
+          "type": "Oral",
+          "session": "Oral O6",
+          "openreview": "https://openreview.net/forum?id=03zMMFkTXk",
+          "source": "https://arxiv.org/abs/2606.12406",
+          "why": "NEXT는 전용 힘 센서 없이 외력을 추정하고 FIRST는 접촉 구간을 학습에 활용한다. arXiv 최신 제목에는 FACTR 2 접두사가 붙었다."
+        },
+        {
+          "id": "AIInkHZlvB",
+          "title": "PACE: Temporal-Role Tactile Conditioning for Chunk-Based Insertion Policies",
+          "type": "Oral",
+          "session": "Oral O6",
+          "openreview": "https://openreview.net/forum?id=AIInkHZlvB",
+          "source": "https://arxiv.org/abs/2610.16308",
+          "why": "PACE는 지속 접촉 상태, 급격한 접촉 이벤트, 미래 접촉 결과의 역할을 구분한다."
+        },
+        {
+          "id": "BV0T1o1ZIL",
+          "title": "Demystifying When and Why VLAs Fail in Contact-Rich Tasks and How to Fix Them",
+          "type": "Spotlight",
+          "session": "Spotlight S4",
+          "openreview": "https://openreview.net/forum?id=BV0T1o1ZIL",
+          "source": "https://arxiv.org/abs/2608.01402",
+          "why": "VLA 접촉 실패를 정밀도 실패와 힘 신호 실패로 구분한다."
+        }
+      ]
+    },
+    {
+      "title": "휴머노이드는 전신 움직임·물체 상호작용·안전의 결합",
+      "summary": "Oral O7은 데이터·제어·기술을, Spotlight S7은 이동과 전신 제어를 전면에 둔다. 축구 슈팅, 사다리 등반, 발바닥 촉각, 전신 VLA와 조작–이동 통합이 공존한다. 전신 행동을 생성하는 데이터와 실제 실행의 안정성을 함께 연구한다.",
+      "official_sessions": [
+        "Oral O7",
+        "Spotlight S7"
+      ],
+      "examples": [
+        {
+          "id": "2dEfANeQL7",
+          "title": "GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors",
+          "type": "Oral",
+          "session": "Oral O7",
+          "openreview": "https://openreview.net/forum?id=2dEfANeQL7",
+          "source": "https://arxiv.org/abs/2606.05160",
+          "why": "GRAIL은 3D asset과 영상 prior로 휴머노이드 조작–이동 시연을 합성한다."
+        },
+        {
+          "id": "TTFZrb0Hw3",
+          "title": "OpenHLM: An Empirical Recipe for Whole-Body Humanoid Loco-Manipulation",
+          "type": "Spotlight",
+          "session": "Spotlight S7",
+          "openreview": "https://openreview.net/forum?id=TTFZrb0Hw3",
+          "source": "https://arxiv.org/abs/2606.22174",
+          "why": "OpenHLM은 전신 teleoperation, VLA 설계, 이종 데이터 공동학습을 체계적으로 비교한다."
+        },
+        {
+          "id": "aGLO1l8SNB",
+          "title": "TactileStep: Sole Tactile Learning for Regulating Foot--Terrain Interaction in Humanoid Locomotion",
+          "type": "Spotlight",
+          "session": "Spotlight S7",
+          "openreview": "https://openreview.net/forum?id=aGLO1l8SNB",
+          "source": "https://arxiv.org/abs/2609.28959",
+          "why": "TactileStep은 발바닥 압력 피드백으로 착지와 지지 접촉을 조절한다."
+        }
+      ]
+    },
+    {
+      "title": "Spotlight는 추론 비용·반응성·후학습 등 실행 조건을 촘촘히 다룸",
+      "summary": "Spotlight S2에 BitVLA, Jetson-PI, REACT, TARC가 함께 배치되어 메모리·온보드 지연·행동 청크 반응성·제어 주기를 다룬다. Oral의 RL Token과 Flow Policy Gradients는 사전학습된 표현 또는 생성 정책을 보상 기반 개선과 결합한다.",
+      "official_sessions": [
+        "Spotlight S2",
+        "Oral O4",
+        "Spotlight S3"
+      ],
+      "examples": [
+        {
+          "id": "mHCqiRUiHi",
+          "title": "BitVLA: 1-bit Vision-Language-Action Models for Robotics Manipulation",
+          "type": "Spotlight",
+          "session": "Spotlight S2",
+          "openreview": "https://openreview.net/forum?id=mHCqiRUiHi",
+          "source": "https://arxiv.org/abs/2506.07530",
+          "why": "모델 설계와 학습 단계부터 낮은 정밀도와 효율성을 고려한다."
+        },
+        {
+          "id": "OckqYiY2QM",
+          "title": "Jetson-PI: Towards Onboard Real-Time Robot Control via Foresight-Aligned Asynchronous Inference",
+          "type": "Spotlight",
+          "session": "Spotlight S2",
+          "openreview": "https://openreview.net/forum?id=OckqYiY2QM",
+          "source": "https://arxiv.org/abs/2607.12659",
+          "why": "Jetson-PI의 수집 초록은 EagleVLA라는 방법명을 사용한다. 논문 제목과 초록의 버전 차이에 유의한다."
+        },
+        {
+          "id": "FFB8qNJwV2",
+          "title": "REACT: Rolling Denoising and Dual Decoupling for Reactive Robot Control with VLA Models",
+          "type": "Spotlight",
+          "session": "Spotlight S2",
+          "openreview": "https://openreview.net/forum?id=FFB8qNJwV2",
+          "source": "https://arxiv.org/abs/2610.12007",
+          "why": "REACT는 지속적인 행동 버퍼를 최신 관측으로 반복 개선해 반응성과 연속성을 조절한다."
+        },
+        {
+          "id": "RYXo2ktK1M",
+          "title": "RL Token: Bootstrapping Online RL with Vision-Language-Action Models",
+          "type": "Oral",
+          "session": "Oral O4",
+          "openreview": "https://openreview.net/forum?id=RYXo2ktK1M",
+          "source": "https://arxiv.org/abs/2604.23073",
+          "why": "RL Token은 작은 actor–critic head로 VLA의 온라인 강화학습을 지원한다."
+        }
+      ]
+    },
+    {
+      "title": "내비게이션은 현실의 마지막 구간·보행자·시간·몸체 제약으로 구체화",
+      "summary": "Spotlight S8은 perception·navigation·autonomous systems를 별도 세션으로 제공한다. 독립적인 내비게이션 Oral 세션은 없지만, 이는 관련 연구의 부재를 뜻하지 않는다. S8의 SidewalkBench, OSCAR, REALM은 각각 보행자/긴 경로, 기다림과 우회, 목표 객체를 실제로 볼 수 있는 도착 상태를 다룬다. S7에는 휴머노이드의 전신 내비게이션도 있다.",
+      "official_sessions": [
+        "Spotlight S8",
+        "Spotlight S7"
+      ],
+      "examples": [
+        {
+          "id": "wBzyyPlFs6",
+          "title": "SidewalkBench: Benchmarking Visual Navigation on Urban Sidewalks",
+          "type": "Spotlight",
+          "session": "Spotlight S8",
+          "openreview": "https://openreview.net/forum?id=wBzyyPlFs6",
+          "source": "https://arxiv.org/abs/2606.16953",
+          "why": "보행자 반응과 긴 거리 실행을 포함하는 보도 내비게이션 평가."
+        },
+        {
+          "id": "hr2FYFod4n",
+          "title": "OSCAR: Obstacle Survival Curves for Adaptive Robot Navigation",
+          "type": "Spotlight",
+          "session": "Spotlight S8",
+          "openreview": "https://openreview.net/forum?id=hr2FYFod4n",
+          "source": "https://arxiv.org/abs/2606.00990",
+          "why": "임시 장애물이 사라지는 시간을 학습해 기다림과 우회를 결정."
+        },
+        {
+          "id": "RwGNm8fUxX",
+          "title": "From Region Arrival to Instance-Level Grounding in Vision-and-Language Navigation",
+          "type": "Spotlight",
+          "session": "Spotlight S8",
+          "openreview": "https://openreview.net/forum?id=RwGNm8fUxX",
+          "source": "https://arxiv.org/abs/2607.03792",
+          "why": "3m 이내 정지 성공과 객체 수준 grounding 사이의 격차를 평가."
+        },
+        {
+          "id": "2Z9666X2B7",
+          "title": "Humanoid Navigation in Cluttered Environments with a Whole-Body Vision-Language-Action Model",
+          "type": "Spotlight",
+          "session": "Spotlight S7",
+          "openreview": "https://openreview.net/forum?id=2Z9666X2B7",
+          "source": "https://arxiv.org/abs/2609.09158",
+          "why": "언어·RGB 입력에서 전신 관절 행동을 예측하는 혼잡 공간 통과."
+        }
+      ]
+    }
+  ],
+  "primary_pages_rechecked": [
+    "https://arxiv.org/abs/2607.15275",
+    "https://arxiv.org/abs/2606.04233",
+    "https://arxiv.org/abs/2602.16710",
+    "https://arxiv.org/abs/2606.12406",
+    "https://arxiv.org/abs/2606.05160",
+    "https://arxiv.org/abs/2604.23073",
+    "https://arxiv.org/abs/2606.16826"
+  ]
+}
