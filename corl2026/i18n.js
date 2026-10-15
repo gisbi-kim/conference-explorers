@@ -1,4 +1,5 @@
 const translationPairs=[
+ ["Papers per page","페이지당 보기"],["All","전체"],
   [
     "A map of 687 papers. Compare the full programme with Oral and Spotlight highlights,",
     "687편의 연구 지도. 전체 논문과 Oral·Spotlight의 강조점을 비교하고,"
