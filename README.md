@@ -10,6 +10,7 @@ This repository collects links to the public 2026 conference explorer sites.
 
 | Conference | Explorer | Repository |
 |---|---|---|
+| SSRR 2026 | [Paper Explorer & EDA](ssrr2026/) | Included in this repository |
 | iSpaRo / i-SAIRAS 2026 | [Programme Explorer](isparo2026/) | Included in this repository |
 | ECCV 2026 | https://gisbi-kim.github.io/eccv2026-explorer/ | https://github.com/gisbi-kim/eccv2026-explorer |
 | CoRL 2026 | [Paper Explorer & Trends](corl2026/); [Topic essays](corl2026-analysis/) | Included in this repository |

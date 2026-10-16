@@ -1,0 +1,267 @@
+Skip to Content
+SSRR 2026 - IEEE Symposium on Safety, Security, and Rescue Robotics
+Home
+
+About
+
+Attend
+
+Program
+Registration
+Call for Contributions
+Contact
+FAQs
+Accepted papers
+Each presentation is 12 minutes + 2 minutes Q&A.
+
+Session 1: Award Finalists
+Monday 2 November, 10:30
+7
+One Operator, Many Robots: Natural-Language Command of UAV-UGV Teams for Search, Victim Detection, and Rescue
+
+Alejandro Jarabo-Peñas, Juan Bravo-Arrabal, Javier Serón, Dahui Lin-Yang, Francisco Pastor, Robert Ladig, Jesus Fernandez-Lozano, Alfonso García-Cerezo, Anders Lyhne Christensen
+
+14
+I See You: Validated Initial Multi-Robot LiDAR Registration via Mutual Observation
+
+Jonathan Lichtenfeld, Oskar von Stryk
+
+35
+Prototyping and Functional Evaluation of a Tendon-Driven End-Effector for Robot-Assisted Combat Casualty Care
+
+Aldrin Padua, Julianna Fischetti, Qianwen Zhao, Gerald Hodgkinson, Russell Biser, Chad Spurlock, Rajarshi Roy, Kevin Lister, Long Wang
+
+40
+Decomposition-Based Multi-Objective Path Planning for Disaster Response
+
+Ananya Rao, Abigail Breitfeld, Howie Choset, David Wettergreen
+
+58
+Jumper: A Centimeter-Scale Rolling and Jumping Robot for Search and Rescue
+
+Kiran Marques, Shashwat Singh, Ben D'Ambrosia, Zeynep Temel, Melisa Orta Martinez
+
+78
+Tension Tells the Tail: Cable-Obstacle Interaction Sensing for Tethered Mobile Robot Navigation
+
+Ryuki Shimada, Koki Suzuki, Genya Ishigami
+
+Session 2: Multi-Robot Coordination and Task Allocation
+Monday 2 November, 13:00
+34
+Reinforcement Learning Based Heterogeneous Task Allocation Under Spatio-Temporal Environmental Uncertainty for Multi-Robot Teams
+
+Xi Lin, Yaxuan Li, Paul Szenher, Brendan Englot
+
+38
+Measure-Based Task Allocation for Information Gathering in Disaster Response using Heterogeneous Multi-Agent Teams
+
+Ananya Rao, Howie Choset, David Wettergreen
+
+55
+Decentralized Hybrid Approach for Multi-UAV Search and Rescue
+
+Thomas Lafranconi, Michele Rota, Alessandro Nazzari, Davide Invernizzi
+
+63
+LLM-Flock: LLM-Driven Decentralized Multi-Robot Flocking via Influence-Based Consensus with Collision Avoidance
+
+Peihan Li, Lifeng Zhou
+
+80
+Frontier-Following: A Reactive Terrain-Conformal Path Planning Framework for Multi-Agent Search over Terrain with Varying Elevation
+
+Johnathan Lok, Spring Berman
+
+13
+SwarmNxt: Open-Source Software-Hardware Platform for Fast and Agile Aerial Swarms
+
+Charbel Toumieh, Niel Mistry, Benjamin Jarvis, Simon Luis Jeger, Peize LIU, Shaojie Shen, Dario Floreano
+
+70
+AoII-Based Persistent Monitoring for Unmanned Surface Vehicles in Spatiotemporal Fields
+
+Razan Andigani, Yaxuan Li, Ivana Collado-Gonzalez, David Storch, Brendan Englot
+
+30
+A Heterogeneous UGV–UAV Collaboration Framework for LiDAR-Based Search-And-Rescue Navigation in Unknown Environments
+
+Bjarke Borg, Jacob Leif Studagaard Slot, Jonas Mølgaard Strøm Hansen, Simon Tang, Tobias Lund Rauh, Vithuran Vasantharajan, Shahab Heshmati-alamdari
+
+Session 3: Ground Platforms, Manipulation, and Medical Response
+Monday 2 November, 15:30
+88
+Onix2: Design of a Portable and Robust Crawler Rescue Robot Based on Long-Term Competition and Field Experience
+
+Takaaki Nara, Ryo Egawa, Shotaro Kojima, Kenichi Takahashi, Yoshito Okada, Satoshi Tadokoro, Kazunori Ohno
+
+50
+Motion-Based Design Optimization of a Centrally Rotating Sub-Crawler Flipper Arm for Rescue Tracked Robots
+
+Danilo Mamocay, Jeanette Pao, Livey Czar Aligno, Sheena Alvarez, Carl John Salaan
+
+86
+SPARC: RoboCup Standard Platform for Autonomous Rescue Competition with Initial Datasets, Software, and Simulation Environments
+
+Yuezhong Wang, Bichi Zhang, Zhongli Yin, Pingcong Li, Raimund Edlinger, Sören Schwertfeger
+
+25
+Language-Guided Grasping under Partial Observation for Mobile Manipulation in Field Inspection and Maintenance
+
+Dilermando Almeida, Juliano Negri, Guilherme Lazzarini, Thiago Henrique Segreto Silva, Ranulfo Bezerra, Gustavo Jose Giardini Lahr, Ricardo de Godoy, Marcelo Becker
+
+37
+Off-Road and Human-Led Convoying for UGVs
+
+Dante Benjamin Cometto, James Tukpah, Taskin Padir
+
+67
+Layered Risk Mapping for Autonomous Patient Transport in Expeditionary Medical Facilities
+
+Lorena Maria Genua, Sarvesh Prajapati, Damla Leblebicioglu, Taskin Padir
+
+22
+A Guideline-Based Modular Robotic Airway-Management Workflow for Emergency and Military Rescue Scenarios
+
+Maximilian Miller, Johannes Huegel, Julius Ambros, Christoph August Wilhelm Parhofer, Tim C. Lueth
+
+73
+The Hybrid Emergency Tourniquet: Fail-Safe Mechatronic Hemorrhage Control for Human and Robotic First-Responders
+
+Julius Ambros, Florian Sax, Maximilian Miller, Christoph August Wilhelm Parhofer, Willi Schmidbauer, Tim C. Lueth
+
+Session 4: Localization, Mapping, and Resilient Communication
+Tuesday 3 November, 10:30
+9
+HDMAPPING-LIO: Discrete-Time, Tightly-Coupled, Fixed-Lag Smoothing Lidar-Inertial Odometry with Hierarchical Gaussian Voxel Map for agile, unpredictable maneuvers and mobile mapping of tiny spaces
+
+Janusz Będkowski, Michał Własiuk
+
+17
+SGM-SLAM: Scene Graph Matching for Data-Efficient Distributed SLAM
+
+Yewei Huang, Tixiao Shan, Abhinav Rajvanshi, Niluthpol Chowdhury Mithun, Yaxuan Li, Brendan Englot, Han-Pang Chiu
+
+6
+Comparison and Fusion of Short-Range High-Resolution Positioning Methods for Tethered UAV-UGV Systems
+
+Samuel Fearn, Gjosse Zijlstra, Thomas Martin Bennett, Sofia Leadbetter, David Megson-Smith
+
+68
+OA-NBV: Occlusion-Aware Next-Best-View Planning for Human-Centered Active Perception on Mobile Robots
+
+Boxun Hu, Chang Chang, Jiawei Ge, Man Namgung, Xiaomin Lin, Axel Krieger, Tinoosh Mohsenin
+
+16
+The Resilient 6G Networking Challenge: Collaborative Design of a Hyper-Resilient Multi-Network Architecture for Rescue Robotics
+
+Tim Gebauer, Manuel Patchou, Simon Schippers, Valentin Thomas Haider, Laura Becker, Diederich Philip, Kröger Nicolai, Johannes Hofer, Peter Kappelt, Nico vom Hofe, Niklas Alexander Wagner, Kevin-Ismet Sabanovic, Steffen Fricke, Christian Arendt, Pascal Jörke, Stefan Böcker, Frank Fitzek, Wolfgang Kellerer, Christian Wietfeld
+
+85
+HANSEL: Automated Mesh Network Planning for Search and Rescue Multi-Robot Missions
+
+Manuel Patchou, Maximilian Rozwora, Stefan Böcker, Christian Wietfeld
+
+Session 5: Remote Sensing and Perception for Disaster Assessment
+Tuesday 3 November, 15:30
+72
+Key Findings for Small UAS for Post-Disaster Damage Assessment from the CURSE’26 Exercise
+
+Thomas Manzini, Robin Murphy, Priyankari Perali, Stephen Johnson, David Merrick
+
+61
+Large Multiple UAS Wildfire Response Aircraft Deconfliction: Remote Pilot Performance
+
+Vivek Mallampati, Atharv Marathe, Alejandra Hilbert, Andrew Dassonville, Christopher A. Sanchez, Julie Adams
+
+41
+Promptable Open-Vocabulary UAV Event Perception for Search and Rescue
+
+Hsuan-Kai Liou, Xin Chun Zhang, YI-TING LAI, Ching-I Huang, CHIHHUI YEH, YICHENG LIN
+
+57
+RescueVLM: Model-Agnostic Vision-Language Framework for Rescue Drone Imagery
+
+Niklas Voigt, Tim Sibum, Hartmut Surmann, Julien Meine, Niklas Digakis
+
+87
+Counting What Matters: Reducing Redundant Object Detections in Overlapping UAV Mapping Imagery for Disaster Response
+
+Max Schulte, Hartmut Surmann
+
+66
+TriSAR-3D and PaintFusion: A Novel Trimodal LiDAR–RGB–Thermal Dataset and Method for 3D Person Detection in Search and Rescue
+
+Markus Kramer, Jan Wachenfeld, Oskar von Stryk
+
+52
+Drone-Deployable Seismic Sensors with Dual-Stage Impact-and-Harpoon Anchoring for Volcanic Disaster Monitoring
+
+Enoch Bryce Pandan, Jeanette Pao, Argel Bandala, Jhone Mychale Mariquit, Carl John Salaan
+
+56
+An Anti-Snag, Shallow-Draft Catamaran USV for Disaster Reconnaissance in Debris-Choked Shallow Waters
+
+Jessrel Salise, Jeanette Pao, Livey Czar Aligno, Sheena Alvarez, Japheth Daniel Sogo-an, Carl John Salaan
+
+Session 6: Security, Counter-UAS, and Humanitarian Demining
+Wednesday 4 November, 10:30
+8
+Project SCOUT: Interceptor Drone for Perimeter Defense
+
+Md Azmain Yousuf, Siwei Cai, Knut Peterson, Lifeng Zhou, David Han
+
+51
+Security Drone: An End-to-End Framework for Adaptive UAV Patrolling
+
+Camille Fleur Buschman, Benjamin R. van Manen, Fatima Yousif Rustamani, chandan kumar Rajendra, Abeje Yenehun Mersha
+
+77
+From Detection to Threat Assessment: Context-Aware Drone Intent Classification for Critical-Infrastructure Security
+
+João Rodrigues, Maxim Vochten, Emile Le Flecher, Geert De Cubber, Daniela Doroftei
+
+18
+Benchmarking Consensus Robustness in Multi-UAV Mine Detection under Controlled Visual Perception Degradation
+
+Aman Tifli, Gianluca Manca, Marvin Zager, Felix Gehlhoff, Galyna Tabunshchyk, Alexander Fay
+
+26
+Towards replacing real images with synthetic data for surface landmine detection
+
+Mario Malizia, Nikolaos Tsiogkas, Eric Demeester, Rob Haelterman, Ken Hasselmann
+
+53
+LiDAR-Based Semantic Next-Best-View Planning for Landmine Reconstruction
+
+Brent Verbruggen, Alessandra Miuccio, Tristan Michielsen, Emile Le Flecher, Peter Slaets, Nikolaos Tsiogkas, Renaud Detry, Rob Haelterman
+
+Session 7: Nuclear and CBRN Response
+Wednesday 4 November, 14:00
+15
+Development and Field Deployment of a 3D Scanning System at Fukushima Daiichi Nuclear Power Station
+
+Masaki Nishioka, Tomoki Sakaue, Daisaku Uchijima, Tomoya Kaneda, Yuya Yoshimura, Takahiro Nagai, Kota Sasaki, Hiroaki Yamakawa, Yuji Matsui
+
+5
+Evaluation of a Radiation-Tolerant LiDAR Prototype for Fuel Debris Retrieval in High-Radiation Environments
+
+Tomoki Sakaue, Yusuke Tsuburaya, Hiroshi Takano, Tatsuya Kawamura, Shuhei Fujita
+
+79
+Seek, Don't Avoid: Radiation-Guided Exploration for Early Contamination Discovery
+
+Miryeong Park, Taehyun Jung, Sanghyun Kim, Younggun Cho
+
+33
+Field Demonstration of a Tracked Hydraulic Mobile Manipulator for CBRN Sampling and Decontamination
+
+Jan Jakovljevic, Tin Novosel, Nino Dragicevic, Zvonko Orehovec, Ante Bakic, Matko Orsag
+
+
+
+
+
+
+
+International Symposium on Safety, Security, and Rescue Robotics ©2026 IEEE
