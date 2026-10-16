@@ -58,3 +58,12 @@ async function init(){try{
  window.addEventListener('popstate',()=>{applyParams();page=1;render();});
  }catch(e){$('resultCount').textContent='Could not load papers. Refresh the page or download the full CSV.';console.error(e);}}
 init();
+const sectionLinks=[...document.querySelectorAll('aside a[href^="#"]')];
+const navSections=sectionLinks.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+function updateSectionNav(){
+ let current=navSections[0];
+ for(const section of navSections)if(section.getBoundingClientRect().top<=120)current=section;
+ sectionLinks.forEach(a=>{if(current&&a.getAttribute('href')==='#'+current.id)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});
+}
+window.addEventListener('scroll',updateSectionNav,{passive:true});
+updateSectionNav();
