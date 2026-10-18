@@ -666,7 +666,7 @@ const translationPairs=[
   ],
   [
     "Snapshot · 18 Oct 2026",
-    "자료 기준 · 2026년 10월 15일"
+    "자료 기준 · 2026년 10월 18일"
   ],
   [
     "Curated for research discovery ·",
