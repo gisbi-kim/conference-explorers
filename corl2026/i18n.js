@@ -113,8 +113,8 @@ const translationPairs=[
     "주제 규칙과 해석 한계"
   ],
   [
-    "These are automatic, overlapping tags, not a semantic classification of every paper. Quantitative comparisons use titles because abstract coverage differs across groups. The Oral group is small: one of its 21 papers represents 4.8 percentage points. These figures do not explain selection decisions, research quality or annual topic growth.",
-    "자동 다중 태그입니다. 논문 전체를 의미적으로 분류한 결과가 아닙니다. 전체와 선정 논문의 초록 공개율이 달라 제목만으로 수치 비교했습니다. Oral 21편은 표본이 작으며 1편이 4.8%p입니다. 선정 원인·연구 품질·연도별 성장률로 해석하지 마세요."
+    "These are automatic, overlapping tags, not a semantic classification of every paper. Quantitative comparisons retain the original title-keyword rules for consistency. The Oral group is small: one of its 21 papers represents 4.8 percentage points. These figures do not explain selection decisions, research quality or annual topic growth.",
+    "자동 다중 태그입니다. 논문 전체를 의미적으로 분류한 결과가 아닙니다. 기존 분석과의 일관성을 위해 제목 키워드 규칙을 유지합니다. Oral 21편은 표본이 작으며 1편이 4.8%p입니다. 선정 원인·연구 품질·연도별 성장률로 해석하지 마세요."
   ],
   [
     "Explore by day and session",
@@ -169,8 +169,8 @@ const translationPairs=[
     "CoRL 공식 프로그램"
   ],
   [
-    ". When an external title differs, it is shown separately. Authors, abstracts, affiliations and links were collected from arXiv, papers and project pages. Unverified does not mean unavailable. Access restrictions prevented retrieval of some OpenReview content. Each paper detail includes sources and affiliation evidence.",
-    " 기준입니다. 외부 제목이 변경된 경우 원문 제목을 별도 표시했습니다. 저자·초록·소속·링크는 arXiv, 논문 및 프로젝트 페이지에서 수집했습니다. 미확인은 자료가 없다는 뜻이 아닙니다. OpenReview는 접근 제한으로 내용을 확보하지 못한 항목이 있습니다. 각 논문 상세에 출처와 소속 추출 근거가 있습니다."
+    ". When an external title differs, it is shown separately. Authors and abstracts for all 687 papers, plus 686 PDF links were refreshed from public OpenReview records on 18 October 2026. Affiliations and other links retain their separately cited sources. Each paper detail includes sources and affiliation evidence.",
+    " 기준입니다. 외부 제목이 변경된 경우 원문 제목을 별도 표시했습니다. 687편 전체의 저자·초록과 686편의 PDF 링크를 2026년 10월 18일 공개 OpenReview 기록으로 갱신했습니다. 소속과 기타 링크는 별도로 명시된 출처를 유지합니다. 각 논문 상세에 출처와 소속 추출 근거가 있습니다."
   ],
   [
     "Institution aliases are normalized only from names found in paper affiliations or bylines. A paper with multiple institutions counts once for each, so totals may exceed the number of papers. Authors with identical names may be merged by name string. Bookmarks are stored only in this browser.",
@@ -189,8 +189,8 @@ const translationPairs=[
     "공식 세션 주제는 Oral·Spotlight에만 제공된다. Poster only에 공식 주제를 추정 부여하지 않는다."
   ],
   [
-    "Abstract coverage is 511/687 overall, 17/21 for Oral, 58/72 for Spotlight and 436/594 for poster-only papers. Qualitative readings of abstracts are limited to papers with public material.",
-    "초록 확보는 전체 511/687, Oral 17/21, Spotlight 58/72, Poster only 436/594이다. 초록 기반 질적 해석은 공개 자료가 있는 논문에 한정한다."
+    "OpenReview metadata refreshed on 18 October 2026: abstracts and authors are available for all 687 papers, with 686 PDFs (21 Oral, 72 Spotlight, 594 poster-only). Topic essays retain their original analysis date.",
+    "2026년 10월 18일 OpenReview 갱신: 687편 전체(Oral 21, Spotlight 72, Poster only 594)의 초록·저자와 686편의 PDF를 확보했다. 주제별 해설은 기존 분석 시점을 유지한다."
   ],
   [
     "Oral sessions contain three papers each, so the sample is small and shaped by programme organization. Selection shares should not be interpreted as research quality, award likelihood or causality.",
@@ -665,7 +665,7 @@ const translationPairs=[
     "독립 연구 탐색기"
   ],
   [
-    "Snapshot · 15 Oct 2026",
+    "Snapshot · 18 Oct 2026",
     "자료 기준 · 2026년 10월 15일"
   ],
   [
