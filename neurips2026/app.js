@@ -155,3 +155,24 @@ document.addEventListener('click',event=>{
  try{localStorage.setItem('neurips2026-abstract-size',String(abstractFontSize));}catch{}
  applyAbstractSize();
 });
+
+/* Dismiss only a tap/click that both starts and ends on the backdrop.
+   Dragging from the abstract or scrolling does not dismiss the reader. */
+{
+ const dialog=document.querySelector('#paper-dialog');
+ let backdropPress=null;
+ const outside=(event)=>{
+  const rect=dialog.getBoundingClientRect();
+  return event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom;
+ };
+ dialog.addEventListener('pointerdown',event=>{
+  backdropPress=event.isPrimary&&event.button===0&&event.target===dialog&&outside(event)
+   ?{x:event.clientX,y:event.clientY}:null;
+ });
+ dialog.addEventListener('pointercancel',()=>{backdropPress=null;});
+ dialog.addEventListener('click',event=>{
+  const press=backdropPress;backdropPress=null;
+  if(press&&event.target===dialog&&outside(event)&&Math.hypot(event.clientX-press.x,event.clientY-press.y)<12)closePaper();
+ });
+ dialog.addEventListener('close',()=>{backdropPress=null;});
+}
