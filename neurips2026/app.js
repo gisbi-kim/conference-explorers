@@ -81,7 +81,55 @@ function openPaper(id,record=true){const p=byId[id];if(!p)return;$('#paper-detai
 function ranking(key,query=''){const m=new Map();D.papers.forEach(p=>new Set(p[key]).forEach(n=>m.set(n,(m.get(n)||0)+1)));return [...m].filter(([n])=>n.toLowerCase().includes(query.toLowerCase())).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0])).slice(0,100).map(([n,c])=>`<button data-filter="${key==='authors'?'author':'institution'}" data-value="${esc(n)}"><span>${esc(n)}</span><b>${c}</b></button>`).join('')||'No match';}
 function download(name,text,type){const a=document.createElement('a'),url=URL.createObjectURL(new Blob(['\ufeff',text],{type}));a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);}
 async function loadData(){const r=await fetch('data.json.gz?v=20261019-neurips');if(!r.ok)throw Error('Data HTTP '+r.status);if(typeof DecompressionStream!=='undefined'){return JSON.parse(await new Response(r.body.pipeThrough(new DecompressionStream('gzip'))).text());}throw Error('This browser needs gzip decompression support. Please use a current browser.');}
-async function init(){[D,R]=await Promise.all([loadData(),fetch('research.json?v=20261019-neurips').then(r=>r.json())]);D.papers.forEach(p=>{byId[p.id]=p;p.searchText=[p.title,p.abstract,...p.authors,...p.institutions,...Object.keys(p.tags).map(k=>D.topics.find(t=>t.id===k)?.label)].join(' ').toLowerCase();});readLocation();$('#stats').innerHTML=[['',D.papers.length,'Public paper records'],...['Oral','Spotlight','Poster only'].map(c=>[c,D.papers.filter(p=>p.presentation_type===c).length,c])].map(([v,n,l])=>`<button class="stat" data-filter="type" data-value="${v}"><b>${n.toLocaleString('en-US')}</b><span>${l}</span></button>`).join('');$('#coverage').textContent=`Metadata coverage · Abstracts ${D.papers.filter(p=>p.abstract).length}/${D.papers.length} · Authors ${D.papers.filter(p=>p.authors.length).length}/${D.papers.length} · Institutions ${D.papers.filter(p=>p.institutions.length).length}/${D.papers.length}`;
+
+function uniqueOfficialData(data) {
+ const normalize=s=>String(s||'').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
+ const groups=[],titles=new Map(),forums=new Map();
+ const rank=p=>({'Oral':0,'Spotlight':1,'Poster only':2}[p.presentation_type]??3);
+ for(const paper of data.papers.filter(p=>p.coverage==='Current official listing')){
+  const title=normalize(paper.title);
+  let forum='';try{forum=new URL(paper.openreview).searchParams.get('id')||'';}catch{}
+  const matches=[titles.get(title),forum?forums.get(forum):undefined].filter(g=>g);
+  const group=matches[0]||{papers:[]};
+  if(!matches.length)groups.push(group);
+  for(const other of new Set(matches.slice(1)))if(other!==group){
+   group.papers.push(...other.papers);other.papers=[];
+   for(const [key,value] of titles)if(value===other)titles.set(key,group);
+   for(const [key,value] of forums)if(value===other)forums.set(key,group);
+  }
+  group.papers.push(paper);titles.set(title,group);if(forum)forums.set(forum,group);
+ }
+ const papers=groups.filter(g=>g.papers.length).map(g=>{
+  const entries=[...g.papers].sort((a,b)=>rank(a)-rank(b)),p={...entries[0]};
+  for(const key of ['authors','institutions','locations','sessions','dates','project','code'])
+   p[key]=[...new Set(entries.flatMap(e=>e[key]||[]))];
+  p.tags=Object.fromEntries([...new Set(entries.flatMap(e=>Object.keys(e.tags||{})))].map(k=>[k,[...new Set(entries.flatMap(e=>e.tags?.[k]||[]))]]));
+  p.aliasIds=entries.map(e=>e.id);
+  for(const key of ['abstract','pdf','openreview','arxiv','supplementary'])
+   if(!p[key])p[key]=entries.find(e=>e[key])?.[key]||'';
+  return p;
+ });
+ const topics=data.topics.map(t=>({...t,...Object.fromEntries(['All','Oral','Spotlight','Poster only'].map(c=>{
+  const cohort=papers.filter(p=>c==='All'||p.presentation_type===c),count=cohort.filter(p=>t.id in p.tags).length;
+  return [c,{count,total:cohort.length,percent:cohort.length?100*count/cohort.length:0}];
+ }))}));
+ const sessions=data.sessions.map(s=>({...s,count:papers.filter(p=>p.sessions.includes(s.label)).length})).filter(s=>s.count);
+ return {...data,papers,topics,sessions};
+}
+function refreshResearch(research,data) {
+ return {...research,insights:research.insights.map(x=>{
+  const topic=data.topics.find(t=>t.label===x.title);if(!topic)return x;
+  const a=topic.All,o=topic.Oral,s=topic.Spotlight;
+  return {...x,summary:`${a.count.toLocaleString('en-US')} titles match this rule (${a.percent.toFixed(1)}% of the collection). Oral: ${o.count}/${o.total}; Spotlight: ${s.count}/${s.total}. These are overlapping title-keyword counts, not year-over-year trends or a measure of research quality.`,
+   examples:data.papers.filter(p=>topic.id in p.tags).sort((a,b)=>['Oral','Spotlight','Poster only'].indexOf(a.presentation_type)-['Oral','Spotlight','Poster only'].indexOf(b.presentation_type)).slice(0,3).map(p=>({id:p.id,title:p.title,session:p.presentation_type,why:'Matched terms: '+p.tags[topic.id].join(', ')}))};
+ }),methodology:[
+ 'Snapshot: 19 October 2026. This explorer shows '+data.papers.length.toLocaleString('en-US')+' unique papers from the current official listing. Earlier-only records are excluded from browsing and statistics.',
+ 'Each paper appears once. Matching normalized titles or OpenReview forum IDs are merged; presentation labels use Oral, then Spotlight, then Poster priority. Sessions and resource links are retained. This is not a certified final acceptance count.',
+ ...research.methodology.slice(2).filter(t=>!t.includes('union')).map(t=>t.replace('abstracts and earlier-only records','abstracts').replace('Source status is shown per paper and can be filtered.','Earlier-only records remain in the archived source files.'))
+ ]};
+}
+
+async function init(){[D,R]=await Promise.all([loadData(),fetch('research.json?v=20261019-neurips').then(r=>r.json())]);D=uniqueOfficialData(D);R=refreshResearch(R,D);document.querySelector('aside a[href="#search"] span').textContent=D.papers.length;D.papers.forEach(p=>{for(const id of p.aliasIds)byId[id]=p;byId[p.id]=p;p.searchText=[p.title,p.abstract,...p.authors,...p.institutions,...Object.keys(p.tags).map(k=>D.topics.find(t=>t.id===k)?.label)].join(' ').toLowerCase();});readLocation();$('#stats').innerHTML=[['',D.papers.length,'Unique official papers'],...['Oral','Spotlight','Poster only'].map(c=>[c,D.papers.filter(p=>p.presentation_type===c).length,c])].map(([v,n,l])=>`<button class="stat" data-filter="type" data-value="${v}"><b>${n.toLocaleString('en-US')}</b><span>${l}</span></button>`).join('');$('#coverage').textContent=`Metadata coverage · Abstracts ${D.papers.filter(p=>p.abstract).length}/${D.papers.length} · Authors ${D.papers.filter(p=>p.authors.length).length}/${D.papers.length} · Institutions ${D.papers.filter(p=>p.institutions.length).length}/${D.papers.length}`;
 for(const [id,values] of [['day',D.papers.flatMap(p=>p.dates)],['track',D.papers.map(p=>p.track)],['location',D.papers.flatMap(p=>p.locations)]])$('#'+id).innerHTML+=[...new Set(values)].sort().map(v=>`<option>${esc(v)}</option>`).join('');
 $('#insights').innerHTML=R.insights.map((x,i)=>`<article class="insight"><span class="num">0${i+1} / ${esc(x.official_sessions.join(' · '))}</span><h3>${esc(x.title)}</h3><p>${esc(x.summary)}</p>${x.examples.map(e=>`<button class="example" data-paper="${e.id}">${esc(e.title)}<small>${esc(e.session)} · ${esc(e.why)}</small></button>`).join('')}</article>`).join('');$('#comparison').innerHTML=D.topics.map(t=>`<tr><td>${chip('topic',t.id,t.label)}</td>${['All','Oral','Spotlight','Poster only'].map((c,i)=>`<td class="c${i}"><button data-compare="${t.id}" data-cohort="${c}"><b>${t[c].percent.toFixed(1)}%</b> <small>${t[c].count}/${t[c].total}</small><span class="bar" style="width:${t[c].percent*2.5}%"></span></button></td>`).join('')}</tr>`).join('');$('#rules').innerHTML=D.topics.map(t=>`<p><b>${esc(t.label)}</b><br><code>${esc(t.pattern)}</code></p>`).join('');$('#session-grid').innerHTML=D.sessions.map(s=>`<button class="session-card" data-filter="session" data-value="${esc(s.label)}"><b>${esc(s.label)}</b><span>${s.count} papers</span><small>Current official listing</small></button>`).join('');$('#session').innerHTML+=D.sessions.map(s=>`<option>${esc(s.label)}</option>`).join('');$('#topic').innerHTML+=D.topics.map(t=>`<option value="${t.id}">${esc(t.label)}</option>`).join('');$('#author-list').innerHTML=ranking('authors');$('#institution-list').innerHTML=ranking('institutions');$('#method-list').innerHTML=R.methodology.filter(t=>!t.includes('RoboTTT,')).map(t=>`<p>${esc(t)}</p>`).join('');render();sync('replace');if(paperId)openPaper(paperId,false);requestAnimationFrame(()=>{if(!paperId&&location.hash)scrollToSection(location.hash);updateSectionNavigation();});}
 document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.filter)apply(b.dataset.filter,b.dataset.value);if(b.dataset.remove)apply(b.dataset.remove,b.dataset.remove==='saved'?false:'');if(b.dataset.paper)openPaper(b.dataset.paper);if(b.dataset.compare){state.topic=b.dataset.compare;apply('type',b.dataset.cohort==='All'?'':b.dataset.cohort);}if(b.dataset.page){page=Number(b.dataset.page);render();sync();$('#search').scrollIntoView();}if(b.dataset.save){saved.has(b.dataset.save)?saved.delete(b.dataset.save):saved.add(b.dataset.save);try{localStorage.setItem('neurips2026-saved',JSON.stringify([...saved]));}catch{}render();}});
