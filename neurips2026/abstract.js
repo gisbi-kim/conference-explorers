@@ -32,7 +32,12 @@ function render(source,issues=[]){
    const simple=tail.match(/^\\(eg|ie|etc|textemdash|textdegree|textasciitilde|faGithub|ttimes|CoT)\b(?:\{\})?/);
    if(simple){out+=({eg:'e.g.',ie:'i.e.',etc:'etc.',textemdash:'—',textdegree:'°',textasciitilde:'~',faGithub:'',ttimes:'×',CoT:'CoT'})[simple[1]];i+=simple[0].length;continue;}
    const endAbstract=tail.match(/^\\end\{abstract\}/);if(endAbstract){i+=endAbstract[0].length;continue;}
-   const cmd=tail.match(/^\\(textbf|textit|emph|texttt|textsf|textrm|textnormal|textsc|underline|textsuperscript|textsubscript|mbox|text|url|href)\s*/);
+   // Recover math written without delimiters only when a complete parenthesized expression is recognizable.
+   if(s[i]==='('){let level=1,end=i+1;for(;end<s.length&&level;end++){if(s[end]==='(')level++;if(s[end]===')')level--;}const body=s.slice(i+1,end-1);if(!level&&/\\(?:sqrt|frac|mathcal|Theta|Omega|kappa|zeta|top|theta|varepsilon)\b/.test(body)&&!/\b(?:the|and|where|with|for)\b/.test(body)){out+='('+math(body,false)+')';i=end;continue;}}
+   const bare=tail.match(/^\\(sqrt|frac|mathbb|mathcal|mathrm|mathbf|hat|tilde|Theta|Omega|log|times|varepsilon|top|theta|chi|tau|eta|ge|leq|mid|sigma|Gamma)\b/);
+   if(bare&&root.katex){let end=i+bare[0].length;while(s[end]==='{'){const g=group(s,end);if(!g)break;end=g.end;}try{out+=root.katex.renderToString(s.slice(i,end),{trust:false,throwOnError:true,strict:'ignore',maxSize:10,maxExpand:1000});i=end;continue;}catch{}}
+   if(s[i]==='{'){const g=group(s,i);if(g&&/^\s*\\/.test(g.text)){out+=inline(g.text,depth+1);i=g.end;continue;}}
+const cmd=tail.match(/^\\(textbf|textit|emph|texttt|textsf|textrm|textnormal|textsc|underline|textsuperscript|textsubscript|mbox|text|url|href)\s*/);
    if(cmd){const g=group(s,i+cmd[0].length);if(g){
     const tags={textbf:'strong',textit:'em',emph:'em',texttt:'code',textsc:'span',underline:'u',textsuperscript:'sup',textsubscript:'sub'};
     if(cmd[1]==='url'||cmd[1]==='href'){const label=cmd[1]==='href'?group(s,g.end):null;out+=/^https?:\/\//i.test(g.text)?'<a href="'+escapeHTML(g.text)+'" target="_blank" rel="noopener noreferrer">'+inline(label?label.text:g.text,depth+1)+'</a>':inline(label?label.text:g.text,depth+1);i=label?label.end:g.end;continue;}
@@ -45,6 +50,8 @@ function render(source,issues=[]){
    const escaped=tail.match(/^\\([%&#_$ {}])/);if(escaped){out+=escapeHTML(escaped[1]);i+=2;continue;}
    const spacing=tail.match(/^\\(?:,|;|!|quad\b|qquad\b|smallskip\b|noindent\b)/);if(spacing){out+=' ';i+=spacing[0].length;continue;}
    if(tail.startsWith('\\\\')){out+='<br>';i+=2;continue;}
+   const unknown=tail.match(/^\\[a-zA-Z]+(?:\{\})?/);
+   if(unknown){out+='<code class="source-macro" title="Macro definition missing from source">'+escapeHTML(unknown[0])+'</code>';i+=unknown[0].length;continue;}
    out+=escapeHTML(s[i++]);
   }
   return out;
