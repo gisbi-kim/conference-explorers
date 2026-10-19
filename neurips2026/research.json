@@ -1,0 +1,201 @@
+{
+  "insights": [
+    {
+      "title": "Reasoning & planning",
+      "summary": "711 titles match this rule (7.8% of the collection). Oral: 10/128; Spotlight: 13/295. These are overlapping title-keyword counts, not year-over-year trends or a measure of research quality.",
+      "official_sessions": [
+        "Title-keyword lens"
+      ],
+      "examples": [
+        {
+          "id": "nc139265",
+          "title": "ALTER: An Allen's Algebra-Based Evaluation Framework for Temporal Reasoning of LLMs",
+          "session": "Oral",
+          "why": "Matched terms: Reasoning"
+        },
+        {
+          "id": "nc139774",
+          "title": "Can LLM Agents Respond to Disasters? Benchmarking Heterogeneous Geospatial Reasoning in Emergency Operations",
+          "session": "Oral",
+          "why": "Matched terms: Reasoning"
+        },
+        {
+          "id": "nc154319",
+          "title": "ExComm: Exploration-Stage Communication for Error-Resilient Agentic Test-Time Scaling",
+          "session": "Oral",
+          "why": "Matched terms: Test-Time"
+        }
+      ]
+    },
+    {
+      "title": "Agents & tool use",
+      "summary": "721 titles match this rule (7.9% of the collection). Oral: 12/128; Spotlight: 13/295. These are overlapping title-keyword counts, not year-over-year trends or a measure of research quality.",
+      "official_sessions": [
+        "Title-keyword lens"
+      ],
+      "examples": [
+        {
+          "id": "nc149524",
+          "title": "APS: Bias-Controlled Adaptive Prototype Simulation for Population-Scale LLM Agents",
+          "session": "Oral",
+          "why": "Matched terms: Agents"
+        },
+        {
+          "id": "nc176365",
+          "title": "Agent Security is a Systems Problem",
+          "session": "Oral",
+          "why": "Matched terms: Agent"
+        },
+        {
+          "id": "nc139558",
+          "title": "AgentAbstain: Do LLM Agents Know When Not to Act?",
+          "session": "Oral",
+          "why": "Matched terms: Agents"
+        }
+      ]
+    },
+    {
+      "title": "Memory & long context",
+      "summary": "368 titles match this rule (4.0% of the collection). Oral: 0/128; Spotlight: 6/295. These are overlapping title-keyword counts, not year-over-year trends or a measure of research quality.",
+      "official_sessions": [
+        "Title-keyword lens"
+      ],
+      "examples": [
+        {
+          "id": "nc153586",
+          "title": "FedSOUL: Federated Continual Unlearning via Spectral Orthogonality",
+          "session": "Spotlight",
+          "why": "Matched terms: Continual"
+        },
+        {
+          "id": "nc156021",
+          "title": "MEMEVO: A Memory-Evolved Video Agent for Long Video Understanding",
+          "session": "Spotlight",
+          "why": "Matched terms: Memory"
+        },
+        {
+          "id": "nc139681",
+          "title": "PULSE: A Synchronized Five-Modality Dataset for Sensorimotor Coordination in Long-Horizon Daily Activities",
+          "session": "Spotlight",
+          "why": "Matched terms: Long-Horizon"
+        }
+      ]
+    },
+    {
+      "title": "Robotics & embodied AI",
+      "summary": "209 titles match this rule (2.3% of the collection). Oral: 5/128; Spotlight: 4/295. These are overlapping title-keyword counts, not year-over-year trends or a measure of research quality.",
+      "official_sessions": [
+        "Title-keyword lens"
+      ],
+      "examples": [
+        {
+          "id": "nc155638",
+          "title": "Can We Model the Artifacts Explicitly? Disentangle Artifacts via Pairwise Edit Relations for Image Manipulation Localization",
+          "session": "Oral",
+          "why": "Matched terms: Manipulation"
+        },
+        {
+          "id": "nc139828",
+          "title": "HABIT: Human-Aware Behavior and Interaction Training Dataset for Robot Manipulation",
+          "session": "Oral",
+          "why": "Matched terms: Robot, Manipulation"
+        },
+        {
+          "id": "nc152085",
+          "title": "Leaderboard Hacking: Preference-Based Model Evaluations are Vulnerable to Manipulation",
+          "session": "Oral",
+          "why": "Matched terms: Manipulation"
+        }
+      ]
+    },
+    {
+      "title": "World models & simulation",
+      "summary": "182 titles match this rule (2.0% of the collection). Oral: 3/128; Spotlight: 5/295. These are overlapping title-keyword counts, not year-over-year trends or a measure of research quality.",
+      "official_sessions": [
+        "Title-keyword lens"
+      ],
+      "examples": [
+        {
+          "id": "nc149524",
+          "title": "APS: Bias-Controlled Adaptive Prototype Simulation for Population-Scale LLM Agents",
+          "session": "Oral",
+          "why": "Matched terms: Simulation"
+        },
+        {
+          "id": "nc154464",
+          "title": "Language-Conditioned World Modeling for Visual Navigation",
+          "session": "Oral",
+          "why": "Matched terms: World Modeling"
+        },
+        {
+          "id": "nc149982",
+          "title": "SyncWorld: Visual Calibration Enables World Models as Zero-Shot Simulators",
+          "session": "Oral",
+          "why": "Matched terms: World Models, Simulators"
+        }
+      ]
+    },
+    {
+      "title": "3D & spatial intelligence",
+      "summary": "447 titles match this rule (4.9% of the collection). Oral: 8/128; Spotlight: 20/295. These are overlapping title-keyword counts, not year-over-year trends or a measure of research quality.",
+      "official_sessions": [
+        "Title-keyword lens"
+      ],
+      "examples": [
+        {
+          "id": "nc149763",
+          "title": "BEAST3D: animal behavioral analysis and neural encoding from multi-view video via Gaussian splatting",
+          "session": "Oral",
+          "why": "Matched terms: Gaussian splatting"
+        },
+        {
+          "id": "nc151996",
+          "title": "Beyond Family Labels: A Taxonomic Ornstein-Uhlenbeck Prior for Avian 3D Shape Recovery",
+          "session": "Oral",
+          "why": "Matched terms: 3D"
+        },
+        {
+          "id": "nc148758",
+          "title": "Consistent 3D Surface Flow Model with Global State",
+          "session": "Oral",
+          "why": "Matched terms: 3D"
+        }
+      ]
+    },
+    {
+      "title": "Data & evaluation",
+      "summary": "1,010 titles match this rule (11.1% of the collection). Oral: 13/128; Spotlight: 37/295. These are overlapping title-keyword counts, not year-over-year trends or a measure of research quality.",
+      "official_sessions": [
+        "Title-keyword lens"
+      ],
+      "examples": [
+        {
+          "id": "nc139265",
+          "title": "ALTER: An Allen's Algebra-Based Evaluation Framework for Temporal Reasoning of LLMs",
+          "session": "Oral",
+          "why": "Matched terms: Evaluation"
+        },
+        {
+          "id": "nc138961",
+          "title": "Benchmark Health Index: A Systematic Framework for Benchmarking the Benchmarks of LLMs",
+          "session": "Oral",
+          "why": "Matched terms: Benchmark, Benchmarks"
+        },
+        {
+          "id": "nc155350",
+          "title": "Bridging Compute- and Data-Optimal Pretraining",
+          "session": "Oral",
+          "why": "Matched terms: Data"
+        }
+      ]
+    }
+  ],
+  "methodology": [
+    "Snapshot: 19 October 2026. 9,243 official presentation records reduce to 6,696 distinct normalized titles. The earlier public snapshot contributes 2,416 additional titles; the union contains 9,112 titles.",
+    "Repeated presentations are grouped by lowercased title with whitespace normalized. The strongest listed presentation label is retained (Oral, then Spotlight, then Poster). This is a public metadata collection, not a certified final acceptance list.",
+    "Current title and author metadata come from the official NeurIPS listing; abstracts and earlier-only records come from the linked public snapshot. Source status is shown per paper and can be filtered.",
+    "Topic labels use the displayed title-keyword rules. Tags overlap, and untagged papers remain searchable. Comparisons use the same union of public records in every cohort.",
+    "Session names are preserved where supplied. Dates are the date portions of source timestamps, not converted local conference schedules; consult the official page for exact times.",
+    "Institutions are deduplicated by exact supplied name. Name variants are not merged; missing affiliations are not inferred. Author counts group exact name strings and may combine namesakes."
+  ]
+}
