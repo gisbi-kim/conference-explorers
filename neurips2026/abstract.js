@@ -7,6 +7,7 @@ function group(s,start){if(s[start]!=='{')return null;let depth=1;for(let i=star
 function render(source,issues=[]){
  const s=decode(String(source||'')), macros={'\\mbox':'\\text{#1}','\\KL':'\\operatorname{KL}','\\polylog':'\\operatorname{polylog}','\\textdegree':'{}^\\circ','\\textasciitilde':'\\sim','\\ReLU':'\\operatorname{ReLU}','\\eps':'\\epsilon','\\diag':'\\operatorname{diag}'};
  function math(tex,display){
+  if(/^\\textbf\{\\texttt\{/.test(tex)&&tex.includes('$'))return inline(tex);
   tex=tex.replace(/\\\*/g,'*');
   if(tex.includes('$')&&!/\\(?:text|mbox)/.test(tex))tex=tex.replace(/\$/g,'');
 
@@ -21,7 +22,7 @@ function render(source,issues=[]){
   while(i<s.length){
    const tail=s.slice(i);
    const delim=tail.startsWith('$$')?['$$','$$',true]:tail.startsWith('\\[')?['\\[','\\]',true]:tail.startsWith('\\(')?['\\(','\\)',false]:s[i]==='$'?['$','$',false]:null;
-   if(delim){let end=i+delim[0].length,braces=0;for(;end<s.length;end++){if(s.startsWith(delim[1],end)&&braces===0)break;if(s[end]==='{')braces++;if(s[end]==='}')braces--;if(s[end]==='\\'&&!s.startsWith(delim[1],end))end++;}if(end<s.length){out+=math(s.slice(i+delim[0].length,end),delim[2]);i=end+delim[1].length;continue;}}
+   if(delim){let end=i+delim[0].length,braces=0;for(;end<s.length;end++){if(s.startsWith(delim[1],end)&&braces===0)break;if(s[end]==='{')braces++;if(s[end]==='}')braces--;if(s[end]==='\\'&&!s.startsWith(delim[1],end))end++;}if(end>=s.length){const fallback=s.indexOf(delim[1],i+delim[0].length);if(fallback>=0)end=fallback;}if(end<s.length){out+=math(s.slice(i+delim[0].length,end),delim[2]);i=end+delim[1].length;continue;}}
    const environment=tail.match(/^\\begin\{(align\*?|equation\*?|gather\*?)\}/);
    if(environment){const close='\\end{'+environment[1]+'}',end=s.indexOf(close,i);if(end>=0){out+=math(s.slice(i,end+close.length),true);i=end+close.length;continue;}}
    const color=tail.match(/^\\textcolor(?:\[[^\]]*\])?\s*/);
