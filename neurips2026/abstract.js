@@ -9,6 +9,7 @@ function render(source,issues=[]){
  function math(tex,display){
   if(/^\\textbf\{\\texttt\{/.test(tex)&&tex.includes('$'))return inline(tex);
   tex=tex.replace(/\\\*/g,'*');
+  if(tex.startsWith('$')&&tex.endsWith('$'))tex=tex.slice(1,-1);
   if(tex.includes('$')&&!/\\(?:text|mbox)/.test(tex))tex=tex.replace(/\$/g,'');
 
   try{if(!root.katex)throw Error('Math renderer unavailable');return root.katex.renderToString(tex,{displayMode:display,throwOnError:true,trust:false,strict:'ignore',maxExpand:1000,maxSize:10,macros});}
@@ -37,20 +38,22 @@ function render(source,issues=[]){
    if(s[i]==='('){let level=1,end=i+1;for(;end<s.length&&level;end++){if(s[end]==='(')level++;if(s[end]===')')level--;}const body=s.slice(i+1,end-1);if(!level&&/\\(?:sqrt|frac|mathcal|Theta|Omega|kappa|zeta|top|theta|varepsilon)\b/.test(body)&&!/\b(?:the|and|where|with|for)\b/.test(body)){out+='('+math(body,false)+')';i=end;continue;}}
    const bare=tail.match(/^\\(sqrt|frac|mathbb|mathcal|mathrm|mathbf|hat|tilde|Theta|Omega|log|times|varepsilon|top|theta|chi|tau|eta|ge|leq|mid|sigma|Gamma)\b/);
    if(bare&&root.katex){let end=i+bare[0].length;while(s[end]==='{'){const g=group(s,end);if(!g)break;end=g.end;}try{out+=root.katex.renderToString(s.slice(i,end),{trust:false,throwOnError:true,strict:'ignore',maxSize:10,maxExpand:1000});i=end;continue;}catch{}}
-   if(s[i]==='{'){const g=group(s,i);if(g&&/^\s*\\/.test(g.text)){out+=inline(g.text,depth+1);i=g.end;continue;}}
+   if(s[i]==='{'){const g=group(s,i);if(g&&/^\s*\\/.test(g.text)&&!/^\\(?:bf|it|em|tt|sc|sl|rm)\b/.test(g.text)){out+=inline(g.text,depth+1);i=g.end;continue;}}
 const cmd=tail.match(/^\\(textbf|textit|emph|texttt|textsf|textrm|textnormal|textsc|underline|textsuperscript|textsubscript|mbox|text|url|href)\s*/);
    if(cmd){const g=group(s,i+cmd[0].length);if(g){
     const tags={textbf:'strong',textit:'em',emph:'em',texttt:'code',textsc:'span',underline:'u',textsuperscript:'sup',textsubscript:'sub'};
     if(cmd[1]==='url'||cmd[1]==='href'){const label=cmd[1]==='href'?group(s,g.end):null;out+=/^https?:\/\//i.test(g.text)?'<a href="'+escapeHTML(g.text)+'" target="_blank" rel="noopener noreferrer">'+inline(label?label.text:g.text,depth+1)+'</a>':inline(label?label.text:g.text,depth+1);i=label?label.end:g.end;continue;}
     const tag=tags[cmd[1]]||'span';out+='<'+tag+'>'+inline(g.text,depth+1)+'</'+tag+'>';i=g.end;continue;
    }}
-   const legacy=tail.match(/^\{\\(bf|it|em|tt|sc)\s+/);
-   if(legacy){const g=group(s,i);if(g){const tag={bf:'strong',it:'em',em:'em',tt:'code',sc:'span'}[legacy[1]];out+='<'+tag+'>'+inline(g.text.replace(/^\\\w+\s+/,''),depth+1)+'</'+tag+'>';i=g.end;continue;}}
+   const legacy=tail.match(/^\{\\(bf|it|em|tt|sc|sl|rm)\s+/);
+   if(legacy){const g=group(s,i);if(g){const tag={bf:'strong',it:'em',em:'em',tt:'code',sc:'span',sl:'em',rm:'span'}[legacy[1]];out+='<'+tag+'>'+inline(g.text.replace(/^\\\w+\s+/,''),depth+1)+'</'+tag+'>';i=g.end;continue;}}
    if(tail.startsWith('**')){const end=s.indexOf('**',i+2);if(end>i+2){out+='<strong>'+inline(s.slice(i+2,end),depth+1)+'</strong>';i=end+2;continue;}}
    if(s[i]==='*'&&s[i+1]&&!/\s/.test(s[i+1])){const end=s.indexOf('*',i+1);if(end>i+1){out+='<em>'+inline(s.slice(i+1,end),depth+1)+'</em>';i=end+1;continue;}}
    const escaped=tail.match(/^\\([%&#_$ {}])/);if(escaped){out+=escapeHTML(escaped[1]);i+=2;continue;}
    const spacing=tail.match(/^\\(?:,|;|!|quad\b|qquad\b|smallskip\b|noindent\b)/);if(spacing){out+=' ';i+=spacing[0].length;continue;}
    if(tail.startsWith('\\\\')){out+='<br>';i+=2;continue;}
+   const accent=tail.match(/^\\H\{([oOuU])\}/);if(accent){out+=escapeHTML((accent[1]+'\u030b').normalize('NFC'));i+=accent[0].length;continue;}
+   const roman=tail.match(/^\\romannumeral\s*(\d+)\b/);if(roman&&Number(roman[1])<=10){out+=['','i','ii','iii','iv','v','vi','vii','viii','ix','x'][Number(roman[1])];i+=roman[0].length;continue;}
    const unknown=tail.match(/^\\[a-zA-Z]+(?:\{\})?/);
    if(unknown){out+='<code class="source-macro" title="Macro definition missing from source">'+escapeHTML(unknown[0])+'</code>';i+=unknown[0].length;continue;}
    out+=escapeHTML(s[i++]);
