@@ -5,10 +5,15 @@ const escapeHTML=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>'
 function decode(s){for(let i=0;i<3;i++){const next=s.replace(/&(#x[\da-f]+|#\d+|amp|lt|gt|quot|apos|nbsp);/gi,(m,k)=>{const named={amp:'&',lt:'<',gt:'>',quot:'"',apos:"'",nbsp:' '};if(k[0]!=='#')return named[k.toLowerCase()]||m;const n=k[1].toLowerCase()==='x'?parseInt(k.slice(2),16):+k.slice(1);return n>0&&n<=0x10ffff?String.fromCodePoint(n):m;});if(next===s)break;s=next;}return s;}
 function group(s,start){if(s[start]!=='{')return null;let depth=1;for(let i=start+1;i<s.length;i++){if(s[i]==='\\'){i++;continue;}if(s[i]==='{')depth++;if(s[i]==='}'&&!--depth)return {text:s.slice(start+1,i),end:i+1};}return null;}
 function render(source,issues=[]){
- const s=decode(String(source||'')), macros={};
+ const s=decode(String(source||'')), macros={'\\mbox':'\\text{#1}','\\KL':'\\operatorname{KL}','\\polylog':'\\operatorname{polylog}','\\textdegree':'{}^\\circ','\\textasciitilde':'\\sim','\\ReLU':'\\operatorname{ReLU}','\\eps':'\\epsilon','\\diag':'\\operatorname{diag}'};
  function math(tex,display){
+  tex=tex.replace(/\\\*/g,'*');
+  if(tex.includes('$')&&!/\\(?:text|mbox)/.test(tex))tex=tex.replace(/\$/g,'');
+
   try{if(!root.katex)throw Error('Math renderer unavailable');return root.katex.renderToString(tex,{displayMode:display,throwOnError:true,trust:false,strict:'ignore',maxExpand:1000,maxSize:10,macros});}
-  catch(e){issues.push({tex,message:e.message});return '<code class="math-fallback" title="Original formula">'+escapeHTML(tex)+'</code>';}
+  catch(e){
+   if(root.katex&&tex.includes('\\\\')){try{return root.katex.renderToString(tex.replace(/\\\\/g,'\\'),{displayMode:display,throwOnError:true,trust:false,strict:'ignore',maxExpand:1000,maxSize:10,macros});}catch{}}
+   issues.push({tex,message:e.message});return '<code class="math-fallback" title="Original formula">'+escapeHTML(tex)+'</code>';}
  }
  function inline(s,depth=0){
   if(depth>40)return escapeHTML(s);
@@ -16,7 +21,17 @@ function render(source,issues=[]){
   while(i<s.length){
    const tail=s.slice(i);
    const delim=tail.startsWith('$$')?['$$','$$',true]:tail.startsWith('\\[')?['\\[','\\]',true]:tail.startsWith('\\(')?['\\(','\\)',false]:s[i]==='$'?['$','$',false]:null;
-   if(delim){let end=i+delim[0].length;for(;end<s.length;end++){if(s.startsWith(delim[1],end))break;if(s[end]==='\\'&&!s.startsWith(delim[1],end))end++;}if(end<s.length){out+=math(s.slice(i+delim[0].length,end),delim[2]);i=end+delim[1].length;continue;}}
+   if(delim){let end=i+delim[0].length,braces=0;for(;end<s.length;end++){if(s.startsWith(delim[1],end)&&braces===0)break;if(s[end]==='{')braces++;if(s[end]==='}')braces--;if(s[end]==='\\'&&!s.startsWith(delim[1],end))end++;}if(end<s.length){out+=math(s.slice(i+delim[0].length,end),delim[2]);i=end+delim[1].length;continue;}}
+   const environment=tail.match(/^\\begin\{(align\*?|equation\*?|gather\*?)\}/);
+   if(environment){const close='\\end{'+environment[1]+'}',end=s.indexOf(close,i);if(end>=0){out+=math(s.slice(i,end+close.length),true);i=end+close.length;continue;}}
+   const color=tail.match(/^\\textcolor(?:\[[^\]]*\])?\s*/);
+   if(color){const name=group(s,i+color[0].length),body=name&&group(s,name.end);if(body){out+=inline(body.text,depth+1);i=body.end;continue;}}
+   const reference=tail.match(/^\\(citep|citet|cite|ref|cref|footnote|acroinit)\s*/);
+   if(reference){const g=group(s,i+reference[0].length);if(g){out+=(reference[1]==='acroinit'?'<strong>':'[')+inline(g.text,depth+1)+(reference[1]==='acroinit'?'</strong>':']');i=g.end;continue;}}
+   const ding=tail.match(/^\\ding\{(18[2-9]|19[01])\}/);if(ding){out+=String.fromCodePoint(0x2460+Number(ding[1])-182);i+=ding[0].length;continue;}
+   const simple=tail.match(/^\\(eg|ie|etc|textemdash|textdegree|textasciitilde|faGithub|ttimes|CoT)\b(?:\{\})?/);
+   if(simple){out+=({eg:'e.g.',ie:'i.e.',etc:'etc.',textemdash:'—',textdegree:'°',textasciitilde:'~',faGithub:'',ttimes:'×',CoT:'CoT'})[simple[1]];i+=simple[0].length;continue;}
+   const endAbstract=tail.match(/^\\end\{abstract\}/);if(endAbstract){i+=endAbstract[0].length;continue;}
    const cmd=tail.match(/^\\(textbf|textit|emph|texttt|textsf|textrm|textnormal|textsc|underline|textsuperscript|textsubscript|mbox|text|url|href)\s*/);
    if(cmd){const g=group(s,i+cmd[0].length);if(g){
     const tags={textbf:'strong',textit:'em',emph:'em',texttt:'code',textsc:'span',underline:'u',textsuperscript:'sup',textsubscript:'sub'};
