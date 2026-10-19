@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><title>Abstract rendering audit</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"><style>body{font:16px system-ui;margin:2rem}pre{white-space:pre-wrap}.sample{padding:1rem;border:1px solid #ccc;margin:1rem 0}</style><h1>Abstract rendering audit</h1><p>Checks every source abstract, including archived records. No source data is modified.</p><pre id="report">Running…</pre><div id="samples"></div><script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script><script src="abstract.js?v=20261019-render"></script><script>
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Abstract rendering audit</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"><style>body{font:16px system-ui;margin:2rem}pre{white-space:pre-wrap}.sample{padding:1rem;border:1px solid #ccc;margin:1rem 0}</style><h1>Abstract rendering audit</h1><p>Checks every source abstract, including archived records. No source data is modified.</p><pre id="report">Running…</pre><div id="samples"></div><script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script><script src="abstract.js?v=20261019-render2"></script><script>
 (async()=>{try{
 const response=await fetch('data.json.gz');const data=await new Response(response.body.pipeThrough(new DecompressionStream('gzip'))).json();
 const commands={},errors=[],samples=[],residuals=[];let count=0,formatted=0,official=0;
@@ -7,7 +7,7 @@ for(const m of p.abstract.matchAll(/\\[a-zA-Z]+/g))commands[m[0]]=(commands[m[0]
 const issues=[];const html=AbstractMarkup.render(p.abstract,issues);const el=document.createElement('div');el.innerHTML=html;
 el.querySelectorAll('.katex,code').forEach(n=>n.remove());
 const leftover=el.textContent.match(/\\[a-zA-Z]+/g);if(leftover)residuals.push({id:p.id,title:p.title,commands:[...new Set(leftover)],abstract:p.abstract});
-if(issues.length)errors.push({id:p.id,title:p.title,issues});
+if(issues.length)errors.push({id:p.id,title:p.title,abstract:p.abstract,issues});
 if(/\\textbf|\\emph|\\textit/.test(p.abstract)&&samples.length<3)samples.push({title:p.title,html});
 if(html.includes('class="katex"')||/<strong>|<em>/.test(html))formatted++;
 }
