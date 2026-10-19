@@ -13,3 +13,17 @@ aside a[aria-current="location"]{color:var(--blue);font-weight:700;background:#e
 header .home-link{color:inherit;text-decoration:none}header .home-link:hover{color:var(--blue)}header .home-link:focus-visible{outline:2px solid var(--blue);outline-offset:5px;border-radius:3px}
 
 button.history-year{font:inherit;text-align:left;color:inherit;cursor:pointer;border:0} .bar{max-width:100%}.coverage-badge{font-size:11px;color:var(--muted);margin-left:8px} .filters{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}.paper .schedule{overflow-wrap:anywhere}
+
+.abstract-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:24px}
+.abstract-heading h3{margin:0}
+.abstract-controls{display:flex;align-items:center;gap:8px;font-size:13px}
+.abstract-controls button{min-width:38px;min-height:38px;border:1px solid #bbb;border-radius:6px;background:transparent;color:inherit;padding:4px 10px;cursor:pointer}
+.abstract-controls button:disabled{opacity:.35;cursor:default}
+.abstract-controls button:focus-visible{outline:3px solid #c9603b;outline-offset:2px}
+.abstract-controls output{min-width:42px;text-align:center;font-variant-numeric:tabular-nums}
+.abstract{font-size:18px;line-height:1.85;overflow-wrap:anywhere;margin:18px 0}
+.abstract .katex{white-space:normal;overflow-wrap:normal}
+.abstract .katex-display{overflow-x:auto;overflow-y:hidden;padding:8px 0;max-width:100%}
+.abstract .math-fallback{white-space:pre-wrap;font-size:.9em}
+.abstract strong{font-weight:750}
+@media(max-width:600px){.abstract-heading{align-items:flex-start}.abstract-controls{flex-wrap:wrap}.abstract-controls button{min-height:44px;min-width:44px}}
