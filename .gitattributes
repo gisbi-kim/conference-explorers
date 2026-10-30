@@ -1,0 +1,2 @@
+# Preserve official Papercept snapshots byte-for-byte, including source whitespace.
+iccas2026/source/*.html -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol

@@ -10,6 +10,7 @@ This repository collects links to the public 2026 conference explorer sites.
 
 | Conference | Explorer | Repository |
 |---|---|---|
+| ICCAS 2026 | [Paper & Programme Explorer](iccas2026/) | Included in this repository |
 | SSRR 2026 | [Paper Explorer & EDA](ssrr2026/) | Included in this repository |
 | iSpaRo / i-SAIRAS 2026 | [Programme Explorer](isparo2026/) | Included in this repository |
 | ECCV 2026 | https://gisbi-kim.github.io/eccv2026-explorer/ | https://github.com/gisbi-kim/eccv2026-explorer |
@@ -39,6 +40,10 @@ These figures cover contributed paper submissions, as reported in the official c
 ECCV 2026 and RSS 2026 publish accepted-paper lists (2,865 and 210 papers respectively), but no official submission totals or acceptance rates were found.
 
 The site is a static `index.html` hosted with GitHub Pages.
+
+## ICCAS 2026 programme
+
+The [ICCAS explorer](iccas2026/) indexes 614 programme papers with abstracts (269 oral, 345 poster), 57 paper sessions and 19 additional event blocks. It supports English/Korean interfaces, paper/abstract/author/affiliation search, official keyword charts, session browsing, local saved papers and CSV/JSON exports. The seven-page Papercept snapshot was retrieved on 31 October 2026; its source is dated 17 October and marked tentative. These are programme counts, not acceptance statistics. See the [source, maintenance and validation guide](iccas2026/README.md).
 
 ## iSpaRo / i-SAIRAS 2026 programme
 

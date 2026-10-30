@@ -1,0 +1,3486 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.25, maximum-scale=5, user-scalable=yes">
+<script type="text/javascript" src="https://ras.papercept.net/conferences/scripts/dom-drag.js"></script>
+<script src="jquery-1.11.1.min.js"></script>
+<title>ICCAS 2026 Program | Program at a Glance</title>
+<style type=text/css>
+body, table, td, th{
+	Font-Family : sans-serif;
+	Font-Size : 10pt;
+}
+.r {text-align: right}
+.blue {color: #0000FF;}
+td {vertical-align: top; text-align: left}
+.c {text-align: center}
+table.s {
+	border-collapse:collapse;
+	border-width: 1px;
+}
+table.s td{
+	border-width: 1px;
+	padding: 4px;
+	border-style: solid;
+	border-color: gray;
+}
+table.t {
+	border-collapse: collapse;
+	border-width: 0px;
+}
+table.t td{
+	border-width: 0px;
+	padding: 4px;
+	border-style: solid;
+	border-color: gray;
+}
+.dots {
+    background:url('./images/dot.gif') repeat-x center;
+}
+.field {
+    background-color: #FFFFFF;
+}
+#pTitle { /* Page title */
+   font-size: 14pt;
+   line-height: 1.5em;
+}
+#pSubTitle { /* Page subtitle */
+   color: #909090;
+   font-size: 10pt; 
+   line-height: 1.5em;
+}
+#container {
+	position: relative;
+	width: 100%;
+	margin: 0;
+/*	overflow: hidden; */
+}
+  
+      table.dayB {  /* Day table Program at a glance B */
+	     border-collapse: collapse;
+	     border-width: 1px;
+	     margin-left: auto;
+         margin-right: auto;
+      }
+      table.dayB td{
+	     border-width: 1px;
+	     padding: 2px;
+	     border-style: solid;
+	     border-color: gray;
+      }
+   
+      .dHd { /* Day header Program at a Glance B */
+         background-color: black; 
+         color: white;
+         text-align: center;
+      }
+   
+      .tHdr { /* Track header row Program at a Glance B */
+         background-color: #CCCCCC
+      }
+   
+
+/* ===== BEGIN PROGRAM COLOR THEMES (2026-09-04) =====
+   PROGRAM_THEME|theme-blue|Ocean Blue
+   PROGRAM_THEME|theme-green|Forest Green
+   PROGRAM_THEME|theme-burgundy|Burgundy
+   PROGRAM_THEME|theme-purple|Royal Purple
+   PROGRAM_THEME|theme-slate|Slate
+   PROGRAM_THEME|theme-grey|Neutral Grey
+   PROGRAM_THEME|theme-peach|Warm Peach
+   PROGRAM_THEME|theme-mahogany|Mahogany
+   PROGRAM_THEME|theme-navy|Midnight Navy
+
+   The PROGRAM_THEME registry lines above are read by publications.pl.
+   Add each future theme both to this registry and to a matching CSS block.
+   ===== END PROGRAM COLOR THEMES (2026-09-04) ===== */
+
+
+/* ============================================================
+   DEFAULT/FALLBACK THEME
+   Used if no valid theme class is present.
+   ============================================================ */
+
+:root {
+   /* Primary accent colors */
+   --program-accent: #245b8a;
+   --program-accent-dark: #2d77b8;
+   --program-accent-soft: #eaf2f8;
+
+   /* Header and panel backgrounds */
+   --program-header-soft: #dfeaf2;
+   --program-panel-soft: #eef4f8;
+   --program-track-soft: #dbe8f1;
+
+   /* Borders */
+   --program-border: #d7e0e8;
+   --program-nav-border: #d1e2ef;
+
+   /* Text and links */
+   --program-link: #1769aa;
+   --program-text: #263746;
+   --program-muted: #667786;
+
+   /* Surfaces */
+   --program-surface: #ffffff;
+   --program-page: #f3f6f8;
+   --program-abstract: #f7f9fb;
+
+   /* Scrollbars */
+   --program-scrollbar: #9aafbf;
+   --program-scrollbar-track: #edf2f5;
+}
+
+
+/* ============================================================
+   OCEAN BLUE
+   ============================================================ */
+
+.program-shell.theme-blue {
+   /* Primary accent colors */
+   --program-accent: #245b8a;
+   --program-accent-dark: #2d77b8;
+   --program-accent-soft: #eaf2f8;
+
+   /* Header and panel backgrounds */
+   --program-header-soft: #dfeaf2;
+   --program-panel-soft: #eef4f8;
+   --program-track-soft: #dbe8f1;
+
+   /* Borders */
+   --program-border: #d7e0e8;
+   --program-nav-border: #d1e2ef;
+
+   /* Text and links */
+   --program-link: #1769aa;
+   --program-text: #263746;
+   --program-muted: #667786;
+
+   /* Surfaces */
+   --program-surface: #ffffff;
+   --program-page: #f3f6f8;
+   --program-abstract: #f7f9fb;
+
+   /* Scrollbars */
+   --program-scrollbar: #9aafbf;
+   --program-scrollbar-track: #edf2f5;
+}
+
+
+/* ============================================================
+   FOREST GREEN
+   ============================================================ */
+
+.program-shell.theme-green {
+   /* Primary accent colors */
+   --program-accent: #367c5b;
+   --program-accent-dark: #2f7656;
+   --program-accent-soft: #e8f4ed;
+
+   /* Header and panel backgrounds */
+   --program-header-soft: #dcece3;
+   --program-panel-soft: #eef7f1;
+   --program-track-soft: #d5e9dd;
+
+   /* Borders */
+   --program-border: #c9ddd1;
+   --program-nav-border: #c7dfd1;
+
+   /* Text and links */
+   --program-link: #267052;
+   --program-text: #263746;
+   --program-muted: #667786;
+
+   /* Surfaces */
+   --program-surface: #ffffff;
+   --program-page: #f3f6f8;
+   --program-abstract: #f5faf7;
+
+   /* Scrollbars */
+   --program-scrollbar: #91ad9d;
+   --program-scrollbar-track: #edf4f0;
+}
+
+
+/* ============================================================
+   BURGUNDY
+   ============================================================ */
+
+.program-shell.theme-burgundy {
+   /* Primary accent colors */
+   --program-accent: #94455a;
+   --program-accent-dark: #87384d;
+   --program-accent-soft: #f6e9ed;
+
+   /* Header and panel backgrounds */
+   --program-header-soft: #efdde2;
+   --program-panel-soft: #faf0f3;
+   --program-track-soft: #ead6dc;
+
+   /* Borders */
+   --program-border: #dfc8cf;
+   --program-nav-border: #e4cbd2;
+
+   /* Text and links */
+   --program-link: #87384d;
+   --program-text: #263746;
+   --program-muted: #667786;
+
+   /* Surfaces */
+   --program-surface: #ffffff;
+   --program-page: #f3f6f8;
+   --program-abstract: #fbf6f7;
+
+   /* Scrollbars */
+   --program-scrollbar: #b5969e;
+   --program-scrollbar-track: #f5edef;
+}
+
+
+/* ============================================================
+   ROYAL PURPLE
+   ============================================================ */
+
+.program-shell.theme-purple {
+   /* Primary accent colors */
+   --program-accent: #7457a6;
+   --program-accent-dark: #684b98;
+   --program-accent-soft: #f0ebf7;
+
+   /* Header and panel backgrounds */
+   --program-header-soft: #e6ddf1;
+   --program-panel-soft: #f5f1f9;
+   --program-track-soft: #dfd5eb;
+
+   /* Borders */
+   --program-border: #d6cce2;
+   --program-nav-border: #d9cee7;
+
+   /* Text and links */
+   --program-link: #654795;
+   --program-text: #263746;
+   --program-muted: #667786;
+
+   /* Surfaces */
+   --program-surface: #ffffff;
+   --program-page: #f3f6f8;
+   --program-abstract: #f8f6fb;
+
+   /* Scrollbars */
+   --program-scrollbar: #a497b7;
+   --program-scrollbar-track: #f1eef5;
+}
+
+
+/* ============================================================
+   SLATE
+   This retains a subtle blue-grey character.
+   ============================================================ */
+
+.program-shell.theme-slate {
+   /* Primary accent colors */
+   --program-accent: #506c7a;
+   --program-accent-dark: #405e6d;
+   --program-accent-soft: #e9f0f3;
+
+   /* Header and panel backgrounds */
+   --program-header-soft: #dde7eb;
+   --program-panel-soft: #f0f5f7;
+   --program-track-soft: #d6e2e7;
+
+   /* Borders */
+   --program-border: #cbd7dc;
+   --program-nav-border: #cad9df;
+
+   /* Text and links */
+   --program-link: #355f73;
+   --program-text: #263746;
+   --program-muted: #667786;
+
+   /* Surfaces */
+   --program-surface: #ffffff;
+   --program-page: #f3f6f8;
+   --program-abstract: #f6f9fa;
+
+   /* Scrollbars */
+   --program-scrollbar: #93a6af;
+   --program-scrollbar-track: #edf2f4;
+}
+
+
+/* ============================================================
+   NEUTRAL GREY
+   This uses neutral greys without a blue tint.
+   ============================================================ */
+
+.program-shell.theme-grey {
+   /* Primary accent colors */
+   --program-accent: #626970;
+   --program-accent-dark: #767B80;
+   --program-accent-soft: #eeeeee;
+
+   /* Header and panel backgrounds */
+   --program-header-soft: #dddddd;
+   --program-panel-soft: #f2f2f2;
+   --program-track-soft: #d7d7d7;
+
+   /* Borders */
+   --program-border: #c8c8c8;
+   --program-nav-border: #cccccc;
+
+   /* Text and links */
+   --program-link: #4f565c;
+   --program-text: #292929;
+   --program-muted: #686868;
+
+   /* Surfaces */
+   --program-surface: #ffffff;
+   --program-page: #f1f1f1;
+   --program-abstract: #f6f6f6;
+
+   /* Scrollbars */
+   --program-scrollbar: #999999;
+   --program-scrollbar-track: #ededed;
+}
+
+/* ============================================================
+   WARM PEACH
+   Soft peach surfaces with warm terracotta accents.
+   ============================================================ */
+
+.program-shell.theme-peach {
+   /* Primary accent colors */
+   --program-accent: #c96f52;
+   --program-accent-dark: #dc9169;
+   --program-accent-soft: #fce9e1;
+
+   /* Header and panel backgrounds */
+   --program-header-soft: #f7d8cc;
+   --program-panel-soft: #fdf0eb;
+   --program-track-soft: #f2cbbb;
+
+   /* Borders */
+   --program-border: #e6c4b7;
+   --program-nav-border: #e8bfae;
+
+   /* Text and links */
+   /* --program-link: #a54831; */
+   --program-link: #893a27;
+   --program-text: #45312b;
+   --program-muted: #80665d;
+
+   /* Surfaces */
+   --program-surface: #ffffff;
+   --program-page: #fdf7f4;
+   --program-abstract: #fff5f1;
+
+   /* Scrollbars */
+   --program-scrollbar: #ce927d;
+   --program-scrollbar-track: #f7e7e0;
+}
+
+/* ============================================================
+   MAHOGANY
+   Rich reddish-brown accents with warm cream surfaces.
+   ============================================================ */
+
+.program-shell.theme-mahogany {
+   /* Primary accent colors */
+   --program-accent: #7b4634;
+   --program-accent-dark: #933426;
+   --program-accent-soft: #f3e8e1;
+
+   /* Header and panel backgrounds */
+   --program-header-soft: #e5d2c7;
+   --program-panel-soft: #f6eee9;
+   --program-track-soft: #d9bfae;
+
+   /* Borders */
+   --program-border: #d2b8a9;
+   --program-nav-border: #cfae9d;
+
+   /* Text and links */
+   --program-link: #713b2b;
+   --program-text: #3f302a;
+   --program-muted: #78645b;
+
+   /* Surfaces */
+   --program-surface: #ffffff;
+   --program-page: #f7f3f0;
+   --program-abstract: #faf4f0;
+
+   /* Scrollbars */
+   --program-scrollbar: #9f7968;
+   --program-scrollbar-track: #eee4de;
+}
+
+/* ============================================================
+   DARK NAVY
+   Dark navy accents with white and very light content surfaces.
+   ============================================================ */
+
+.program-shell.theme-navy {
+   /* Primary accent colors */
+   --program-accent: #214f73;
+   --program-accent-dark: #123b5d;
+   --program-accent-soft: #edf3f7;
+
+   /* Header and panel backgrounds */
+   --program-header-soft: #dce8f0;
+   --program-panel-soft: #f3f7f9;
+   --program-track-soft: #d4e2ec;
+
+   /* Borders */
+   --program-border: #b8c9d5;
+   --program-nav-border: #b5cbd9;
+
+   /* Text and links */
+   --program-link: #155f96;
+   --program-text: #243746;
+   --program-muted: #617585;
+
+   /* Surfaces */
+   --program-surface: #ffffff;
+   --program-page: #f3f6f8;
+   --program-abstract: #f7f9fb;
+
+   /* Scrollbars */
+   --program-scrollbar: #748fa3;
+   --program-scrollbar-track: #e8eef2;
+}
+
+/* ===== BEGIN CONSISTENT MOBILE TEXT SIZING (2026-09-15) =====
+   Prevent Safari from independently inflating text in wide or merged PAAG
+   cells. Browser pinch zoom and the Program size controls remain available. */
+html {
+   scroll-behavior: auto;
+   -webkit-text-size-adjust: 100%;
+   text-size-adjust: 100%;
+   /* Reserve the desktop scrollbar lane even on short pages. This keeps the
+      85vw program shell on one fixed centerline across every generated file. */
+   overflow-y: scroll;
+   scrollbar-gutter: stable;
+}
+/* ===== END CONSISTENT MOBILE TEXT SIZING (2026-09-15) ===== */
+body {
+   margin: 0;
+   box-sizing: border-box;
+   padding-bottom: 24px;
+   background: var(--program-page);
+   color: var(--program-text);
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+   font-size: 14px;
+   line-height: 1.45;
+}
+body, table, td, th {
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+a { color: var(--program-link); text-decoration: none; }
+a:hover, a:focus { color: var(--program-accent-dark); text-decoration: underline; }
+.program-shell {
+   box-sizing: border-box;
+   width: 85vw;
+   max-width: 85vw;
+   min-width: 0;
+   margin: 10px auto 0;
+   padding: 10px 16px 14px;
+   overflow: hidden;
+   background: var(--program-surface);
+   border: 1px solid var(--program-border);
+   border-radius: 10px;
+   box-shadow: 0 3px 14px rgba(31, 55, 75, 0.08);
+}
+#TheTop {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: baseline;
+   justify-content: center;
+   gap: 2px 9px;
+   margin: 0 0 5px;
+}
+#TheTop br { display: none; }
+#pTitle {
+   display: inline;
+   margin: 0;
+   color: var(--program-accent-dark);
+   font-size: 19px;
+   line-height: 1.2;
+}
+#pTitle a { color: inherit; }
+#pSubTitle {
+   display: inline;
+   color: var(--program-muted);
+   font-size: 12px;
+   line-height: 1.2;
+}
+.program-nav {
+   margin: 5px 0;
+   padding: 5px 8px;
+   overflow-x: auto;
+   overflow-y: hidden;
+   white-space: nowrap;
+   -webkit-overflow-scrolling: touch;
+   scrollbar-width: thin;
+   background: var(--program-accent-soft);
+   border: 1px solid var(--program-nav-border);
+   border-radius: 7px;
+   line-height: 1.55;
+}
+/* ===== BEGIN GROUPED WEB DAILY PROGRAM NAVIGATION (2026-10-17) ===== */
+.program-nav.program-nav-web-grouped {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 2px;
+}
+.program-nav-web-grouped > a {
+   flex: 0 0 auto;
+}
+.program-daily-navigation {
+   display: inline-flex;
+   flex: 0 0 auto;
+   flex-direction: column;
+   align-items: stretch;
+   justify-content: center;
+   vertical-align: middle;
+}
+.program-daily-navigation-label {
+   display: block;
+   padding: 0 8px 2px;
+   border-bottom: 1px solid var(--program-nav-border);
+   color: var(--program-text);
+   font-weight: 600;
+   line-height: 1.25;
+   text-align: center;
+}
+.program-daily-navigation-links {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 1.8em;
+   line-height: 1.25;
+   text-align: center;
+}
+/* ===== END GROUPED WEB DAILY PROGRAM NAVIGATION (2026-10-17) ===== */
+/* ===== BEGIN PRIMARY NAVIGATION OVERFLOW ARROWS (2026-09-29) ===== */
+.program-nav-frame {
+   position: relative;
+   min-width: 0;
+}
+.program-nav-frame .program-nav {
+   box-sizing: border-box;
+   width: 100%;
+}
+.program-nav-frame.has-overflow .program-nav {
+   padding-left: 38px;
+   padding-right: 38px;
+   scroll-padding-left: 38px;
+   scroll-padding-right: 38px;
+}
+.program-nav-arrow {
+   position: absolute;
+   z-index: 20;
+   top: 50%;
+   width: 30px;
+   height: 32px;
+   padding: 0;
+   transform: translateY(-50%);
+   color: #ffffff;
+   background: var(--program-accent-dark);
+   border: 1px solid var(--program-border);
+   border-radius: 5px;
+   box-shadow: 0 1px 5px rgba(0,0,0,.2);
+   font: inherit;
+   font-size: 22px;
+   font-weight: 700;
+   line-height: 1;
+   cursor: pointer;
+   touch-action: manipulation;
+}
+.program-nav-arrow-left { left: 4px; }
+.program-nav-arrow-right { right: 4px; }
+.program-nav-arrow:hover,
+.program-nav-arrow:focus-visible {
+   background: var(--program-accent);
+   outline: 2px solid var(--program-surface);
+   outline-offset: -4px;
+}
+.program-nav-arrow[hidden] { display: none !important; }
+/* ===== END PRIMARY NAVIGATION OVERFLOW ARROWS (2026-09-29) ===== */
+.program-nav a, .program-legend a, .program-letter-list a {
+   display: inline-block;
+   padding: 2px 5px;
+   font-weight: 600;
+}
+.program-glance-page a.program-current-day {
+   padding: 2px 6px;
+   color: var(--program-accent-dark) !important;
+   background: var(--program-accent-soft);
+   border-radius: 4px;
+   text-decoration: none;
+   box-shadow: inset 0 -3px 0 var(--program-accent-dark);
+}
+.program-scale-controls {
+   display: none;
+   align-items: center;
+   justify-content: center;
+   gap: 5px;
+   margin: 2px 0 3px;
+   color: var(--program-muted);
+   font-size: 11px;
+   line-height: 1;
+}
+.program-glance-page .program-scale-controls {
+   display: flex;
+}
+.program-scale-controls button {
+   min-width: 27px;
+   height: 24px;
+   padding: 1px 6px;
+   color: var(--program-link);
+   background: var(--program-surface);
+   border: 1px solid var(--program-border);
+   border-radius: 4px;
+   font: inherit;
+   font-weight: 700;
+   cursor: pointer;
+}
+.program-scale-controls button:hover,
+.program-scale-controls button:focus-visible {
+   background: var(--program-accent-soft);
+   outline: 2px solid var(--program-accent);
+   outline-offset: 1px;
+}
+.program-scale-value {
+   display: inline-block;
+   min-width: 38px;
+   color: var(--program-text);
+   font-weight: 700;
+   text-align: center;
+}
+.program-status { margin: 4px 0; color: var(--program-muted); font-size: 11px; }
+.program-page-title h3 {
+   margin: 6px 0 5px;
+   color: var(--program-accent-dark);
+   font-size: 17px;
+   line-height: 1.2;
+}
+.program-letter-list, .program-legend { margin: 4px 0 6px; }
+.program-legend { color: var(--program-muted); font-size: 12px; }
+.program-output {
+   box-sizing: border-box;
+   width: 100%;
+   max-width: 100%;
+   min-width: 0;
+   overflow: hidden;
+   -webkit-overflow-scrolling: touch;
+}
+.program-output > table,
+.program-output table.trk,
+.program-output table.lT,
+.program-output table.kT { width: 100% !important; max-width: 100%; }
+table.trk, table.lT, table.kT, table.dayB, table.s { color: var(--program-text); }
+table.trk td, table.lT td, table.kT td, table.dayB td, table.s td { padding: 5px 7px; }
+.sHdr td, .sSHdr td, .ssHdr td, .pHdr td, .lHdr td, .dHd td, .tHdr td {
+   border-color: var(--program-border) !important;
+} 
+/* ===== BEGIN COMPACT AUTHOR INDEX ENTRIES (2026-09-04) ===== */
+/* Tighten author entries but leave the A, B, C letter headers unchanged. */
+table.lT {
+   table-layout: fixed !important;
+}
+/* Prevent mobile browsers from independently enlarging one index column.
+   Both index tables must retain the font sizes selected by our responsive CSS. */
+table.lT,
+table.lT *,
+table.kT,
+table.kT * {
+   -webkit-text-size-adjust: none;
+   text-size-adjust: none;
+}
+table.lT col.author-index-code-column {
+   width: 9.5em;
+}
+table.lT col.author-index-program-column {
+   width: 36px;
+}
+table.lT tr:not(.lHdr) > td {
+   padding: 1px 4px !important;
+   line-height: 1.2;
+}
+/* ===== END COMPACT AUTHOR INDEX ENTRIES (2026-09-04) ===== */
+/* ===== BEGIN AUTHOR INDEX ROW GUIDE (2026-09-28) =====
+   Retain the original continuous dot.gif leaders. A very light row cue
+   appears only while a row is hovered or contains keyboard focus. This
+   intentionally does not zebra-stripe rows or hide off-screen letter blocks.
+   ===== END AUTHOR INDEX ROW GUIDE INTRODUCTION (2026-09-28) ===== */
+.program-output table.lT tr:not(.lHdr):hover > td,
+.program-output table.lT tr:not(.lHdr):hover .dots,
+.program-output table.lT tr:not(.lHdr):hover .field,
+.program-output table.lT tr:not(.lHdr):focus-within > td,
+.program-output table.lT tr:not(.lHdr):focus-within .dots,
+.program-output table.lT tr:not(.lHdr):focus-within .field {
+   background-color: rgba(127, 127, 127, 0.045);
+   background-color: color-mix(in srgb, var(--program-accent-soft) 35%, transparent);
+}
+/* ===== END AUTHOR INDEX ROW GUIDE (2026-09-28) ===== */
+/* ===== BEGIN AUTHOR INDEX RESIZE RELOAD OVERLAY (2026-09-28) ===== */
+.author-index-resize-overlay { position:fixed; inset:0; z-index:10000; display:none; align-items:center; justify-content:center; background:rgba(255,255,255,.88); color:var(--program-accent-dark); text-align:center; }
+.author-index-resize-overlay.is-visible { display:flex; }
+.author-index-resize-indicator { padding:14px 20px; background:var(--program-surface); border:1px solid var(--program-border); border-radius:9px; box-shadow:0 5px 22px rgba(31,55,75,.18); font-weight:600; }
+.author-index-resize-spinner { box-sizing:border-box; width:44px; height:44px; margin:0 auto 9px; border:5px solid var(--program-accent-soft); border-top-color:var(--program-accent); border-radius:50%; animation:author-index-resize-spin .8s linear infinite; }
+@keyframes author-index-resize-spin { to { transform:rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .author-index-resize-spinner { animation:none; } }
+/* ===== END AUTHOR INDEX RESIZE RELOAD OVERLAY (2026-09-28) ===== */
+.sHdr { background: var(--program-accent-dark) !important; color: #ffffff; }
+.sHdr a { color: #ffffff; }
+.sSHdr, .ssHdr { background: var(--program-header-soft) !important; color: var(--program-text); }
+.pHdr { background: var(--program-panel-soft) !important; color: var(--program-text); }
+.lHdr, .tHdr {
+   background: var(--program-track-soft) !important;
+   color: var(--program-accent-dark);
+   font-weight: 700;
+}
+.dHd { background: var(--program-accent-dark) !important; color: #ffffff; font-weight: 700; }
+.pTtl {
+   color: var(--program-text);
+   font-size: 14px !important;
+   font-style: normal !important;
+   font-weight: 600;
+   line-height: 1.35;
+}
+hr.thin { height: 1px !important; background: var(--program-border) !important; }
+div[id^="Ab"] {
+   margin: 4px 0 7px;
+   padding: 9px 11px !important;
+   background: var(--program-abstract);
+   border-left: 3px solid var(--program-accent);
+   border-radius: 0 5px 5px 0;
+   text-align: left;
+}
+.sdiv {
+   box-sizing: border-box;
+   width: 100% !important;
+   max-width: 100%;
+   min-width: 0;
+   max-height: calc(90vh - 50px);
+   overflow: auto !important;
+   border-radius: 6px;
+   scrollbar-color: var(--program-scrollbar) var(--program-scrollbar-track);
+}
+.program-scroll-frame {
+   position: relative;
+   box-sizing: border-box;
+   width: 100%;
+   min-width: 0;
+}
+.program-scroll-frame > .sdiv {
+   width: 100% !important;
+}
+.program-scroll-arrow {
+   position: absolute;
+   z-index: 30;
+   top: 50%;
+   width: 34px;
+   height: 48px;
+   padding: 0;
+   transform: translateY(-50%);
+   color: #ffffff;
+   background: rgba(31, 55, 75, 0.78);
+   border: 1px solid rgba(255, 255, 255, 0.8);
+   border-radius: 5px;
+   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.22);
+   font-size: 25px;
+   font-weight: 700;
+   line-height: 1;
+   cursor: pointer;
+   touch-action: manipulation;
+}
+.program-scroll-arrow-left { left: 4px; }
+.program-scroll-arrow-right { right: 4px; }
+.program-scroll-arrow:hover,
+.program-scroll-arrow:focus-visible {
+   background: var(--program-accent-dark);
+   outline: 2px solid #ffffff;
+   outline-offset: -4px;
+}
+.program-scroll-arrow[hidden] {
+   display: none !important;
+}
+.blck {
+   box-sizing: border-box;
+   width: 100%;
+   max-width: 100%;
+   min-width: 0;
+   overflow: hidden;
+}
+
+/* ===== BEGIN FIXED PROGRAM-AT-A-GLANCE SPACING (2026-09-14) =====
+   The generator places two BR elements between successive day blocks. Because
+   those separators sit outside the blocks, they otherwise remain visible when
+   earlier days are hidden and accumulate as the selected day advances. */
+.program-glance-page .program-output > br {
+   display: none;
+}
+.program-glance-page .blck > p {
+   margin-top: 2px;
+   margin-bottom: 4px;
+   text-align: center;
+   visibility: visible;
+   opacity: 1;
+}
+.program-glance-page .blck > p > br:first-child {
+   display: none;
+}
+.program-glance-page .blck > p > b:first-of-type {
+   display: none;
+}
+.program-glance-page .blck > p a {
+   font-weight: 700;
+}
+.program-day-navigation {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+   gap: 3px 10px;
+   white-space: normal;
+}
+.program-day-navigation-disabled {
+   color: var(--program-muted);
+   font-weight: 700;
+   opacity: 0.48;
+   cursor: default;
+}
+.program-glance-page .scrlis {
+   display: none !important;
+}
+/* ===== END FIXED PROGRAM-AT-A-GLANCE SPACING (2026-09-14) ===== */
+
+/* ===== BEGIN PAAG NATIVE PINCH ZOOM (2026-09-14) =====
+   Permit two-finger browser zoom throughout the schedule while preserving
+   one-finger horizontal and vertical scrolling inside its panel. */
+html,
+body,
+.program-glance-page,
+.program-glance-page .program-output,
+.program-glance-page .blck,
+.program-glance-page .sdiv {
+   touch-action: pan-x pan-y pinch-zoom;
+}
+/* ===== END PAAG NATIVE PINCH ZOOM (2026-09-14) ===== */
+table.dayB {
+   min-width: 100% !important;
+   margin-left: 0 !important;
+   margin-right: 0 !important;
+}
+
+/* ===== BEGIN FIXED 85-PERCENT PROGRAM VIEWPORT (2026-09-04) =====
+   Sparse schedules expand to the full viewport. Dense schedules retain their
+   generated pixel width but overflow only inside .sdiv, where both scrollbars
+   are available. The outer page can no longer be widened by a schedule table.
+   ===== END FIXED 85-PERCENT PROGRAM VIEWPORT (2026-09-04) ===== */
+table.trk tr.author-row td {
+   padding-top: 1px !important;
+   padding-bottom: 1px !important;
+   line-height: 1.25;
+}
+
+/* ===== BEGIN CONTENT-LIST PAPER TARGET FOCUS (2026-09-27) =====
+   A paper reached from the Author, Keyword, or Search index is identified as
+   one complete block.  The white overlay deliberately makes this tint a
+   couple of shades lighter than the normal paper-header background while
+   retaining the selected conference theme.
+   ===== END CONTENT-LIST PAPER TARGET FOCUS (2026-09-27) ===== */
+table.trk tr.paper-target-focus > td {
+   background:
+      linear-gradient(rgba(255,255,255,0.58), rgba(255,255,255,0.58)),
+      var(--program-accent-soft) !important;
+}
+/* Draw a restrained one-pixel perimeter instead of a thick left stripe.
+   Separate rules for two-cell and colspan rows keep both sides identical. */
+table.trk tr.paper-target-focus > td:first-child:not(:last-child) {
+   border-left: 0 !important;
+   box-shadow: inset 1px 0 0 var(--program-accent) !important;
+}
+table.trk tr.paper-target-focus > td:last-child:not(:first-child) {
+   border-right: 0 !important;
+   box-shadow: inset -1px 0 0 var(--program-accent) !important;
+}
+table.trk tr.paper-target-focus > td:only-child {
+   border-left: 0 !important;
+   border-right: 0 !important;
+   box-shadow:
+      inset 1px 0 0 var(--program-accent),
+      inset -1px 0 0 var(--program-accent) !important;
+}
+table.trk tr.paper-target-focus-start > td {
+   border-top: 1px solid var(--program-accent) !important;
+}
+table.trk tr.paper-target-focus-end > td {
+   border-bottom: 1px solid var(--program-accent) !important;
+}
+table.trk tr.paper-target-focus-start {
+   scroll-margin-top: 18px;
+}
+table.trk tr.paper-target-focus div[id^="Ab"] {
+   padding-top: 5px !important;
+   background: transparent !important;
+   border-left: 0 !important;
+   border-radius: 0 !important;
+}
+
+/* ===== BEGIN ACCESSIBILITY ENHANCEMENTS (2026-09-27) =====
+   Keyboard focus is shown only for keyboard-style navigation. Mouse and touch
+   presentation remain unchanged. Reduced motion follows the visitor's system
+   preference without altering the normal experience.
+   ===== END ACCESSIBILITY ENHANCEMENTS (2026-09-27) ===== */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+   outline: 3px solid var(--program-accent) !important;
+   outline-offset: 2px !important;
+}
+@media (prefers-reduced-motion: reduce) {
+   html { scroll-behavior: auto !important; }
+   *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      transition-delay: 0ms !important;
+   }
+}
+.program-target-focus {
+   position: relative;
+   z-index: 2;
+   box-shadow: inset 0 0 0 1px #9f2d20;
+}
+.program-target-focus::after {
+   content: "";
+   position: absolute;
+   inset: 4px;
+   border: 2px dashed #9f2d20;
+   box-sizing: border-box;
+   pointer-events: none;
+}
+.program-target-focus:focus {
+   outline: none !important;
+}
+input[type="checkbox"] { accent-color: var(--program-accent); }
+@media (max-width: 900px) {
+   .program-shell { width: 94vw; max-width: 94vw; padding: 12px 10px 16px; }
+   #pTitle { font-size: 19px; }
+   .program-page-title h3 { font-size: 17px; }
+   table.trk td, table.lT td, table.kT td, table.dayB td, table.s td { padding: 4px 5px; }
+}
+
+/* ===== BEGIN RESPONSIVE PROGRAM OUTPUT (2026-09-14) =====
+   Preserve the complete multi-track Program at a Glance as a horizontally
+   scrollable grid. Reflow the navigation and index pages on narrow screens.
+   Web and media outputs use the same self-contained, headerless layout.
+   ===== END RESPONSIVE PROGRAM OUTPUT INTRODUCTION (2026-09-14) ===== */
+
+@media (max-width: 700px), (orientation: landscape) and (max-height: 500px) {
+   html {
+      /* Phone browsers use overlay scrollbars; retain the full screen width. */
+      overflow-y: auto;
+      scrollbar-gutter: auto;
+   }
+   /* Use the complete phone viewport and remove desktop-only decoration. */
+   body,
+   table,
+   td,
+   th {
+      font-size: 12px;
+   }
+   .program-shell {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding: 3px 4px 8px;
+      border-left: 0;
+      border-right: 0;
+      border-radius: 0;
+      box-shadow: none;
+   }
+
+   #container {
+      overflow-x: hidden;
+   }
+
+   #pTitle {
+      display: block;
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.2;
+   }
+   #pSubTitle {
+      display: block;
+      font-size: 11px;
+      line-height: 1.2;
+   }
+   .program-page-title h3 {
+      margin: 4px 0 3px;
+      font-size: 14px;
+      line-height: 1.2;
+   }
+
+   /* Keep the main navigation to one shallow, horizontally scrollable row.
+      Every existing destination remains available without consuming height. */
+   .program-nav {
+      display: block;
+      margin: 3px 0;
+      padding: 2px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
+      line-height: 1.2;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+   }
+   .program-nav a {
+      margin: 0;
+      padding: 3px 5px;
+      white-space: nowrap;
+   }
+   .program-letter-list a {
+      margin: 1px 0;
+      padding: 2px 4px;
+   }
+   .program-status,
+   .program-legend {
+      margin: 3px 0;
+      font-size: 11px;
+      line-height: 1.35;
+   }
+   .program-letter-list {
+      margin: 3px 0;
+      line-height: 1.45;
+   }
+
+   /* Ordinary output tables reflow within the screen. */
+   .program-output {
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+   }
+   .program-output table.trk,
+   .program-output table.lT,
+   .program-output table.kT {
+      table-layout: auto;
+   }
+   table.trk td,
+   table.lT td,
+   table.kT td,
+   table.s td {
+      overflow-wrap: anywhere;
+      word-break: normal;
+   }
+
+   /* The generated Author Index marks names nowrap. Permit only its first
+      (author-name) column to wrap; retain compact rows and fixed code column. */
+   table.lT tr:not(.lHdr) > td:first-child {
+      white-space: normal !important;
+      min-width: 0;
+   }
+   table.lT tr:not(.lHdr) > td:nth-child(2) {
+      white-space: nowrap;
+   }
+   /* Keep the keyword and its linked sessions as two readable columns. */
+   table.kT td:first-child {
+      width: 38% !important;
+      min-width: 0;
+   }
+
+   /* Do not collapse a multi-track schedule. Its generated 1500/1600-pixel
+      width remains intact and .sdiv supplies native touch scrolling. */
+   .sdiv {
+      width: 100% !important;
+      max-width: 100%;
+      border: 1px solid var(--program-border);
+      overscroll-behavior: contain;
+      touch-action: pan-x pan-y pinch-zoom;
+      -webkit-overflow-scrolling: touch;
+   }
+   .sdiv table.dayB {
+      max-width: none;
+      table-layout: fixed;
+   }
+   .sdiv table.dayB.compact-fit-table {
+      width: 100% !important;
+      min-width: 100% !important;
+   }
+
+   input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+   }
+
+   /* Program-at-a-Glance-only compaction. The class is applied at load time
+      when a generated page contains an .sdiv schedule panel. */
+   .program-glance-page {
+      padding: 2px;
+   }
+   .program-glance-page .program-legend {
+      display: none;
+   }
+   .program-glance-page #TheTop {
+      margin-bottom: 2px;
+   }
+   .program-glance-page .program-status {
+      margin: 2px 0;
+      font-size: 10px;
+      line-height: 1.2;
+   }
+   .program-glance-page .program-page-title h3 {
+      margin: 2px 0;
+      font-size: 13px;
+   }
+   .program-glance-page .blck > p {
+      margin: 2px 0;
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
+      font-size: 11px;
+      line-height: 1.25;
+      -webkit-overflow-scrolling: touch;
+   }
+   .program-glance-page .blck > p > br:first-child {
+      display: none;
+   }
+   .program-glance-page .scrlis {
+      display: none !important;
+   }
+   .program-glance-page .sdiv {
+      height: calc(100vh - 125px) !important;
+      height: calc(100dvh - 125px) !important;
+      min-height: 220px;
+      max-height: none;
+   }
+
+   /* Keep the day and track context anchored while the table moves beneath
+      it. Sticky cells are scoped to the PAAG schedule only. */
+   .program-glance-page table.dayB td.dHd {
+      position: sticky;
+      z-index: 5;
+      top: 0;
+   }
+   .program-glance-page table.dayB tr.tHdr > td {
+      position: sticky;
+      z-index: 4;
+      top: 26px;
+   }
+}
+
+@media (max-width: 420px) {
+   body,
+   table,
+   td,
+   th {
+      font-size: 11px;
+   }
+   .program-shell {
+      padding-left: 2px;
+      padding-right: 2px;
+   }
+   .program-nav a {
+      padding-left: 4px;
+      padding-right: 4px;
+   }
+   .program-letter-list a {
+      padding-left: 3px;
+      padding-right: 3px;
+   }
+   table.trk td,
+   table.kT td,
+   table.s td {
+      padding: 3px 4px;
+   }
+   table.kT td:first-child {
+      width: 42% !important;
+   }
+   .program-glance-page .sdiv {
+      height: calc(100vh - 118px) !important;
+      height: calc(100dvh - 118px) !important;
+   }
+}
+
+/* iPhone landscape can otherwise apply text autosizing independently to the
+   two columns, making names or schedule codes much larger than their peers. */
+@media (orientation: landscape) and (max-height: 500px) {
+   .program-output table.lT,
+   .program-output table.lT td,
+   .program-output table.lT div,
+   .program-output table.lT a,
+   .program-output table.kT,
+   .program-output table.kT td,
+   .program-output table.kT div,
+   .program-output table.kT a {
+      font-size: 12px !important;
+   }
+}
+
+/* ===== END RESPONSIVE PROGRAM OUTPUT (2026-09-14) ===== */
+
+@media print {
+   body { background: #ffffff; padding-bottom: 0; }
+   .program-scale-controls,
+   .program-scroll-arrow { display: none !important; }
+   .program-shell {
+      width: 100%; margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none;
+   }
+}
+/* ===== END MODERN PROGRAM OUTPUT (2026-09-03) ===== */
+</style>
+<script language="JavaScript">
+function initXMLHttp(){
+   var oRequest = false;
+   try {
+      oRequest = new XMLHttpRequest();
+   }  catch (trymicrosoft) {
+      try {
+         oRequest = new ActiveXObject("Msxml2.XMLHTTP");
+      }  catch (othermicrosoft) {
+         try {
+            oRequest = new ActiveXObject("Microsoft.XMLHTTP");
+         }  catch (failed) {
+            oRequest = false;
+         }
+      }
+   }
+   if (!oRequest){
+      alert("Error initializing XMLHttpRequest! Your browser does not support AJAX");
+   }
+   return oRequest;
+}
+function modify(number,kk){
+   var check = document.getElementById('mod' + kk).checked;
+   if (check){
+      action = 'Add';
+   }
+   else{
+      action = 'Delete';
+   }
+   
+//   url = 'https://ras.papercept.net/conferences/scripts/myprogram.pl?ConfID=561&' + action + number;
+//   window.open(url,'myprogrampage');
+
+   modifyItem("https://ras.papercept.net/conferences/scripts/myprogram_aja.pl","561",action,number)
+
+}
+
+
+function modifyItem(url,ConfID,action,number){
+   var oRequest = initXMLHttp();
+   if (!oRequest){return;}
+   
+   // Send the request
+
+   oRequest.open("post",url, true);
+   var sParams = 'ConfID=' + ConfID + '&Action=' + action + '&Number=' + number;
+   document.body.style.cursor = 'wait';
+   oRequest.send(sParams);
+
+   // Process the response
+   
+   oRequest.onreadystatechange = function(){ 
+      if (oRequest && oRequest.readyState && oRequest.readyState == 4){
+         document.body.style.cursor = 'auto';
+         var responseText = oRequest.responseText;
+         if (responseText.substring(0,5) == 'Error'){
+            alert(responseText);
+         }
+         else{
+         
+//            alert(responseText);
+
+         }
+      }
+   } 
+}
+
+var iIntervalId;  // Global variable
+function modsession(id,kk){
+   var check = document.getElementById('mod' + kk).checked;
+   if (check){
+      action = 'AddSession';
+   }
+   else{
+      action = 'DelSession';
+   }
+
+//   url = 'https://ras.papercept.net/conferences/scripts/myprogram.pl?ConfID=561&' + action + id;
+//   window.open(url,'myprogrampage');
+
+   modifySession("https://ras.papercept.net/conferences/scripts/myprogram_aja.pl","561",action,id)
+
+}
+
+function modifySession(url,ConfID,action,id){
+   var oRequest = initXMLHttp();
+   if (!oRequest){return;}
+   
+   // Send the request
+
+   oRequest.open("post",url, true);
+   var sParams = 'ConfID=' + ConfID + '&Action=' + action + '&ID=' + id;
+   document.body.style.cursor = 'wait';
+   oRequest.send(sParams);
+
+   // Process the response
+   
+   oRequest.onreadystatechange = function(){ 
+      if (oRequest && oRequest.readyState && oRequest.readyState == 4){
+         document.body.style.cursor = 'auto';
+         var responseText = oRequest.responseText;
+         if (responseText.substring(0,5) == 'Error'){
+            alert(responseText);
+         }
+         else{
+         
+//            alert(responseText);
+
+         }
+      }
+   } 
+}
+
+function getCookie(sName){
+   var sRE = "(?:; )?" + sName + "=([^;]*);?";   
+   var oRE = new RegExp(sRE);
+   if (oRE.test(document.cookie)){
+      return decodeURIComponent(RegExp["$1"]);}
+   else{
+      return null;
+   }
+}
+function loadprogram(){
+   var list = getCookie("ICCAS2026");
+   if (list){
+      var List = list.split(",");
+      for (var i=0; i<List.length; i++){
+         var names = document.getElementsByName('modify' + List[i]);
+         if (names.length){
+            for (var j=0; j<names.length; j++){
+               names[j].checked = true;
+            }
+         }
+      }
+   }
+}
+function reset(){
+
+   // Uncheck all modify and addsession checkboxes
+
+   var ins = document.getElementsByTagName('input');
+   for (var i=0; i<ins.length; i++){
+      if (ins[i].type == 'checkbox' && ins[i].id && ins[i].id.substring(0,3) == 'mod'){
+         ins[i].checked = false;
+      }
+   }
+   
+   // Reload the program
+   
+   loadprogram();
+}
+function startreset(){
+   iIntervalId = setInterval(reset,2000);
+}
+function viewAbstract(number){
+   var box = document.getElementById('Ab' + number);
+   if (box.style.display == 'block'){
+      box.style.display = 'none';
+   }
+   else if (box && box.style.display == 'none'){
+      box.style.display = 'block';
+   }
+}
+function openAllAbstracts(){
+   var d = document.getElementsByTagName('div');
+   var count = d.length;
+   if (count == 0){return;}
+   for (var i=0; i<d.length; i++){
+      if (d[i].id && d[i].id.substring(0,2) == 'Ab' && d[i].style.display == 'none'){
+         d[i].style.display = 'block';
+      }
+   }
+}
+function closeAllAbstracts(){
+   var d = document.getElementsByTagName('div');
+   for (var i=0; i<d.length; i++){
+      if (d[i].id && d[i].id.substring(0,2) == 'Ab'){
+         d[i].style.display = 'none';
+      }
+   }
+}
+var uhash;
+
+// ===== BEGIN PROGRAM CONTENT MAGNIFICATION (2026-09-14) =====
+var programScaleMinimum = 60;
+var programScaleMaximum = 140;
+var programScaleStep = 10;
+var programScalePercent = 100;
+
+function programScaleStorageKey(){
+   // All generated program files in one conference directory share a setting.
+   var pagePath = location.pathname;
+   var finalSlash = pagePath.lastIndexOf('/');
+   var conferencePath = finalSlash >= 0 ? pagePath.substring(0, finalSlash + 1) : pagePath;
+   return 'program-content-scale:' + conferencePath;
+}
+
+function readProgramScale(){
+   try {
+      var savedScale = parseInt(localStorage.getItem(programScaleStorageKey()), 10);
+      if (savedScale >= programScaleMinimum && savedScale <= programScaleMaximum){
+         return savedScale;
+      }
+   }
+   catch (ignoreStorageError){}
+   return 100;
+}
+
+function applyProgramScale(percent, saveSetting){
+   percent = Math.max(programScaleMinimum,
+      Math.min(programScaleMaximum, Math.round(percent / programScaleStep) * programScaleStep));
+   programScalePercent = percent;
+
+   // Scale only the generated data tables. The surrounding output container,
+   // PAAG day title/navigation and scroll panel retain normal dimensions.
+   // CSS zoom scales cell widths, heights, padding and text together, while
+   // .sdiv calculates its horizontal scroll range from the scaled table.
+   var scale = percent / 100;
+   var programTables = document.querySelectorAll(
+      '.program-output table.dayB, .program-output table.trk, ' +
+      '.program-output table.lT, .program-output table.kT, .program-output table.s'
+   );
+   for (var tableIndex = 0; tableIndex < programTables.length; tableIndex++){
+      programTables[tableIndex].style.zoom = scale;
+   }
+
+   var scaleValue = document.getElementById('programScaleValue');
+   if (scaleValue){scaleValue.textContent = percent + '%';}
+   var smallerButton = document.getElementById('programScaleSmaller');
+   var largerButton = document.getElementById('programScaleLarger');
+   if (smallerButton){smallerButton.disabled = percent <= programScaleMinimum;}
+   if (largerButton){largerButton.disabled = percent >= programScaleMaximum;}
+
+   if (saveSetting){
+      try {localStorage.setItem(programScaleStorageKey(), String(percent));}
+      catch (ignoreStorageError){}
+   }
+
+   var visibleDay = document.querySelector('.blck:not([style*="display: none"])');
+   if (visibleDay){fitProgramPanelToViewport(visibleDay.id);}
+}
+
+function changeProgramScale(change){
+   applyProgramScale(programScalePercent + change, true);
+}
+
+function resetProgramScale(){
+   applyProgramScale(100, true);
+}
+// ===== END PROGRAM CONTENT MAGNIFICATION (2026-09-14) =====
+
+// ===== BEGIN ACCESSIBILITY ENHANCEMENTS (2026-09-27) =====
+function enhanceProgramAccessibility(){
+   var currentFile = location.pathname.substring(location.pathname.lastIndexOf('/') + 1);
+   var navigationLinks = document.querySelectorAll('.program-nav a');
+   var linkIndex;
+
+   // Identify the page represented by the primary navigation without adding
+   // any visual styling. PAAG day links use aria-current="date" separately.
+   for (linkIndex = 0; linkIndex < navigationLinks.length; linkIndex++){
+      var navigationLink = navigationLinks[linkIndex];
+      var linkHref = navigationLink.getAttribute('href') || '';
+      var linkFile = linkHref.split('#')[0].split('?')[0];
+      linkFile = linkFile.substring(linkFile.lastIndexOf('/') + 1);
+      if (linkFile && linkFile == currentFile){
+         navigationLink.setAttribute('aria-current','page');
+      }
+      else if (!navigationLink.classList.contains('program-current-day')){
+         navigationLink.removeAttribute('aria-current');
+      }
+   }
+
+   // Supply an accessible name to any icon-only control not already labelled.
+   // Existing explicit labels always take precedence.
+   var iconControls = document.querySelectorAll('a, button');
+   for (linkIndex = 0; linkIndex < iconControls.length; linkIndex++){
+      var control = iconControls[linkIndex];
+      if (control.hasAttribute('aria-label') || control.hasAttribute('aria-labelledby')){continue;}
+      var visibleText = control.textContent.trim();
+      var containsGraphic = Boolean(control.querySelector('svg, img'));
+      // Avoid a regular expression here: this template is processed through
+      // Perl interpolation, which can consume regex escapes and the end-of-
+      // string dollar marker before the JavaScript reaches the browser.
+      var symbolCode = visibleText.length == 1 ? visibleText.charCodeAt(0) : 0;
+      var isSymbolOnly = visibleText == '?' || visibleText == '+' || visibleText == '-' ||
+         symbolCode == 0x2212 || symbolCode == 0x2039 || symbolCode == 0x203a;
+      if (!containsGraphic && !isSymbolOnly){continue;}
+      var accessibleName = control.getAttribute('data-tooltip') || control.getAttribute('title');
+      if (!accessibleName){
+         var image = control.querySelector('img[alt]');
+         if (image){accessibleName = image.getAttribute('alt');}
+      }
+      if (accessibleName){control.setAttribute('aria-label',accessibleName);}
+   }
+}
+// ===== END ACCESSIBILITY ENHANCEMENTS (2026-09-27) =====
+
+// ===== BEGIN PRIMARY NAVIGATION OVERFLOW ARROWS (2026-09-29) =====
+function installPrimaryNavigationArrows(){
+   var navigation = document.querySelector('.program-nav');
+   if (!navigation || navigation.parentElement.classList.contains('program-nav-frame')){return;}
+
+   var frame = document.createElement('div');
+   frame.className = 'program-nav-frame';
+   navigation.parentNode.insertBefore(frame, navigation);
+   frame.appendChild(navigation);
+
+   var leftArrow = document.createElement('button');
+   leftArrow.type = 'button';
+   leftArrow.className = 'program-nav-arrow program-nav-arrow-left';
+   leftArrow.setAttribute('aria-label','Scroll navigation left');
+   leftArrow.setAttribute('title','Scroll navigation left');
+   leftArrow.innerHTML = '&#8249;';
+   leftArrow.hidden = true;
+
+   var rightArrow = document.createElement('button');
+   rightArrow.type = 'button';
+   rightArrow.className = 'program-nav-arrow program-nav-arrow-right';
+   rightArrow.setAttribute('aria-label','Scroll navigation right');
+   rightArrow.setAttribute('title','Scroll navigation right');
+   rightArrow.innerHTML = '&#8250;';
+   rightArrow.hidden = true;
+
+   frame.appendChild(leftArrow);
+   frame.appendChild(rightArrow);
+
+   function updateNavigationArrows(remeasureOverflow){
+      // Only remove arrow clearance when the viewport or navigation geometry
+      // changes. Removing it during every scroll moves the right endpoint and
+      // can leave the final link trapped underneath a persistent arrow.
+      if (remeasureOverflow){
+         frame.classList.remove('has-overflow');
+         var naturalOverflow = navigation.scrollWidth > navigation.clientWidth + 2;
+         if (!naturalOverflow){
+            navigation.scrollLeft = 0;
+            leftArrow.hidden = true;
+            rightArrow.hidden = true;
+            return;
+         }
+         frame.classList.add('has-overflow');
+      }
+
+      var hasOverflow = frame.classList.contains('has-overflow');
+      if (!hasOverflow){return;}
+
+      var maximumScroll = Math.max(0,navigation.scrollWidth - navigation.clientWidth);
+      leftArrow.hidden = navigation.scrollLeft <= 2;
+      rightArrow.hidden = maximumScroll <= 2 ||
+         Math.ceil(navigation.scrollLeft) >= Math.floor(maximumScroll) - 2;
+   }
+
+   function moveNavigation(direction){
+      var movement = Math.max(120,Math.round(navigation.clientWidth * 0.75));
+      var reduceMotion = window.matchMedia &&
+         window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      navigation.scrollBy({
+         left: direction * movement,
+         behavior: reduceMotion ? 'auto' : 'smooth'
+      });
+   }
+
+   leftArrow.addEventListener('click',function(){moveNavigation(-1);});
+   rightArrow.addEventListener('click',function(){moveNavigation(1);});
+   navigation.addEventListener('scroll',function(){updateNavigationArrows(false);},{passive:true});
+   window.addEventListener('resize',function(){updateNavigationArrows(true);});
+   window.addEventListener('orientationchange',function(){
+      window.setTimeout(function(){updateNavigationArrows(true);},100);
+   });
+   if (window.ResizeObserver){
+      var lastNavigationFrameWidth = frame.clientWidth;
+      var navigationObserver = new ResizeObserver(function(){
+         var currentNavigationFrameWidth = frame.clientWidth;
+         if (Math.abs(currentNavigationFrameWidth - lastNavigationFrameWidth) > 1){
+            lastNavigationFrameWidth = currentNavigationFrameWidth;
+            updateNavigationArrows(true);
+         }
+      });
+      navigationObserver.observe(frame);
+   }
+
+   window.requestAnimationFrame(function(){updateNavigationArrows(true);});
+}
+// ===== END PRIMARY NAVIGATION OVERFLOW ARROWS (2026-09-29) =====
+
+// ===== BEGIN AUTHOR INDEX WIDTH-CHANGE RELOAD (2026-09-28) =====
+function installAuthorIndexResizeReload(){
+   var authorTable = document.querySelector('.program-output table.lT');
+   if (!authorTable){return;}
+
+   var storageKey = 'author-index-resize-position:' + location.pathname;
+   var savedPosition = null;
+   try {
+      var savedText = sessionStorage.getItem(storageKey);
+      if (savedText){
+         savedPosition = JSON.parse(savedText);
+         sessionStorage.removeItem(storageKey);
+      }
+   }
+   catch (ignorePositionReadError){}
+
+   if (savedPosition && Date.now() - savedPosition.savedAt < 15000){
+      if (window.history && 'scrollRestoration' in window.history){
+         window.history.scrollRestoration = 'manual';
+      }
+      window.requestAnimationFrame(function(){
+         window.requestAnimationFrame(function(){
+            var restoreTarget = null;
+            if (savedPosition.anchorName){
+               var namedTargets = document.getElementsByName(savedPosition.anchorName);
+               if (namedTargets.length){
+                  restoreTarget = namedTargets[0].closest('tr');
+                  var rowsAfterAnchor = savedPosition.rowsAfterAnchor || 0;
+                  while (restoreTarget && rowsAfterAnchor > 0){
+                     restoreTarget = restoreTarget.nextElementSibling;
+                     rowsAfterAnchor--;
+                  }
+               }
+            }
+            if (restoreTarget){
+               restoreTarget.scrollIntoView({block: 'start'});
+               window.scrollBy(0, -(savedPosition.viewportOffset || 0));
+            }
+            else if (typeof savedPosition.scrollY == 'number'){
+               window.scrollTo(0, savedPosition.scrollY);
+            }
+         });
+      });
+   }
+
+   var initialWidth = window.innerWidth;
+   var reloadTimer = null;
+   var resizeActive = false;
+   var overlay = document.createElement('div');
+   overlay.className = 'author-index-resize-overlay';
+   overlay.setAttribute('role','status');
+   overlay.setAttribute('aria-live','polite');
+   overlay.setAttribute('aria-label','Adjusting the Author Index to the new window width');
+   overlay.innerHTML = '<div class="author-index-resize-indicator"><div class="author-index-resize-spinner" aria-hidden="true"></div><div>Adjusting Author Index&hellip;</div></div>';
+   document.body.appendChild(overlay);
+
+   function rememberVisibleAuthorRow(){
+      var shell = document.querySelector('.program-shell');
+      var shellLeft = shell ? shell.getBoundingClientRect().left : 0;
+      var probeX = Math.min(window.innerWidth - 1, Math.max(1, shellLeft + 20));
+      var probeY = Math.min(window.innerHeight - 1, Math.max(1, window.innerHeight * 0.35));
+      var probe = document.elementFromPoint(probeX, probeY);
+      var visibleRow = probe && probe.closest ? probe.closest('table.lT tr') : null;
+      var anchorRow = visibleRow;
+      var rowsAfterAnchor = 0;
+      var anchor = anchorRow ? anchorRow.querySelector('a[name]') : null;
+
+      while (anchorRow && !anchor && rowsAfterAnchor < 100){
+         anchorRow = anchorRow.previousElementSibling;
+         rowsAfterAnchor++;
+         anchor = anchorRow ? anchorRow.querySelector('a[name]') : null;
+      }
+
+      var position = {
+         savedAt: Date.now(),
+         scrollY: window.pageYOffset || document.documentElement.scrollTop || 0,
+         viewportOffset: visibleRow ? visibleRow.getBoundingClientRect().top : 0,
+         anchorName: anchor ? anchor.getAttribute('name') : '',
+         rowsAfterAnchor: anchor ? rowsAfterAnchor : 0
+      };
+      try {sessionStorage.setItem(storageKey, JSON.stringify(position));}
+      catch (ignorePositionWriteError){}
+   }
+
+   window.addEventListener('resize', function(){
+      if (window.visualViewport && window.visualViewport.scale != 1){return;}
+      if (Math.abs(window.innerWidth - initialWidth) < 32){return;}
+
+      if (!resizeActive){
+         resizeActive = true;
+         rememberVisibleAuthorRow();
+         overlay.classList.add('is-visible');
+      }
+
+      if (reloadTimer){window.clearTimeout(reloadTimer);}
+      reloadTimer = window.setTimeout(function(){
+         location.reload();
+      }, 750);
+   });
+}
+// ===== END AUTHOR INDEX WIDTH-CHANGE RELOAD (2026-09-28) =====
+
+// ===== BEGIN CONTENT-LIST PAPER TARGET FOCUS (2026-09-27) =====
+function focusContentListPaperFromHash(){
+   var paperAnchor = location.hash ? location.hash.substring(1) : '';
+   if (!paperAnchor){return;}
+
+   try {paperAnchor = decodeURIComponent(paperAnchor);}
+   catch (ignoreMalformedHash){}
+
+   var namedTargets = document.getElementsByName(paperAnchor);
+   var targetAnchor = namedTargets.length ? namedTargets[0] : document.getElementById(paperAnchor);
+   if (!targetAnchor){return;}
+
+   var targetRow = targetAnchor.closest ? targetAnchor.closest('tr[data-paper-anchor]') : null;
+   if (!targetRow){return;}
+
+   var allPaperRows = document.querySelectorAll('tr[data-paper-anchor]');
+   var matchingRows = [];
+   var rowIndex;
+
+   for (rowIndex = 0; rowIndex < allPaperRows.length; rowIndex++){
+      allPaperRows[rowIndex].classList.remove(
+         'paper-target-focus', 'paper-target-focus-start', 'paper-target-focus-end'
+      );
+
+      if (allPaperRows[rowIndex].getAttribute('data-paper-anchor') == paperAnchor){
+         // Include the collapsible abstract row even while it is hidden. If
+         // the title is opened later, the abstract becomes a seamless visual
+         // continuation of the same highlighted paper block.
+         matchingRows.push(allPaperRows[rowIndex]);
+      }
+   }
+
+   if (!matchingRows.length){return;}
+   for (rowIndex = 0; rowIndex < matchingRows.length; rowIndex++){
+      matchingRows[rowIndex].classList.add('paper-target-focus');
+   }
+   matchingRows[0].classList.add('paper-target-focus-start');
+   matchingRows[matchingRows.length - 1].classList.add('paper-target-focus-end');
+
+   // Run after the browser's normal anchor jump so the entire paper block,
+   // rather than only the named anchor, is positioned comfortably in view.
+   window.setTimeout(function(){
+      matchingRows[0].scrollIntoView({block: 'center', inline: 'nearest'});
+   },0);
+}
+
+window.addEventListener('hashchange', focusContentListPaperFromHash);
+// ===== END CONTENT-LIST PAPER TARGET FOCUS (2026-09-27) =====
+
+$(function() { 
+
+   // Program-size magnification belongs only to Program at a Glance. Identify
+   // that page before displaying, binding, or applying the scale controls.
+   var programShell = document.querySelector('.program-shell');
+   var isProgramGlancePage = Boolean(programShell && programShell.querySelector('.sdiv'));
+   if (isProgramGlancePage){programShell.classList.add('program-glance-page');}
+
+   // Bind after the controls exist. This also works where a Content Security
+   // Policy or template processing prevents inline event handlers.
+   var smallerScaleControl = document.getElementById('programScaleSmaller');
+   var largerScaleControl = document.getElementById('programScaleLarger');
+   var resetScaleControl = document.getElementById('programScaleReset');
+   if (isProgramGlancePage && smallerScaleControl){
+      smallerScaleControl.addEventListener('click', function(){changeProgramScale(-programScaleStep);});
+   }
+   if (isProgramGlancePage && largerScaleControl){
+      largerScaleControl.addEventListener('click', function(){changeProgramScale(programScaleStep);});
+   }
+   if (isProgramGlancePage && resetScaleControl){
+      resetScaleControl.addEventListener('click', resetProgramScale);
+   }
+
+   if (isProgramGlancePage){applyProgramScale(readProgramScale(), false);}
+   installPrimaryNavigationArrows();
+   focusContentListPaperFromHash();
+   enhanceProgramAccessibility();
+   installAuthorIndexResizeReload();
+
+   // ===== BEGIN MOBILE PROGRAM AT A GLANCE IDENTIFICATION (2026-09-14) =====
+   // Add a page-specific class without changing the generated program markup.
+   // The class is now applied above before PAAG-only controls are initialized.
+
+   // Build one consistent first/middle/last navigation row and remove the
+   // redundant Top action.
+   normalizeProgramDayNavigation();
+
+   // Add directional controls outside each PAAG scroll panel.
+   var programScrollPanels = document.querySelectorAll('.program-glance-page .sdiv');
+   for (var panelIndex = 0; panelIndex < programScrollPanels.length; panelIndex++){
+      installProgramScrollEdges(programScrollPanels[panelIndex]);
+   }
+
+   // Fit sparse schedules to the phone width. Dense multi-track schedules
+   // retain their generated width and remain scrollable inside .sdiv.
+   $('.sdiv table.dayB').each(function(){
+      var generatedWidth = parseInt(this.style.width, 10);
+      if (generatedWidth && generatedWidth <= 700){
+         $(this).addClass('compact-fit-table');
+      }
+   });
+   // ===== END MOBILE PROGRAM AT A GLANCE IDENTIFICATION (2026-09-14) =====
+
+   // Check for URL hash
+
+   uhash = location.hash.substring(1);
+   if (uhash.slice(-1) == '_'){
+      uhash = null;
+   }
+   // 2026-09-04: Keep the session cell's generated background colour.
+   // The target is identified later by the solid/dashed border treatment.
+});
+
+
+$(function() { 
+
+   // Check for URL hash
+
+   uhash = location.hash.substring(1);
+   if (uhash.slice(-1) == '_'){
+      uhash = null;
+   }
+   if (uhash){
+
+      // Set the widths
+      
+      setwidth();
+      
+      // Reset left margin for FF
+
+      document.getElementById('container').scrollLeft = 0;;
+
+      // ===== BEGIN DIRECT CROSS-PAGE TARGET FOCUS (2026-09-04) =====
+      // Reveal the correct day, center its session inside the schedule panel,
+      // and highlight it without reloading or visibly scrolling across the page.
+      var targetElement = document.getElementById(uhash);
+      if (!targetElement){return;}
+
+      var target = $(targetElement);
+      var dayBlock = target.closest('.blck');
+      var targetCell = target.closest('td');
+
+      if (dayBlock.length){
+         var dayId = dayBlock.attr('id');
+
+         // ===== BEGIN REMEMBER CROSS-PAGE TARGET DAY (2026-09-14) =====
+         currentProgramDay = dayId;
+         // ===== END REMEMBER CROSS-PAGE TARGET DAY (2026-09-14) =====
+
+         initialize();
+         dayBlock.show();
+
+         // ===== BEGIN PAGE-TOP CROSS-PAGE RETURN (2026-09-15) =====
+         // Cross-page target links must move only the schedule panel. Keep the
+         // browser at the top so the conference heading and navigation remain
+         // visible, and update the consolidated heading for the target day.
+         updateProgramGlanceHeading(dayId);
+         window.scrollTo(0,0);
+         fitProgramPanelToViewport(dayId);
+
+         // ===== END PAGE-TOP CROSS-PAGE RETURN (2026-09-15) =====
+
+         var scrollPanel = dayBlock.find('.sdiv').first();
+         if (scrollPanel.length && targetCell.length){
+            var panelOffset = scrollPanel.offset();
+            var cellOffset = targetCell.offset();
+            var centeredLeft = scrollPanel.scrollLeft() + cellOffset.left - panelOffset.left
+               - (scrollPanel.innerWidth() - targetCell.outerWidth()) / 2;
+            var centeredTop = scrollPanel.scrollTop() + cellOffset.top - panelOffset.top
+               - (scrollPanel.innerHeight() - targetCell.outerHeight()) / 2;
+
+            scrollPanel.scrollLeft(Math.max(0, centeredLeft));
+            scrollPanel.scrollTop(Math.max(0, centeredTop));
+         }
+
+         $('.program-target-focus').removeClass('program-target-focus');
+         targetCell.addClass('program-target-focus');
+         // Focus the highlighted session cell rather than the viewport-width
+         // day wrapper. The wrapper's focus outline otherwise becomes a stray
+         // vertical line when a wide schedule is scrolled horizontally.
+         var targetCellElement = targetCell.get(0);
+         if (targetCellElement){
+            targetCellElement.setAttribute('tabindex', '-1');
+            try {targetCellElement.focus({preventScroll: true});}
+            catch (ignoreFocusOptionError){targetCellElement.focus();}
+         }
+         window.scrollTo(0,0);
+      }
+
+      if (window.history && window.history.replaceState){
+         window.history.replaceState(null, document.title,
+            location.pathname + location.search + '#' + uhash + '_');
+      }
+      // ===== END DIRECT CROSS-PAGE TARGET FOCUS (2026-09-04) =====
+   }
+   else{
+      setwidth();
+      initialize();
+
+      // ===== BEGIN PROGRAM AT A GLANCE AUTO-OPEN (2026-09-03) =====
+      // If this is the Program at a Glance, open its first configured day
+      // immediately instead of displaying the former introductory screen.
+      var firstProgramDay = document.getElementById('strt');
+      if (firstProgramDay){
+         selfollowing(firstProgramDay.getAttribute('data-first-day'));
+      }
+      // ===== END PROGRAM AT A GLANCE AUTO-OPEN (2026-09-03) =====
+   }
+});
+
+var ghit = false;
+
+// ===== BEGIN CURRENT PROGRAM DAY STATE (2026-09-14) =====
+// Preserve the visible day when resize/orientation events rerun initialize().
+var currentProgramDay = null;
+// ===== END CURRENT PROGRAM DAY STATE (2026-09-14) =====
+
+function setwidth(){
+   var viewportwidth = $( window ).width();
+   var viewportheight = $( window ).height();
+
+   // ===== BEGIN ORIENTATION-SAFE OVERFLOW RESET (2026-09-14) =====
+   // Recalculate from scratch after every resize/orientation change.
+   ghit = false;
+   // ===== END ORIENTATION-SAFE OVERFLOW RESET (2026-09-14) =====
+
+   var sdiv = $( ".sdiv" );
+   for (var i=0; i<sdiv.length; i++){
+      // ===== BEGIN 85-PERCENT DAY PANEL WIDTH (2026-09-04) =====
+      // The program-shell is 85% of the page; each day fills that shell.
+      $(sdiv[i]).css({width: '100%'});
+      // ===== END 85-PERCENT DAY PANEL WIDTH (2026-09-04) =====
+      $(sdiv[i]).css("height", .9*viewportheight-50 + 'px');      
+   }
+
+   // Detect horizontal overflow on any of the divs
+   
+   var divs = document.getElementsByTagName('div');
+   for (var i=0; i<divs.length; i++){
+      if (divs[i].id && divs[i].id.substring(0,3) == 'div'){
+         if (divs[i].scrollWidth > divs[i].clientWidth){
+            ghit = true;
+            break;
+         }
+      }
+   }
+   if (!ghit){
+      for (var i=0; i<divs.length; i++){
+         divs[i].style.height = 'auto';
+      }
+   }
+}
+
+function selfollowing(hsh){
+   // ===== BEGIN SAFE PROGRAM DAY NAVIGATION (2026-09-03) =====
+   // A newly opened page has no URL hash; avoid constructing an empty
+   // jQuery ID selector before opening the first configured day.
+   $('.program-target-focus').removeClass('program-target-focus');
+   // ===== END SAFE PROGRAM DAY NAVIGATION (2026-09-03) =====
+   // ===== BEGIN PROGRAM AT A GLANCE TOP BEHAVIOR (2026-09-03) =====
+   // The introductory screen no longer exists, so Top returns to day one.
+   if (hsh == 'TheTop'){
+      var firstProgramDay = document.getElementById('strt');
+      if (firstProgramDay){
+         hsh = firstProgramDay.getAttribute('data-first-day');
+      }
+   }
+   // ===== END PROGRAM AT A GLANCE TOP BEHAVIOR (2026-09-03) =====
+
+   // ===== BEGIN REMEMBER SELECTED PROGRAM DAY (2026-09-14) =====
+   if (hsh != 'TheTop' && document.getElementById(hsh)){
+      currentProgramDay = hsh;
+      updateProgramGlanceHeading(hsh);
+   }
+
+   // Keep the common conference header in a consistent position for every
+   // selected PAAG day instead of scrolling the browser to the day block.
+   window.scrollTo(0,0);
+   setwidth();
+   initialize();
+   // ===== END REMEMBER SELECTED PROGRAM DAY (2026-09-14) =====
+
+   if (hsh == 'TheTop'){
+      var ypos = $('#container').offset().top;
+      window.scrollTo(0,ypos)
+   }
+   else{
+      $('#' + hsh).show();
+      $( '#A' + hsh ).focus();
+
+      // ===== BEGIN STABLE DAY SWITCH AND PANEL RESET (2026-09-14) =====
+      // Begin every newly selected day at its upper-left corner. Horizontal
+      // and vertical movement then remain local to the schedule panel.
+      var selectedPanel = $('#' + hsh).find('.sdiv').first();
+      if (selectedPanel.length){
+         selectedPanel.scrollLeft(0);
+         selectedPanel.scrollTop(0);
+      }
+      window.scrollTo(0,0);
+      fitProgramPanelToViewport(hsh);
+      // ===== END STABLE DAY SWITCH AND PANEL RESET (2026-09-14) =====
+   }
+}
+
+// ===== BEGIN COMPACT PROGRAM VIEWPORT DETECTION (2026-09-14) =====
+function isCompactProgramViewport(){
+   return $(window).width() <= 700 || $(window).height() <= 500;
+}
+// ===== END COMPACT PROGRAM VIEWPORT DETECTION (2026-09-14) =====
+
+// ===== BEGIN CONSOLIDATED PAAG DAY HEADING (2026-09-15) =====
+// Reuse the generated day/date but place it in the main PAAG heading. The
+// original per-day bold title is retained in the HTML as the source and hidden
+// by CSS, so no change to publications.pl or the generated day links is needed.
+function updateProgramGlanceHeading(dayId){
+   var shell = document.querySelector('.program-shell.program-glance-page');
+   var dayBlock = document.getElementById(dayId);
+   if (!shell || !dayBlock){return;}
+
+   updateProgramCurrentDay(dayId);
+
+   var sourceTitle = dayBlock.querySelector('p > b');
+   var pageHeading = shell.querySelector('.program-page-title h3');
+   if (!sourceTitle || !pageHeading){return;}
+
+   // Do not use a backslash-based whitespace regular expression here. The
+   // legacy template processor consumes that backslash before output.
+   var sourceText = sourceTitle.textContent.trim();
+   var dayMarker = dayId + ' ';
+   var dayPosition = sourceText.indexOf(dayMarker);
+   if (dayPosition >= 0){
+      pageHeading.textContent = 'Program at a Glance ' + sourceText.substring(dayPosition);
+   }
+}
+// ===== END CONSOLIDATED PAAG DAY HEADING (2026-09-15) =====
+
+// ===== BEGIN PAAG CURRENT DAY AND SCROLL EDGES (2026-09-15) =====
+function updateProgramCurrentDay(dayId){
+   var shell = document.querySelector('.program-shell.program-glance-page');
+   if (!shell){return;}
+
+   var dayLinks = shell.querySelectorAll('.program-nav a, .blck > p a');
+   for (var linkIndex = 0; linkIndex < dayLinks.length; linkIndex++){
+      var link = dayLinks[linkIndex];
+      var linkLabel = link.textContent.trim();
+      var isMainDayLink = link.closest('.program-nav') && linkLabel == dayId;
+      var isPaagDayLink = link.closest('.program-day-navigation')
+         && linkLabel == dayId
+         && link.getAttribute('data-program-day-target') == dayId;
+      var isCurrentDay = Boolean(isMainDayLink || isPaagDayLink);
+      link.classList.toggle('program-current-day', isCurrentDay);
+      if (isCurrentDay){link.setAttribute('aria-current', 'date');}
+      else{link.removeAttribute('aria-current');}
+   }
+}
+
+function createProgramDayNavigationLink(label, dayId, titleText){
+   var link = document.createElement('a');
+   link.href = '#';
+   link.textContent = label;
+   link.setAttribute('data-program-day-target', dayId);
+   if (titleText){link.title = titleText;}
+   link.addEventListener('click', function(event){
+      event.preventDefault();
+      selfollowing(dayId);
+   });
+   return link;
+}
+
+function createDisabledProgramDayNavigation(label){
+   var item = document.createElement('span');
+   item.className = 'program-day-navigation-disabled';
+   item.textContent = label;
+   item.setAttribute('aria-disabled', 'true');
+   return item;
+}
+
+function normalizeProgramDayNavigation(){
+   var shell = document.querySelector('.program-shell.program-glance-page');
+   if (!shell){return;}
+   var dayBlocks = shell.querySelectorAll('.blck');
+
+   for (var blockIndex = 0; blockIndex < dayBlocks.length; blockIndex++){
+      var dayBlock = dayBlocks[blockIndex];
+      var row = dayBlock.querySelector('p');
+      var sourceTitle = row ? row.querySelector('b') : null;
+      if (!row || !sourceTitle){continue;}
+
+      // Preserve the hidden generated title because it supplies the date for
+      // the consolidated heading; replace everything else in the row.
+      while (row.firstChild){row.removeChild(row.firstChild);}
+      row.appendChild(sourceTitle);
+
+      var navigation = document.createElement('span');
+      navigation.className = 'program-day-navigation';
+
+      if (blockIndex > 0){
+         navigation.appendChild(createProgramDayNavigationLink('Previous',
+            dayBlocks[blockIndex - 1].id, 'Click to jump to the previous day'));
+      }
+      else{
+         navigation.appendChild(createDisabledProgramDayNavigation('Previous'));
+      }
+
+      for (var dayIndex = 0; dayIndex < dayBlocks.length; dayIndex++){
+         navigation.appendChild(createProgramDayNavigationLink(
+            dayBlocks[dayIndex].id, dayBlocks[dayIndex].id, ''));
+      }
+
+      if (blockIndex < dayBlocks.length - 1){
+         navigation.appendChild(createProgramDayNavigationLink('Next',
+            dayBlocks[blockIndex + 1].id, 'Click to jump to the next day'));
+      }
+      else{
+         navigation.appendChild(createDisabledProgramDayNavigation('Next'));
+      }
+
+      row.appendChild(navigation);
+   }
+}
+
+function updateProgramScrollEdges(panel){
+   if (!panel){return;}
+   var maximumScroll = Math.max(0, panel.scrollWidth - panel.clientWidth);
+   var frame = panel.parentElement;
+   if (!frame || !frame.classList.contains('program-scroll-frame')){return;}
+   var leftArrow = frame.querySelector('.program-scroll-arrow-left');
+   var rightArrow = frame.querySelector('.program-scroll-arrow-right');
+   if (leftArrow){leftArrow.hidden = panel.scrollLeft <= 2;}
+   if (rightArrow){
+      rightArrow.hidden = maximumScroll <= 2 || panel.scrollLeft >= maximumScroll - 2;
+   }
+}
+
+function installProgramScrollEdges(panel){
+   if (!panel || panel.getAttribute('data-program-scroll-edges') == 'yes'){return;}
+   panel.setAttribute('data-program-scroll-edges', 'yes');
+
+   var frame = document.createElement('div');
+   frame.className = 'program-scroll-frame';
+   panel.parentNode.insertBefore(frame, panel);
+   frame.appendChild(panel);
+
+   var leftArrow = document.createElement('button');
+   leftArrow.type = 'button';
+   leftArrow.className = 'program-scroll-arrow program-scroll-arrow-left';
+   leftArrow.innerHTML = '&#8249;';
+   leftArrow.setAttribute('aria-label', 'Show earlier program tracks');
+   leftArrow.title = 'Show content to the left';
+   var rightArrow = document.createElement('button');
+   rightArrow.type = 'button';
+   rightArrow.className = 'program-scroll-arrow program-scroll-arrow-right';
+   rightArrow.innerHTML = '&#8250;';
+   rightArrow.setAttribute('aria-label', 'Show later program tracks');
+   rightArrow.title = 'Show content to the right';
+   frame.appendChild(leftArrow);
+   frame.appendChild(rightArrow);
+
+   function moveProgramPanel(direction){
+      var distance = Math.max(160, Math.round(panel.clientWidth * 0.8));
+      try {panel.scrollBy({left: direction * distance, behavior: 'smooth'});}
+      catch (ignoreSmoothScrollError){panel.scrollLeft += direction * distance;}
+   }
+   leftArrow.addEventListener('click', function(){moveProgramPanel(-1);});
+   rightArrow.addEventListener('click', function(){moveProgramPanel(1);});
+   panel.addEventListener('scroll', function(){updateProgramScrollEdges(panel);},
+      {passive: true});
+   updateProgramScrollEdges(panel);
+}
+// ===== END PAAG CURRENT DAY AND SCROLL EDGES (2026-09-15) =====
+
+// ===== BEGIN VIEWPORT-FITTED PROGRAM PANEL (2026-09-14) =====
+// Size the visible schedule from its actual top edge. This keeps its horizontal
+// scrollbar inside the viewport even when headings wrap or browser chrome
+// changes the available height.
+function fitProgramPanelToViewport(dayId){
+   if (!dayId){return;}
+   var dayBlock = document.getElementById(dayId);
+   if (!dayBlock){return;}
+   var panel = dayBlock.querySelector('.sdiv');
+   if (!panel){return;}
+
+   var panelTop = Math.max(panel.getBoundingClientRect().top, 0);
+   // Keep the schedule and its horizontal scrollbar comfortably above the
+   // browser edge, matching the bottom space used by the other program pages.
+   var programBottomBreathingRoom = 24;
+   var availableHeight = window.innerHeight - panelTop - programBottomBreathingRoom;
+   if (availableHeight < 220){availableHeight = 220;}
+   panel.style.setProperty('height', availableHeight + 'px', 'important');
+   updateProgramScrollEdges(panel);
+}
+// ===== END VIEWPORT-FITTED PROGRAM PANEL (2026-09-14) =====
+
+function initialize(){
+
+   var blcks = $('.blck');
+
+   // ===== BEGIN DETERMINISTIC PROGRAM-AT-A-GLANCE DAY DISPLAY (2026-09-28) =====
+   // Day visibility must not depend on whether a particular schedule happens
+   // to overflow its panel. On every viewport, show exactly the selected (or
+   // first configured) day and let its .sdiv panel scroll in both directions.
+   var programGlancePage = document.querySelector('.program-shell.program-glance-page');
+   if (blcks.length && programGlancePage){
+      $("body").css({"overflow-x": "hidden", "overflow-y": "auto"});
+
+      for (var i=0; i<blcks.length; i++){
+         blcks[i].style.display = 'none';
+      }
+
+      var dayToDisplay = currentProgramDay;
+      if (!dayToDisplay){
+         var firstConfiguredDay = document.getElementById('strt');
+         if (firstConfiguredDay){
+            dayToDisplay = firstConfiguredDay.getAttribute('data-first-day');
+         }
+      }
+      if (dayToDisplay && document.getElementById(dayToDisplay)){
+         currentProgramDay = dayToDisplay;
+         $('#' + dayToDisplay).show();
+         updateProgramGlanceHeading(dayToDisplay);
+         fitProgramPanelToViewport(dayToDisplay);
+      }
+
+      var startControl = document.getElementById('start');
+      if (startControl){startControl.style.display = 'none';}
+      $('.scrlis').hide();
+      return;
+   }
+   // ===== END DETERMINISTIC PROGRAM-AT-A-GLANCE DAY DISPLAY (2026-09-28) =====
+
+   // Preserve the legacy overflow test for any non-PAAG output that contains
+   // day blocks.
+   for (var i=0; i<blcks.length; i++){
+      blcks[i].style.display = 'block';
+   }
+
+   // Detect horizontal overflow on any of the divs
+   
+   var hit = false;
+   var divs = document.getElementsByTagName('div');
+   for (var i=0; i<divs.length; i++){
+      if (divs[i].id && divs[i].id.substring(0,3) == 'div'){
+         if (divs[i].scrollWidth > divs[i].clientWidth || divs[i].scrollHeight > divs[i].clientHeight){
+            hit = true;
+            break;
+         }
+      }
+   }
+   if (hit){
+   
+      // On larger displays preserve the established fixed-panel behavior.
+      $("body").css("overflow", "hidden");
+      // ===== BEGIN HIDE PROGRAM INTRODUCTION (2026-09-03) =====
+      var startControl = document.getElementById('start');
+      if (startControl){startControl.style.display = 'none';}
+      // ===== END HIDE PROGRAM INTRODUCTION (2026-09-03) =====
+      
+      // Hide all day blocks
+   
+      var blcks = $('.blck');
+      for (var i=0; i<blcks.length; i++){
+         blcks[i].style.display = 'none';
+      }
+
+      // ===== BEGIN RESTORE VISIBLE PROGRAM DAY AFTER RESIZE (2026-09-14) =====
+      // Safari and desktop browsers may fire resize after the first day opens.
+      // Restore the remembered day, or the first configured day as fallback.
+      var dayToShow = currentProgramDay;
+      if (!dayToShow){
+         var firstProgramDay = document.getElementById('strt');
+         if (firstProgramDay){
+            dayToShow = firstProgramDay.getAttribute('data-first-day');
+         }
+      }
+      if (dayToShow && document.getElementById(dayToShow)){
+         currentProgramDay = dayToShow;
+         $('#' + dayToShow).show();
+         fitProgramPanelToViewport(dayToShow);
+      }
+      // ===== END RESTORE VISIBLE PROGRAM DAY AFTER RESIZE (2026-09-14) =====
+
+      var scrlis = $('.scrlis');
+      for (var i=0; i<scrlis.length; i++){
+         scrlis.show();
+      }
+   }
+   else{
+      $("body").css("overflow", "auto");
+      var startControl = document.getElementById('start');
+      if (startControl){startControl.style.display = 'none';}
+      var blcks = $('.sdiv');
+      for (var i=0; i<blcks.length; i++){
+        blcks[i].style.height = 'auto';
+      }
+      var scrlis = $('.scrlis');
+      for (var i=0; i<scrlis.length; i++){
+         scrlis.hide();
+      }
+   }
+   return;
+}
+
+
+</script>
+</head>
+
+<body  onresize="setwidth(); initialize()">
+
+<form name="myprogram" action="https://ras.papercept.net/conferences/scripts/myprogram.pl">
+
+<div id="container">
+
+<div class="program-shell theme-mahogany">
+<div class="c" id="TheTop">
+<span id="pTitle"><a href="http://2026.iccas.org" target="_blank"><b>26th International Conference on Control, Automation and Systems (ICCAS)</b></a><br></span>
+<span id="pSubTitle"><b>October 27-30, 2026, Sapporo, Japan</b></span><br><br>
+
+</div>
+
+<div class="c program-nav program-nav-web-grouped" style="position: relative">
+<a href=ICCAS2026_ProgramAtAGlanceWeb.html>Program at a Glance</a>&nbsp;&nbsp;
+         <span class="program-daily-navigation">
+            <span class="program-daily-navigation-label">Daily Technical Program</span>
+            <span class="program-daily-navigation-links">&nbsp;&nbsp;<a href=ICCAS2026_ContentListWeb_1.html>Tuesday</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=ICCAS2026_ContentListWeb_2.html>Wednesday</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=ICCAS2026_ContentListWeb_3.html>Thursday</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=ICCAS2026_ContentListWeb_4.html>Friday</a>&nbsp;&nbsp;</span>
+         </span>
+      &nbsp;&nbsp<a href=ICCAS2026_AuthorIndexWeb.html>Author Index</a>&nbsp;&nbsp;&nbsp;&nbsp<a href=ICCAS2026_KeywordIndexWeb.html>Keyword Index</a>&nbsp;&nbsp
+</div>
+
+
+<div class="program-scale-controls" role="group" aria-label="Program content size">
+<span>Program size:</span>
+<button type="button" id="programScaleSmaller" title="Make program content smaller" aria-label="Make program content smaller">&minus;</button>
+<span id="programScaleValue" class="program-scale-value" aria-live="polite">100%</span>
+<button type="button" id="programScaleLarger" title="Make program content larger" aria-label="Make program content larger">+</button>
+<button type="button" id="programScaleReset" title="Reset program content to 100 percent" aria-label="Reset program content to 100 percent">Reset</button>
+</div>
+
+
+<div class="c program-status">
+Last updated on October 17, 2026. This conference program is tentative and subject to change
+</div>
+<div class="c program-page-title">
+<h3>Program at a Glance<span id="start" style="display:none"><a id="strt" data-first-day="Tuesday" href="javascript:selfollowing('Tuesday')"></a></span></h3>
+</div>
+<p class="c program-letter-list"></p>
+<div class="c program-legend">
+
+</div>
+
+<div class="c program-output">
+
+         <div id="Tuesday" class="blck">
+         <p><br><b>ICCAS 2026 Technical Program Tuesday October 27, 2026</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" onclick="selfollowing('Tuesday')">Tuesday</a>&nbsp;&nbsp;<a href="javascript:void(0)" onclick="selfollowing('Wednesday')">Wednesday</a>&nbsp;&nbsp;<a href="javascript:void(0)" onclick="selfollowing('Thursday')">Thursday</a>&nbsp;&nbsp;<a href="javascript:void(0)" onclick="selfollowing('Friday')">Friday</a>&nbsp;&nbsp;<a href="javascript:void(0)" onclick="selfollowing('Wednesday')" title="Click to jump to the next day">Next</a>&nbsp;&nbsp;<a href="javascript:void(0)" onclick="selfollowing('TheTop'); return true">Top</a>&nbsp;&nbsp;<span class="scrlis" style="color: gray"><br>Click on the day's program and use the arrow keys for easy horizontal and vertical scrolling</span></p>
+      
+
+         <div id="div1" class="sdiv" style="overflow: auto">
+         <div id="ATuesday" tabindex="1">
+	  
+         <table class="dayB" style="width: 1500px">
+
+<tr>
+<td colspan="9" class="dHd"><b>ICCAS 2026 Technical Program Tuesday October 27, 2026 </b></td>
+</tr>
+<tr class="tHdr">
+<td width="11%" class="c">Track T1</td>
+<td width="11%" class="c">Track T2</td>
+<td width="11%" class="c">Track T3</td>
+<td width="11%" class="c">Track T4</td>
+<td width="11%" class="c">Track T5</td>
+<td width="11%" class="c">Track T6</td>
+<td width="11%" class="c">Track T7</td>
+<td width="11%" class="c">Track T8</td>
+<td width="11%" class="c">Track T9</td>
+</tr><tr>
+<td width="11%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+                  <td width="11%" rowspan="1" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="tuat2">09:00-12:10</a><BR>
+                        Cattleya, 3F<BR>
+                        Tutorial TuAT2<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_1.html#tuat2" title="Click to go to the session program"><i>Image-Based 3D Model Reconstruction: From Multi-View Geometry to Neural Rendering (09: 00-11: 00)</i></a>
+                   </td>
+               
+                  <td width="11%" rowspan="1" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="tuat3">09:00-12:10</a><BR>
+                        Azalea, 3F<BR>
+                        Tutorial TuAT3<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_1.html#tuat3" title="Click to go to the session program"><i>Fun and Foundations of Swarm Systems and Control (09: 00-11: 20)</i></a>
+                   </td>
+               
+                  <td width="11%" rowspan="1" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="tuat4">09:00-12:10</a><BR>
+                        Lilac, 3F<BR>
+                        Tutorial TuAT4<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_1.html#tuat4" title="Click to go to the session program"><i>Dynamically Embedded Model Predictive Control: Real-Time Operation, Constraint Satisfaction, and Stability (09: 00-12: 10)</i></a>
+                   </td>
+               
+<td width="11%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="11%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="11%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="11%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="11%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+</tr>
+<tr>
+<td width="11%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="11%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="11%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="11%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="11%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="11%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="11%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="11%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="11%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+</tr>
+<tr>
+<td width="11%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+                  <td width="11%" rowspan="1" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="tubt2">13:00-17:00</a><BR>
+                        Cattleya, 3F<BR>
+                        Tutorial TuBT2<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_1.html#tubt2" title="Click to go to the session program"><i>Learning-Based Control for Automotive Systems: From Semi-Parametric Dynamics Modeling to Online Policy Improvement (13: 00-15: 50)</i></a>
+                   </td>
+               
+                  <td width="11%" rowspan="1" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="tubt3">13:00-17:00</a><BR>
+                        Azalea, 3F<BR>
+                        Tutorial TuBT3<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_1.html#tubt3" title="Click to go to the session program"><i>From AI & Robotics Research to Railway Deployment (14: 00-17: 00)</i></a>
+                   </td>
+               
+                  <td width="11%" rowspan="1" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="tubt4">13:00-17:00</a><BR>
+                        Lilac, 3F<BR>
+                        Workshop TuBT4<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_1.html#tubt4" title="Click to go to the session program"><i>Soft Haptic Modules for Skin-Conformal Multi-Modal Tactile Interfaces</i></a>
+                   </td>
+               
+<td width="11%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="11%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="11%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="11%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="11%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+</tr>
+<tr>
+                  <td width="99%" rowspan="1" style="background-color: #E2FFE2"
+                     colspan="9" class="c">
+                        <a id="tupo1s">17:00-18:00</a><BR>
+                        3F Lobby<BR>
+                        Poster Session TuPo1S<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_1.html#tupo1s" title="Click to go to the session program"><i>Poster Session 1</i></a>
+                   </td>
+               
+</tr>
+<tr>
+                  <td width="99%" rowspan="1" style="background-color: #E2FFE2"
+                     colspan="9" class="c">
+                        <a id="tuwr">18:00-19:20</a><BR>
+                        Palace Hall, 3F<BR>
+                         TuWR<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_1.html#tuwr" title="Click to go to the session program"><i>Welcome Reception</i></a>
+                   </td>
+               
+</tr>
+
+         </table>
+         </div>
+         </div>
+         </div>
+         <br><br>
+      
+         <div id="Wednesday" class="blck">
+         <p><br><b>ICCAS 2026 Technical Program Wednesday October 28, 2026</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" onclick="selfollowing('Tuesday')" title="Click to jump to the previous day">Previous</a>&nbsp;&nbsp;<a href="javascript:void(0)" onclick="selfollowing('Tuesday')">Tuesday</a>&nbsp;&nbsp;<a href="javascript:void(0)" onclick="selfollowing('Wednesday')">Wednesday</a>&nbsp;&nbsp;<a href="javascript:void(0)" onclick="selfollowing('Thursday')">Thursday</a>&nbsp;&nbsp;<a href="javascript:void(0)" onclick="selfollowing('Friday')">Friday</a>&nbsp;&nbsp;<a href="javascript:void(0)" onclick="selfollowing('Thursday')" title="Click to jump to the next day">Next</a>&nbsp;&nbsp;<a href="javascript:void(0)" onclick="selfollowing('TheTop'); return true">Top</a>&nbsp;&nbsp;<span class="scrlis" style="color: gray"><br>Click on the day's program and use the arrow keys for easy horizontal and vertical scrolling</span></p>
+      
+
+         <div id="div2" class="sdiv" style="overflow: auto">
+         <div id="AWednesday" tabindex="2">
+	  
+         <table class="dayB" style="width: 1600px">
+
+<tr>
+<td colspan="10" class="dHd"><b>ICCAS 2026 Technical Program Wednesday October 28, 2026 </b></td>
+</tr>
+<tr class="tHdr">
+<td width="10%" class="c">Track T1</td>
+<td width="10%" class="c">Track T2</td>
+<td width="10%" class="c">Track T3</td>
+<td width="10%" class="c">Track T4</td>
+<td width="10%" class="c">Track T5</td>
+<td width="10%" class="c">Track T6</td>
+<td width="10%" class="c">Track T7</td>
+<td width="10%" class="c">Track T8</td>
+<td width="10%" class="c">Track T9</td>
+<td width="10%" class="c">Posters</td>
+</tr><tr>
+                  <td width="10%" rowspan="6" style="background-color: #FFFFD0"
+                     colspan="1" class="c">
+                        <a id="weat1">09:00-10:30</a><BR>
+                        Palace Hall, 3F<BR>
+                        Oral Session WeAT1<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#weat1" title="Click to go to the session program"><i>Control System Applications</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="weat2">09:00-10:30</a><BR>
+                        Cattleya, 3F<BR>
+                        Oral Session WeAT2<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#weat2" title="Click to go to the session program"><i>Rehabilitation Robot</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFD0"
+                     colspan="1" class="c">
+                        <a id="weat3">09:00-10:30</a><BR>
+                        Azalea, 3F<BR>
+                        Oral Session WeAT3<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#weat3" title="Click to go to the session program"><i>ICROS Daejeon-Chungcheong OS : Modeling, Estimation, and Control for Intelligent Systems</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="weat4">09:00-10:30</a><BR>
+                        Lilac, 3F<BR>
+                        Oral Session WeAT4<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#weat4" title="Click to go to the session program"><i>Navigation, Guidance and Control 1</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="weat5">09:00-10:30</a><BR>
+                        Crown, 3F<BR>
+                        Oral Session WeAT5<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#weat5" title="Click to go to the session program"><i>Award Session 1</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="weat6">09:00-10:30</a><BR>
+                        Symphony A, 4F<BR>
+                        Oral Session WeAT6<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#weat6" title="Click to go to the session program"><i>Biomedical Instruments and Systems</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="weat7">09:00-10:30</a><BR>
+                        Symphony B, 4F<BR>
+                        Oral Session WeAT7<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#weat7" title="Click to go to the session program"><i>Artificial Intelligence Systems 1</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFD0"
+                     colspan="1" class="c">
+                        <a id="weat8">09:00-10:30</a><BR>
+                        Symphony C, 4F<BR>
+                        Oral Session WeAT8<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#weat8" title="Click to go to the session program"><i>Recent Advancements in Machine Learning Techniques for Intelligent Systems 1</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFD0"
+                     colspan="1" class="c">
+                        <a id="weat9">09:00-10:30</a><BR>
+                        Symphony D, 4F<BR>
+                        Oral Session WeAT9<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#weat9" title="Click to go to the session program"><i>GNC Technology and Application</i></a>
+                   </td>
+               
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+</tr>
+<tr>
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+</tr>
+<tr>
+                  <td width="10%" rowspan="4" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="wepo2p">09:30-10:30</a><BR>
+                        3F Lobby<BR>
+                        Poster Session WePo2P<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#wepo2p" title="Click to go to the session program"><i>Poster Session 2</i></a>
+                   </td>
+               
+</tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr>
+                  <td width="100%" rowspan="1" style="background-color: #FFFFFF"
+                     colspan="10" class="c">
+                        <a id="weam_br">10:30-10:40</a><BR>
+                        Room T10<BR>
+                         WeAM_BR<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#weam_br" title="Click to go to the session program"><i> </i></a>
+                   </td>
+               
+</tr>
+<tr>
+                  <td width="100%" rowspan="1" style="background-color: #E2FFE2"
+                     colspan="10" class="c">
+                        <a id="wepl">10:40-11:40</a><BR>
+                        Palace Hall, 3F<BR>
+                        Plenary Lecture WePL<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#wepl" title="Click to go to the session program"><i>Opening Ceremony & Plenary Lecture &#8544; (Prof. Koushil Sreenath, USA)</i></a>
+                   </td>
+               
+</tr>
+<tr>
+                  <td width="100%" rowspan="1" style="background-color: #FFFFFF"
+                     colspan="10" class="c">
+                        <a id="welu_br">11:40-13:00</a><BR>
+                        Room T10<BR>
+                         WeLU_BR<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#welu_br" title="Click to go to the session program"><i> </i></a>
+                   </td>
+               
+</tr>
+<tr>
+                  <td width="100%" rowspan="1" style="background-color: #E2FFE2"
+                     colspan="10" class="c">
+                        <a id="wekn">13:00-14:00</a><BR>
+                        Palace Hall, 3F<BR>
+                         WeKN<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#wekn" title="Click to go to the session program"><i>Keynote Speech &#8544;(Prof. Jinoh Lee) & &#8545; (Prof. Daniel Seita)</i></a>
+                   </td>
+               
+</tr>
+<tr>
+                  <td width="100%" rowspan="1" style="background-color: #FFFFFF"
+                     colspan="10" class="c">
+                        <a id="wemm_br">14:00-14:20</a><BR>
+                        Room T10<BR>
+                         WeMM_BR<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#wemm_br" title="Click to go to the session program"><i> </i></a>
+                   </td>
+               
+</tr>
+<tr>
+                  <td width="100%" rowspan="1" style="background-color: #E2FFE2"
+                     colspan="10" class="c">
+                        <a id="wefrs">14:20-15:20</a><BR>
+                        Palace Hall, 3F<BR>
+                         WeFrS<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#wefrs" title="Click to go to the session program"><i>Frontiers Session 1</i></a>
+                   </td>
+               
+</tr>
+<tr>
+                  <td width="100%" rowspan="1" style="background-color: #FFFFFF"
+                     colspan="10" class="c">
+                        <a id="wepm_br">15:20-15:40</a><BR>
+                        Room T10<BR>
+                         WePM_BR<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#wepm_br" title="Click to go to the session program"><i> </i></a>
+                   </td>
+               
+</tr>
+<tr>
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="webt1">15:40-17:10</a><BR>
+                        Palace Hall, 3F<BR>
+                        Oral Session WeBT1<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#webt1" title="Click to go to the session program"><i>Control Theory and Applications 1</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFD0"
+                     colspan="1" class="c">
+                        <a id="webt2">15:40-17:10</a><BR>
+                        Cattleya, 3F<BR>
+                        Oral Session WeBT2<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#webt2" title="Click to go to the session program"><i>Physical AI and Military Robots 1</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="webt3">15:40-17:10</a><BR>
+                        Azalea, 3F<BR>
+                        Oral Session WeBT3<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#webt3" title="Click to go to the session program"><i>Robot Vision 1</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="webt4">15:40-17:10</a><BR>
+                        Lilac, 3F<BR>
+                        Oral Session WeBT4<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#webt4" title="Click to go to the session program"><i>Navigation, Guidance and Control 2</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFD0"
+                     colspan="1" class="c">
+                        <a id="webt5">15:40-17:10</a><BR>
+                        Crown, 3F<BR>
+                        Oral Session WeBT5<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#webt5" title="Click to go to the session program"><i>ICROS-ECTI Joint OS: Advanced Control and Estimation</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="webt6">15:40-17:10</a><BR>
+                        Symphony A, 4F<BR>
+                        Oral Session WeBT6<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#webt6" title="Click to go to the session program"><i>Control Devices and Instruments</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="webt7">15:40-17:10</a><BR>
+                        Symphony B, 4F<BR>
+                        Oral Session WeBT7<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#webt7" title="Click to go to the session program"><i>Artificial Intelligence Systems 2</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFD0"
+                     colspan="1" class="c">
+                        <a id="webt8">15:40-17:10</a><BR>
+                        Symphony C, 4F<BR>
+                        Oral Session WeBT8<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#webt8" title="Click to go to the session program"><i>Recent Advancements in Machine Learning Techniques for Intelligent Systems 2</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFD0"
+                     colspan="1" class="c">
+                        <a id="webt9">15:40-17:10</a><BR>
+                        Symphony D, 4F<BR>
+                        Oral Session WeBT9<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#webt9" title="Click to go to the session program"><i>ICT Convergence in Intelligent Robotics and AI Development</i></a>
+                   </td>
+               
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+</tr>
+<tr>
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+</tr>
+<tr>
+                  <td width="10%" rowspan="4" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="wepo3p">16:10-17:10</a><BR>
+                        3F Lobby<BR>
+                        Poster Session WePo3P<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_2.html#wepo3p" title="Click to go to the session program"><i>Poster Session 3</i></a>
+                   </td>
+               
+</tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+
+         </table>
+         </div>
+         </div>
+         </div>
+         <br><br>
+      
+         <div id="Thursday" class="blck">
+         <p><br><b>ICCAS 2026 Technical Program Thursday October 29, 2026</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" onclick="selfollowing('Wednesday')" title="Click to jump to the previous day">Previous</a>&nbsp;&nbsp;<a href="javascript:void(0)" onclick="selfollowing('Tuesday')">Tuesday</a>&nbsp;&nbsp;<a href="javascript:void(0)" onclick="selfollowing('Wednesday')">Wednesday</a>&nbsp;&nbsp;<a href="javascript:void(0)" onclick="selfollowing('Thursday')">Thursday</a>&nbsp;&nbsp;<a href="javascript:void(0)" onclick="selfollowing('Friday')">Friday</a>&nbsp;&nbsp;<a href="javascript:void(0)" onclick="selfollowing('Friday')" title="Click to jump to the next day">Next</a>&nbsp;&nbsp;<a href="javascript:void(0)" onclick="selfollowing('TheTop'); return true">Top</a>&nbsp;&nbsp;<span class="scrlis" style="color: gray"><br>Click on the day's program and use the arrow keys for easy horizontal and vertical scrolling</span></p>
+      
+
+         <div id="div3" class="sdiv" style="overflow: auto">
+         <div id="AThursday" tabindex="3">
+	  
+         <table class="dayB" style="width: 1600px">
+
+<tr>
+<td colspan="10" class="dHd"><b>ICCAS 2026 Technical Program Thursday October 29, 2026 </b></td>
+</tr>
+<tr class="tHdr">
+<td width="10%" class="c">Track T1</td>
+<td width="10%" class="c">Track T2</td>
+<td width="10%" class="c">Track T3</td>
+<td width="10%" class="c">Track T4</td>
+<td width="10%" class="c">Track T5</td>
+<td width="10%" class="c">Track T6</td>
+<td width="10%" class="c">Track T7</td>
+<td width="10%" class="c">Track T8</td>
+<td width="10%" class="c">Track T9</td>
+<td width="10%" class="c">Posters</td>
+</tr><tr>
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="that1">09:00-10:30</a><BR>
+                        Palace Hall, 3F<BR>
+                        Oral Session ThAT1<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#that1" title="Click to go to the session program"><i>Control Theory and Applications 2</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFD0"
+                     colspan="1" class="c">
+                        <a id="that2">09:00-10:30</a><BR>
+                        Cattleya, 3F<BR>
+                        Oral Session ThAT2<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#that2" title="Click to go to the session program"><i>Physical AI and Military Robots 2</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFD0"
+                     colspan="1" class="c">
+                        <a id="that3">09:00-10:30</a><BR>
+                        Azalea, 3F<BR>
+                        Oral Session ThAT3<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#that3" title="Click to go to the session program"><i>SICE-ICROS Joint OS: Robot Technology and Its Application 1</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="that4">09:00-10:30</a><BR>
+                        Lilac, 3F<BR>
+                        Oral Session ThAT4<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#that4" title="Click to go to the session program"><i>Navigation, Guidance and Control 3</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="that5">09:00-10:30</a><BR>
+                        Crown, 3F<BR>
+                        Oral Session ThAT5<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#that5" title="Click to go to the session program"><i>Award Session 2</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="that6">09:00-10:30</a><BR>
+                        Symphony A, 4F<BR>
+                        Oral Session ThAT6<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#that6" title="Click to go to the session program"><i>Robotic Applications 1</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="that7">09:00-10:30</a><BR>
+                        Symphony B, 4F<BR>
+                        Oral Session ThAT7<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#that7" title="Click to go to the session program"><i>Artificial Intelligence Systems 3</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFD0"
+                     colspan="1" class="c">
+                        <a id="that8">09:00-10:30</a><BR>
+                        Symphony C, 4F<BR>
+                        Oral Session ThAT8<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#that8" title="Click to go to the session program"><i>Recent Advancements in Machine Learning Techniques for Intelligent Systems 3</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="that9">09:00-10:30</a><BR>
+                        Symphony D, 4F<BR>
+                        Oral Session ThAT9<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#that9" title="Click to go to the session program"><i>Autonomous Vehicle Systems 1</i></a>
+                   </td>
+               
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+</tr>
+<tr>
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+</tr>
+<tr>
+                  <td width="10%" rowspan="4" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="thpo4p">09:30-10:30</a><BR>
+                        3F Lobby<BR>
+                        Poster Session ThPo4P<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#thpo4p" title="Click to go to the session program"><i>Poster Session 4</i></a>
+                   </td>
+               
+</tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr>
+                  <td width="100%" rowspan="1" style="background-color: #FFFFFF"
+                     colspan="10" class="c">
+                        <a id="tham_br">10:30-10:40</a><BR>
+                        Room T10<BR>
+                         ThAM_BR<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#tham_br" title="Click to go to the session program"><i> </i></a>
+                   </td>
+               
+</tr>
+<tr>
+                  <td width="100%" rowspan="1" style="background-color: #E2FFE2"
+                     colspan="10" class="c">
+                        <a id="thpl">10:40-11:40</a><BR>
+                        Palace Hall, 3F<BR>
+                        Plenary Lecture ThPL<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#thpl" title="Click to go to the session program"><i>Plenary Lecture &#8545; (Prof. Hiroyuki Shinoda, Japan)</i></a>
+                   </td>
+               
+</tr>
+<tr>
+                  <td width="100%" rowspan="1" style="background-color: #FFFFFF"
+                     colspan="10" class="c">
+                        <a id="thlu_br">11:40-13:00</a><BR>
+                        Room T10<BR>
+                         ThLU_BR<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#thlu_br" title="Click to go to the session program"><i> </i></a>
+                   </td>
+               
+</tr>
+<tr>
+                  <td width="100%" rowspan="1" style="background-color: #E2FFE2"
+                     colspan="10" class="c">
+                        <a id="thkn">13:00-14:00</a><BR>
+                        Palace Hall, 3F<BR>
+                         ThKN<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#thkn" title="Click to go to the session program"><i>Keynote Speech &#8546; (Prof. Sarthak Pathak) & &#8547; (Prof. Jiyeon Kang)</i></a>
+                   </td>
+               
+</tr>
+<tr>
+                  <td width="100%" rowspan="1" style="background-color: #FFFFFF"
+                     colspan="10" class="c">
+                        <a id="thmm_br">14:00-14:20</a><BR>
+                        Room T10<BR>
+                         ThMM_BR<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#thmm_br" title="Click to go to the session program"><i> </i></a>
+                   </td>
+               
+</tr>
+<tr>
+                  <td width="100%" rowspan="1" style="background-color: #E2FFE2"
+                     colspan="10" class="c">
+                        <a id="thfrs">14:20-15:20</a><BR>
+                        Palace Hall, 3F<BR>
+                         ThFrS<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#thfrs" title="Click to go to the session program"><i>Frontiers Session 2</i></a>
+                   </td>
+               
+</tr>
+<tr>
+                  <td width="100%" rowspan="1" style="background-color: #FFFFFF"
+                     colspan="10" class="c">
+                        <a id="thpm_br">15:20-15:40</a><BR>
+                        Room T10<BR>
+                         ThPM_BR<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#thpm_br" title="Click to go to the session program"><i> </i></a>
+                   </td>
+               
+</tr>
+<tr>
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="thbt1">15:40-17:10</a><BR>
+                        Palace Hall, 3F<BR>
+                         ThBT1<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#thbt1" title="Click to go to the session program"><i> </i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFD0"
+                     colspan="1" class="c">
+                        <a id="thbt2">15:40-17:10</a><BR>
+                        Cattleya, 3F<BR>
+                        Oral Session ThBT2<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#thbt2" title="Click to go to the session program"><i>Robotics Technologies for Surgery and Intervention</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFD0"
+                     colspan="1" class="c">
+                        <a id="thbt3">15:40-17:10</a><BR>
+                        Azalea, 3F<BR>
+                        Oral Session ThBT3<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#thbt3" title="Click to go to the session program"><i>SICE-ICROS Joint OS: Robot Technology and Its Application 2</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="thbt4">15:40-17:10</a><BR>
+                        Lilac, 3F<BR>
+                        Oral Session ThBT4<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#thbt4" title="Click to go to the session program"><i>Robot Mechanism and Control 1</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="thbt5">15:40-17:10</a><BR>
+                        Crown, 3F<BR>
+                         ThBT5<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#thbt5" title="Click to go to the session program"><i>Koh Young AI Competition (15: 40-16: 50)</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="thbt6">15:40-17:10</a><BR>
+                        Symphony A, 4F<BR>
+                        Oral Session ThBT6<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#thbt6" title="Click to go to the session program"><i>Robotic Applications 2</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="thbt7">15:40-17:10</a><BR>
+                        Symphony B, 4F<BR>
+                        Oral Session ThBT7<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#thbt7" title="Click to go to the session program"><i>Artificial Intelligence Systems 4</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFD0"
+                     colspan="1" class="c">
+                        <a id="thbt8">15:40-17:10</a><BR>
+                        Symphony C, 4F<BR>
+                        Oral Session ThBT8<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#thbt8" title="Click to go to the session program"><i>Data-Driven Intelligence in Process Control and Robotics</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="thbt9">15:40-17:10</a><BR>
+                        Symphony D, 4F<BR>
+                        Oral Session ThBT9<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#thbt9" title="Click to go to the session program"><i>Autonomous Vehicle Systems 2</i></a>
+                   </td>
+               
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+</tr>
+<tr>
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+</tr>
+<tr>
+                  <td width="10%" rowspan="4" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="thpo5p">16:10-17:10</a><BR>
+                        3F Lobby<BR>
+                        Poster Session ThPo5P<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#thpo5p" title="Click to go to the session program"><i>Poster Session 5</i></a>
+                   </td>
+               
+</tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr>
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+</tr>
+<tr>
+                  <td width="100%" rowspan="1" style="background-color: #E2FFE2"
+                     colspan="10" class="c">
+                        <a id="thbqt">18:00-20:00</a><BR>
+                        Palace Hall, 3F<BR>
+                         ThBQT<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_3.html#thbqt" title="Click to go to the session program"><i>Banquet</i></a>
+                   </td>
+               
+</tr>
+
+         </table>
+         </div>
+         </div>
+         </div>
+         <br><br>
+      
+         <div id="Friday" class="blck">
+         <p><br><b>ICCAS 2026 Technical Program Friday October 30, 2026</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" onclick="selfollowing('Thursday')" title="Click to jump to the previous day">Previous</a>&nbsp;&nbsp;<a href="javascript:void(0)" onclick="selfollowing('Tuesday')">Tuesday</a>&nbsp;&nbsp;<a href="javascript:void(0)" onclick="selfollowing('Wednesday')">Wednesday</a>&nbsp;&nbsp;<a href="javascript:void(0)" onclick="selfollowing('Thursday')">Thursday</a>&nbsp;&nbsp;<a href="javascript:void(0)" onclick="selfollowing('Friday')">Friday</a>&nbsp;&nbsp;<a href="javascript:void(0)" onclick="selfollowing('TheTop'); return true">Top</a>&nbsp;&nbsp;<span class="scrlis" style="color: gray"><br>Click on the day's program and use the arrow keys for easy horizontal and vertical scrolling</span></p>
+      
+
+         <div id="div4" class="sdiv" style="overflow: auto">
+         <div id="AFriday" tabindex="4">
+	  
+         <table class="dayB" style="width: 1600px">
+
+<tr>
+<td colspan="10" class="dHd"><b>ICCAS 2026 Technical Program Friday October 30, 2026 </b></td>
+</tr>
+<tr class="tHdr">
+<td width="10%" class="c">Track T1</td>
+<td width="10%" class="c">Track T2</td>
+<td width="10%" class="c">Track T3</td>
+<td width="10%" class="c">Track T4</td>
+<td width="10%" class="c">Track T5</td>
+<td width="10%" class="c">Track T6</td>
+<td width="10%" class="c">Track T7</td>
+<td width="10%" class="c">Track T8</td>
+<td width="10%" class="c">Track T9</td>
+<td width="10%" class="c">Posters</td>
+</tr><tr>
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="frat1">09:00-10:30</a><BR>
+                        Palace Hall, 3F<BR>
+                        Oral Session FrAT1<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frat1" title="Click to go to the session program"><i>Control Theory and Applications 3</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="frat2">09:00-10:30</a><BR>
+                        Cattleya, 3F<BR>
+                        Oral Session FrAT2<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frat2" title="Click to go to the session program"><i>Human-Robot Interaction</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="frat3">09:00-10:30</a><BR>
+                        Azalea, 3F<BR>
+                        Oral Session FrAT3<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frat3" title="Click to go to the session program"><i>Process Control Systems</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="frat4">09:00-10:30</a><BR>
+                        Lilac, 3F<BR>
+                        Oral Session FrAT4<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frat4" title="Click to go to the session program"><i>Robot Mechanism and Control 2</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="frat5">09:00-10:30</a><BR>
+                        Crown, 3F<BR>
+                        Oral Session FrAT5<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frat5" title="Click to go to the session program"><i>Sensors and Signal Processing</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="frat6">09:00-10:30</a><BR>
+                        Symphony A, 4F<BR>
+                        Oral Session FrAT6<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frat6" title="Click to go to the session program"><i>Robotic Applications 3</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="frat7">09:00-10:30</a><BR>
+                        Symphony B, 4F<BR>
+                        Oral Session FrAT7<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frat7" title="Click to go to the session program"><i>Artificial Intelligence Systems 5</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFD0"
+                     colspan="1" class="c">
+                        <a id="frat8">09:00-10:30</a><BR>
+                        Symphony C, 4F<BR>
+                        Oral Session FrAT8<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frat8" title="Click to go to the session program"><i>Robust Perception and Adaptive Control Systems for Industrial Intelligence</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="frat9">09:00-10:30</a><BR>
+                        Symphony D, 4F<BR>
+                        Oral Session FrAT9<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frat9" title="Click to go to the session program"><i>Autonomous Vehicle Systems 3</i></a>
+                   </td>
+               
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+</tr>
+<tr>
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+</tr>
+<tr>
+                  <td width="10%" rowspan="4" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="frpo6p">09:30-10:30</a><BR>
+                        3F Lobby<BR>
+                        Poster Session FrPo6P<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frpo6p" title="Click to go to the session program"><i>Poster Session 6</i></a>
+                   </td>
+               
+</tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr>
+                  <td width="100%" rowspan="1" style="background-color: #FFFFFF"
+                     colspan="10" class="c">
+                        <a id="fram_br">10:30-10:40</a><BR>
+                        Room T10<BR>
+                         FrAM_BR<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#fram_br" title="Click to go to the session program"><i> </i></a>
+                   </td>
+               
+</tr>
+<tr>
+                  <td width="100%" rowspan="1" style="background-color: #E2FFE2"
+                     colspan="10" class="c">
+                        <a id="frpl">10:40-11:40</a><BR>
+                        Palace Hall, 3F<BR>
+                         FrPL<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frpl" title="Click to go to the session program"><i>Plenary Lecture &#8546; (Prof. Jean Oh, USA)</i></a>
+                   </td>
+               
+</tr>
+<tr>
+                  <td width="100%" rowspan="1" style="background-color: #FFFFFF"
+                     colspan="10" class="c">
+                        <a id="frlu_br">11:40-13:00</a><BR>
+                        Room T10<BR>
+                         FrLU_BR<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frlu_br" title="Click to go to the session program"><i> </i></a>
+                   </td>
+               
+</tr>
+<tr>
+                  <td width="100%" rowspan="1" style="background-color: #E2FFE2"
+                     colspan="10" class="c">
+                        <a id="frkn">13:00-14:00</a><BR>
+                        Palace Hall, 3F<BR>
+                         FrKN<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frkn" title="Click to go to the session program"><i>Keynote Speech &#8548; (Prof. Heejin Ahn) & &#8549; (Prof. Joohyung Kim)</i></a>
+                   </td>
+               
+</tr>
+<tr>
+                  <td width="100%" rowspan="1" style="background-color: #FFFFFF"
+                     colspan="10" class="c">
+                        <a id="frmm_br">14:00-14:20</a><BR>
+                        Room T10<BR>
+                         FrMM_BR<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frmm_br" title="Click to go to the session program"><i> </i></a>
+                   </td>
+               
+</tr>
+<tr>
+                  <td width="100%" rowspan="1" style="background-color: #E2FFE2"
+                     colspan="10" class="c">
+                        <a id="frfrs">14:20-15:20</a><BR>
+                        Palace Hall, 3F<BR>
+                         FrFrS<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frfrs" title="Click to go to the session program"><i>Frontiers Session 3</i></a>
+                   </td>
+               
+</tr>
+<tr>
+                  <td width="100%" rowspan="1" style="background-color: #FFFFFF"
+                     colspan="10" class="c">
+                        <a id="frpm_br">15:20-15:40</a><BR>
+                        Room T10<BR>
+                         FrPM_BR<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frpm_br" title="Click to go to the session program"><i> </i></a>
+                   </td>
+               
+</tr>
+<tr>
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="frbt1">15:40-17:10</a><BR>
+                        Palace Hall, 3F<BR>
+                        Oral Session FrBT1<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frbt1" title="Click to go to the session program"><i>Control Theory and Applications 4</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="frbt2">15:40-17:10</a><BR>
+                        Cattleya, 3F<BR>
+                        Oral Session FrBT2<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frbt2" title="Click to go to the session program"><i>Industrial Applications of Control</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="frbt3">15:40-17:10</a><BR>
+                        Azalea, 3F<BR>
+                        Oral Session FrBT3<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frbt3" title="Click to go to the session program"><i>Robot Vision 2</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="frbt4">15:40-17:10</a><BR>
+                        Lilac, 3F<BR>
+                        Oral Session FrBT4<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frbt4" title="Click to go to the session program"><i>Robot Mechanism and Control 3</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="frbt5">15:40-17:10</a><BR>
+                        Crown, 3F<BR>
+                        Oral Session FrBT5<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frbt5" title="Click to go to the session program"><i>Exoskeleton Robot</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="frbt6">15:40-17:10</a><BR>
+                        Symphony A, 4F<BR>
+                        Oral Session FrBT6<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frbt6" title="Click to go to the session program"><i>Robotic Applications 4</i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="frbt7">15:40-17:10</a><BR>
+                        Symphony B, 4F<BR>
+                         FrBT7<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frbt7" title="Click to go to the session program"><i> </i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="frbt8">15:40-17:10</a><BR>
+                        Symphony C, 4F<BR>
+                         FrBT8<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frbt8" title="Click to go to the session program"><i> </i></a>
+                   </td>
+               
+                  <td width="10%" rowspan="6" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="frbt9">15:40-17:10</a><BR>
+                        Symphony D, 4F<BR>
+                        Oral Session FrBT9<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frbt9" title="Click to go to the session program"><i>Autonomous Vehicle Systems 4</i></a>
+                   </td>
+               
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+</tr>
+<tr>
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+</tr>
+<tr>
+                  <td width="10%" rowspan="4" style="background-color: #FFFFFF"
+                     colspan="1" class="c">
+                        <a id="frpo7p">16:10-17:10</a><BR>
+                        3F Lobby<BR>
+                        Poster Session FrPo7P<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frpo7p" title="Click to go to the session program"><i>Poster Session 7</i></a>
+                   </td>
+               
+</tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr>
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+<td width="10%" style="border: white; background-color: #FDFDFD">&nbsp;</td>
+</tr>
+<tr>
+                  <td width="100%" rowspan="1" style="background-color: #E2FFE2"
+                     colspan="10" class="c">
+                        <a id="frfw">17:30-17:40</a><BR>
+                        Palace Hall, 3F<BR>
+                         FrFW<BR>
+                        <BR>
+                        <a href="ICCAS2026_ContentListWeb_4.html#frfw" title="Click to go to the session program"><i>Closing Ceremony</i></a>
+                   </td>
+               
+</tr>
+
+         </table>
+         </div>
+         </div>
+         </div>
+         <br><br>
+      
+</div>
+
+<p>&nbsp;<br>&nbsp;</p><p>&nbsp;<br>&nbsp;</p>
+</div>
+</div>
+
+</form>
+
+</body>
+
+</html>

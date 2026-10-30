@@ -1,0 +1,47 @@
+{
+  "snapshotDate": "2026-10-31",
+  "files": [
+    {
+      "file": "ICCAS2026_ProgramAtAGlanceWeb.html",
+      "url": "https://ras.papercept.net/conferences/conferences/ICCAS2026/program/ICCAS2026_ProgramAtAGlanceWeb.html",
+      "bytes": 135888,
+      "sha256": "50d8ec5312e4585ba6bae64164afda563e7d10f059563835be86f76dc2b13c3d"
+    },
+    {
+      "file": "ICCAS2026_ContentListWeb_1.html",
+      "url": "https://ras.papercept.net/conferences/conferences/ICCAS2026/program/ICCAS2026_ContentListWeb_1.html",
+      "bytes": 247279,
+      "sha256": "a246069d7a274c2451224188f7f1144ab4a44cbee230305c0dc54b6106236e3a"
+    },
+    {
+      "file": "ICCAS2026_ContentListWeb_2.html",
+      "url": "https://ras.papercept.net/conferences/conferences/ICCAS2026/program/ICCAS2026_ContentListWeb_2.html",
+      "bytes": 746816,
+      "sha256": "1511662f2fa78c93da2e681fcdb9a740ce044c7903422fcc32a7e1acd595f25e"
+    },
+    {
+      "file": "ICCAS2026_ContentListWeb_3.html",
+      "url": "https://ras.papercept.net/conferences/conferences/ICCAS2026/program/ICCAS2026_ContentListWeb_3.html",
+      "bytes": 747233,
+      "sha256": "83691c384ef5b9617cc1b0efe3e6c1b17bf563367a84bb05ef196c2f1b875a92"
+    },
+    {
+      "file": "ICCAS2026_ContentListWeb_4.html",
+      "url": "https://ras.papercept.net/conferences/conferences/ICCAS2026/program/ICCAS2026_ContentListWeb_4.html",
+      "bytes": 708102,
+      "sha256": "d391f5eb63ec888df9355e3196e2b3330b09b61537bc94fbd4c66f7e70fd7543"
+    },
+    {
+      "file": "ICCAS2026_AuthorIndexWeb.html",
+      "url": "https://ras.papercept.net/conferences/conferences/ICCAS2026/program/ICCAS2026_AuthorIndexWeb.html",
+      "bytes": 616951,
+      "sha256": "2a10b8c8e86bae8b113efb700808402aab7e913cc8dab5d7d7343092016a97a3"
+    },
+    {
+      "file": "ICCAS2026_KeywordIndexWeb.html",
+      "url": "https://ras.papercept.net/conferences/conferences/ICCAS2026/program/ICCAS2026_KeywordIndexWeb.html",
+      "bytes": 232923,
+      "sha256": "4f2c69335e29f6579d493d82ae2d4348ac087e1e53be32b7a021225a68863f95"
+    }
+  ]
+}
