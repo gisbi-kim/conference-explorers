@@ -19,7 +19,12 @@ def text(node):
 def soup(name):
     return BeautifulSoup((ROOT / 'source' / name).read_bytes(), 'html.parser')
 
+def institution_aliases():
+    groups = json.loads((ROOT/'institution-aliases.json').read_text(encoding='utf-8'))
+    return {label: canonical for canonical, labels in groups.items() for label in labels}
+
 def build():
+    aliases = institution_aliases()
     papers, sessions = [], []
     for day in range(1, 5):
         name = f'ICCAS2026_ContentListWeb_{day}.html'
@@ -63,7 +68,8 @@ def build():
                 if count > 1:
                     warnings.append(dict(session=session['id'], message=f'{count} oral entries share {start}–{end} in the source.'))
     counts = dict(papers=len(papers), oral=sum(p['type']=='Oral Session' for p in papers), poster=sum(p['type']=='Poster Session' for p in papers), paperSessions=sum(bool(s['papers']) for s in sessions), authors=len({a['id'] for p in papers for a in p['authors']}), affiliationLabels=len({a['affiliation'] for p in papers for a in p['authors']}), keywords=len({k for p in papers for k in p['keywords']}), abstracts=sum(bool(p['abstract']) for p in papers))
-    data = dict(conference='ICCAS 2026', title='26th International Conference on Control, Automation and Systems', location='Sapporo, Japan', dates=['2026-10-27','2026-10-28','2026-10-29','2026-10-30'], timezone='Asia/Tokyo', sourceUpdated='2026-10-17', snapshotDate='2026-10-31', sourceStatus='Tentative and subject to change', source=BASE+FILES[0], counts=counts, warnings=warnings, sessions=sessions, papers=papers)
+    counts['institutions'] = len({aliases.get(a['affiliation'], a['affiliation']) for p in papers for a in p['authors']})
+    data = dict(institutionAliases=aliases, conference='ICCAS 2026', title='26th International Conference on Control, Automation and Systems', location='Sapporo, Japan', dates=['2026-10-27','2026-10-28','2026-10-29','2026-10-30'], timezone='Asia/Tokyo', sourceUpdated='2026-10-17', snapshotDate='2026-10-31', sourceStatus='Tentative and subject to change', source=BASE+FILES[0], counts=counts, warnings=warnings, sessions=sessions, papers=papers)
     return data
 
 def csv_text(value):
@@ -73,11 +79,11 @@ def csv_text(value):
 def write(data):
     (ROOT/'data.json').write_text(json.dumps(data, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     with (ROOT/'papers.csv').open('w', encoding='utf-8-sig', newline='') as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, lineterminator='\n')
         fields = ['id','paperId','title','session','date','start','end','room','type','authors','affiliations','keywords','abstract','source']
         writer.writerow(fields)
         for paper in data['papers']:
-            row = dict(paper, authors='; '.join(a['name'] for a in paper['authors']), affiliations='; '.join(dict.fromkeys(a['affiliation'] for a in paper['authors'])), keywords='; '.join(paper['keywords']))
+            row = dict(paper, authors='; '.join(a['name'] for a in paper['authors']), affiliations='; '.join(dict.fromkeys(data['institutionAliases'].get(a['affiliation'], a['affiliation']) for a in paper['authors'])), keywords='; '.join(paper['keywords']))
             writer.writerow([csv_text(row[k]) for k in fields])
     manifest = dict(snapshotDate=data['snapshotDate'], files=[dict(file=n, url=BASE+n, bytes=(ROOT/'source'/n).stat().st_size, sha256=hashlib.sha256((ROOT/'source'/n).read_bytes()).hexdigest()) for n in FILES])
     (ROOT/'source/manifest.json').write_text(json.dumps(manifest, indent=2)+'\n', encoding='utf-8')
